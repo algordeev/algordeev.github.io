@@ -1,0 +1,170 @@
+:root {
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --text: #1b1d21;
+  --muted: #5f6672;
+  --accent: #2455e0;
+  --border: #e4e4df;
+  --radius: 14px;
+  --max: 1040px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101214;
+    --surface: #181b1f;
+    --text: #eceef1;
+    --muted: #9aa1ad;
+    --accent: #7ea1ff;
+    --border: #2a2e34;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+code {
+  background: var(--border);
+  padding: 1px 6px;
+  border-radius: 6px;
+  font-size: 0.9em;
+}
+
+/* ---------- Nav ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px max(16px, calc((100vw - var(--max)) / 2));
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.brand { font-weight: 700; color: var(--text); }
+.nav nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 15px; }
+.nav nav a { color: var(--muted); }
+.nav nav a:hover { color: var(--text); text-decoration: none; }
+
+/* ---------- Layout ---------- */
+main, footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+section { padding: 56px 0 8px; scroll-margin-top: 60px; }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 1.7rem; margin-bottom: 20px; }
+h3 { font-size: 1.1rem; }
+.muted { color: var(--muted); font-size: 0.92rem; }
+
+/* ---------- Hero ---------- */
+.hero { padding: 88px 0 40px; }
+.eyebrow {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+.hero h1 { font-size: clamp(2.4rem, 7vw, 4rem); letter-spacing: -0.02em; }
+.lead { font-size: 1.2rem; color: var(--muted); max-width: 640px; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+}
+.btn:hover { text-decoration: none; opacity: 0.9; }
+.btn.ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.portrait { width: 160px; height: 160px; object-fit: cover; border-radius: 50%; margin-top: 16px; }
+
+/* ---------- Timeline ---------- */
+.timeline { border-left: 2px solid var(--border); padding-left: 24px; }
+.timeline article { position: relative; margin-bottom: 28px; }
+.timeline article::before {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.date { font-size: 0.85rem; color: var(--muted); }
+.meta { margin: 0 0 6px; color: var(--muted); }
+.timeline ul { margin: 8px 0 0; padding-left: 20px; }
+
+/* ---------- Project cards ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card video,
+.gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--border);
+}
+.gallery { display: grid; grid-auto-flow: column; grid-auto-columns: 100%; overflow-x: auto; scroll-snap-type: x mandatory; }
+.gallery img { scroll-snap-align: start; }
+.card-body { padding: 18px 20px 20px; }
+.card-body p { margin: 0 0 12px; font-size: 0.97rem; }
+.tags { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0 0 12px; }
+.tags li {
+  font-size: 0.78rem;
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+.links { margin: 0; font-weight: 600; font-size: 0.95rem; }
+
+/* ---------- Skills ---------- */
+.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.skills p { margin: 0; color: var(--muted); }
+
+/* ---------- Footer ---------- */
+footer { padding: 48px 16px; color: var(--muted); font-size: 0.9rem; }
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .hero { padding-top: 56px; }
+}

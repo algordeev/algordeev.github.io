@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aleksandr Gordeev – Robotics & Embedded Engineering</title>
+  <meta name="description" content="Portfolio of Aleksandr Gordeev: computer engineering student working on robotics, optimization and embedded systems.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#top">A. Gordeev</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <p class="eyebrow">Computer Engineering · Robotics · Optimization</p>
+    <h1>Aleksandr Gordeev</h1>
+    <p class="lead">
+      Computer engineering student building autonomous systems, from embedded
+      hardware to trajectory optimization. Based in İzmir, Türkiye.
+    </p>
+    <p class="cta">
+      <a class="btn" href="#projects">See my projects</a>
+      <a class="btn ghost" href="https://github.com/algordeev">GitHub</a>
+      <!-- Put your CV at assets/cv.pdf, then keep this line -->
+      <a class="btn ghost" href="assets/cv.pdf">Download CV</a>
+    </p>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I'm a B.S. Computer Engineering student at Yaşar University with a focus on
+      robotics and autonomous systems. I enjoy work that crosses the stack:
+      PCB design and Arduino-level embedded code on one end, multi-objective
+      optimization and path planning on the other.
+    </p>
+    <!-- Optional: add a photo at assets/me.jpg and uncomment
+    <img class="portrait" src="assets/me.jpg" alt="Portrait of Aleksandr Gordeev">
+    -->
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="timeline">
+      <article>
+        <span class="date">2023 – 2027 (expected)</span>
+        <h3>B.S. Computer Engineering</h3>
+        <p class="meta">Yaşar University, İzmir, Türkiye</p>
+        <!-- Add GPA, relevant courses, honors here -->
+      </article>
+      <article>
+        <span class="date">2024 – 2025</span>
+        <h3>Erasmus+ Exchange</h3>
+        <p class="meta">Universidad Complutense de Madrid, Spain</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <article>
+        <span class="date">Jun – Jul 2026</span>
+        <h3>Robotics &amp; Autonomous Systems Intern</h3>
+        <p class="meta">ISCAR Research Group, Universidad Complutense de Madrid</p>
+        <ul>
+          <li>Worked on trajectory planning for multiple autonomous surface vehicles (ASVs).</li>
+          <li>Applied multi-objective evolutionary optimization (NSGA-II / NSGA-III).</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="muted">Replace the files in <code>assets/</code> with your own images and videos. Each card supports a video, an image gallery, or both.</p>
+
+    <div class="grid">
+
+      <!-- ============ PROJECT 1 ============ -->
+      <article class="card">
+        <video controls preload="metadata" poster="assets/tram-poster.jpg">
+          <source src="assets/tram-demo.mp4" type="video/mp4">
+        </video>
+        <div class="card-body">
+          <h3>Autonomous Tram Digital Twin</h3>
+          <p>
+            An autonomous, energy-efficient tram system with a digital twin for
+            simulation and control.
+          </p>
+          <ul class="tags">
+            <li>Python</li><li>Simulation</li><li>Control</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/algordeev/autonomous-tram-digital-twin">Source code →</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- ============ PROJECT 2 ============ -->
+      <article class="card">
+        <div class="gallery">
+          <img src="assets/asv-1.jpg" alt="Multi-ASV trajectory planning result" loading="lazy">
+          <img src="assets/asv-2.jpg" alt="Pareto front from NSGA-III run" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Multi-ASV Trajectory Planning</h3>
+          <p>
+            Multi-objective trajectory optimization for a fleet of autonomous
+            surface vehicles using NSGA-II and NSGA-III.
+          </p>
+          <ul class="tags">
+            <li>MATLAB</li><li>NSGA-II/III</li><li>Optimization</li>
+          </ul>
+          <p class="links"><a href="#">Details →</a></p>
+        </div>
+      </article>
+
+      <!-- ============ PROJECT 3 (copy this block for more) ============ -->
+      <article class="card">
+        <div class="gallery">
+          <img src="assets/pcb-1.jpg" alt="Custom PCB board" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Embedded / PCB Project</h3>
+          <p>Short description of a hardware project: Arduino, custom PCB, sensors.</p>
+          <ul class="tags">
+            <li>Arduino</li><li>PCB Design</li><li>C/C++</li>
+          </ul>
+          <p class="links"><a href="#">Details →</a></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div>
+        <h3>Programming</h3>
+        <p>C/C++, Java, Python, MATLAB, SQL, Assembly (MIPS, RISC-V)</p>
+      </div>
+      <div>
+        <h3>Engineering</h3>
+        <p>Arduino, embedded systems, PCB design, trajectory planning, multi-objective optimization</p>
+      </div>
+      <div>
+        <h3>Languages</h3>
+        <p>Russian (native), English (C1), Turkish (B1), Spanish (A2)</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      <!-- Replace with your real email -->
+      Email: <a href="mailto:your.email@example.com">your.email@example.com</a><br>
+      GitHub: <a href="https://github.com/algordeev">github.com/algordeev</a><br>
+      <!-- LinkedIn: <a href="https://www.linkedin.com/in/your-handle">linkedin.com/in/your-handle</a> -->
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Aleksandr Gordeev</p>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
