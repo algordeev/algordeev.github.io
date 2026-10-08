@@ -12,46 +12,51 @@
 <header class="nav">
   <a class="brand" href="#top">AG</a>
   <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" data-i18n="about">About</a>
+    <a href="#education" data-i18n="education">Education</a>
+    <a href="#experience" data-i18n="experience">Experience</a>
+    <a href="#projects" data-i18n="projects">Projects</a>
+    <a href="#achievements" data-i18n="achievements">Achievements</a>
+    <a href="#skills" data-i18n="skills">Skills</a>
+    <a href="#contact" data-i18n="contact">Contact</a>
   </nav>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-lang="ru">RU</button>
+    <button type="button" data-lang="en">EN</button>
+    <button type="button" data-lang="tr">TR</button>
+  </div>
 </header>
 
 <main id="top">
 
   <section class="hero">
     <div class="hero-text">
-      <p class="eyebrow">Computer Engineering · Robotics · Optimization</p>
-      <h1>Aleksandr Gordeev</h1>
-      <p class="lead">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Computer Engineering · Robotics · Optimization</p>
+      <h1 data-i18n="name">Aleksandr Gordeev</h1>
+      <p class="lead" data-i18n="hero.lead">
         Computer engineering student building autonomous systems, from embedded
         firmware and custom PCBs to multi-objective trajectory optimization.
         Based in İzmir, Türkiye.
       </p>
       <p class="cta">
-        <a class="btn" href="#projects">See my projects</a>
+        <a class="btn" href="#projects" data-i18n="hero.projects">See my projects</a>
         <a class="btn ghost" href="https://github.com/algordeev">GitHub</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/algordeev/">LinkedIn</a>
-        <a class="btn ghost" href="assets/cv.pdf">Download CV</a>
+        <a class="btn ghost" href="assets/cv.pdf" data-i18n="hero.cv">Download CV</a>
       </p>
     </div>
-    <img class="portrait" src="assets/me.jpg" alt="Portrait of Aleksandr Gordeev">
+    <img class="portrait" src="assets/me.jpg" alt="Portrait of Aleksandr Gordeev" data-i18n-alt="hero.alt">
   </section>
 
   <section id="about">
-  <h2>About</h2>
+  <h2 data-i18n="about">About</h2>
 
-  <p>
+  <p data-i18n="about.p1">
     Computer Engineering student at Yaşar University with interests in
     autonomous systems, robotics, software development, and optimization.
   </p>
 
-  <p>
+  <p data-i18n="about.p2">
     I have worked on multi-agent autonomous surface vehicle trajectory planning
     at the ISCAR Research Group of Universidad Complutense de Madrid, using
     MATLAB, multi-objective optimization, and statistical analysis.
@@ -59,7 +64,7 @@
     software, electronics, and intelligent transportation systems.
   </p>
 
-  <p>
+  <p data-i18n="about.p3">
     My technical experience includes C/C++, Java, SQL, MATLAB, Python, embedded
     systems, PCB design, data structures and algorithms. I am particularly
     interested in software engineering, autonomous systems, robotics, databases,
@@ -68,54 +73,54 @@
 </section>
 
   <section id="education">
-    <h2>Education</h2>
+    <h2 data-i18n="education">Education</h2>
     <div class="timeline">
       <article>
-        <span class="date">2023 – expected 2027</span>
-        <h3>B.S. in Computer Engineering</h3>
-        <p class="meta">Yaşar University, İzmir, Türkiye · 100% scholarship</p>
+        <span class="date" data-i18n="edu.date">2023 – expected 2027</span>
+        <h3 data-i18n="edu.degree">B.S. in Computer Engineering</h3>
+        <p class="meta" data-i18n="edu.degree.meta">Yaşar University, İzmir, Türkiye · 100% scholarship</p>
       </article>
       <article>
         <span class="date">2024 – 2025</span>
-        <h3>Erasmus+ Exchange</h3>
-        <p class="meta">Universidad Complutense de Madrid, Spain · Grant recipient</p>
+        <h3 data-i18n="edu.erasmus">Erasmus+ Exchange</h3>
+        <p class="meta" data-i18n="edu.erasmus.meta">Universidad Complutense de Madrid, Spain · 6 000 € grant</p>
       </article>
     </div>
   </section>
 
   <section id="experience">
-    <h2>Experience</h2>
+    <h2 data-i18n="experience">Experience</h2>
     <div class="timeline">
       <article>
-        <span class="date">Jun – Jul 2026</span>
-        <h3>Robotics &amp; Autonomous Systems Intern</h3>
-        <p class="meta">ISCAR Research Group, Universidad Complutense de Madrid</p>
+        <span class="date" data-i18n="exp.date">Jun – Jul 2026</span>
+        <h3 data-i18n="exp.iscar.title">Robotics &amp; Autonomous Systems Intern</h3>
+        <p class="meta" data-i18n="exp.iscar.meta">ISCAR Research Group, Universidad Complutense de Madrid</p>
         <ul>
-          <li>Worked on trajectory planning for multiple autonomous surface vehicles (ASVs).</li>
-          <li>Applied multi-objective evolutionary optimization (NSGA-II / NSGA-III).</li>
+          <li data-i18n="exp.iscar.l1">Worked on trajectory planning for multiple autonomous surface vehicles (ASVs).</li>
+          <li data-i18n="exp.iscar.l2">Applied multi-objective evolutionary optimization (NSGA-II / NSGA-III).</li>
         </ul>
       </article>
       <article>
         <span class="date">2018 – 2022</span>
-        <h3>Assistant Robotics Instructor and Competition Judge</h3>
-        <p class="meta">Palace of Children's Creativity, Nizhny Novgorod, Russia</p>
+        <h3 data-i18n="exp.inst.title">Assistant Robotics Instructor and Competition Judge</h3>
+        <p class="meta" data-i18n="exp.inst.meta">Palace of Children's Creativity, Nizhny Novgorod, Russia</p>
         <ul>
-          <li>Guided junior students in robotics projects and evaluated mechanics and algorithms at youth competitions.</li>
+          <li data-i18n="exp.inst.l1">Guided junior students in robotics projects and evaluated mechanics and algorithms at youth competitions.</li>
         </ul>
       </article>
       <article>
         <span class="date">2018 – 2020</span>
-        <h3>Robotics Mentor and Event Coordinator</h3>
-        <p class="meta">Regional Charity Organisation "Zabota", Nizhny Novgorod, Russia</p>
+        <h3 data-i18n="exp.mentor.title">Robotics Mentor and Event Coordinator</h3>
+        <p class="meta" data-i18n="exp.mentor.meta">Regional Charity Organisation "Zabota", Nizhny Novgorod, Russia</p>
         <ul>
-          <li>Taught LEGO EV3 and Arduino fundamentals to underprivileged youth and helped organize robotics events.</li>
+          <li data-i18n="exp.mentor.l1">Taught LEGO EV3 and Arduino fundamentals to underprivileged youth and helped organize robotics events.</li>
         </ul>
       </article>
     </div>
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
+    <h2 data-i18n="projects">Projects</h2>
 
     <div class="grid">
 
@@ -126,9 +131,9 @@
           <source src="assets/tram-demo.mp4" type="video/mp4">
         </video>
         <div class="card-body">
-          <h3>Autonomous Tram System</h3>
+          <h3 data-i18n="proj.tram.title">Autonomous Tram System</h3>
           <p class="date">2020 – 2022</p>
-          <p>
+          <p data-i18n="proj.tram.desc">
             An autonomous model tram that won the WRO 2021 Russian National
             Final and competed at the international final. Modular real-time
             firmware handles motion control, obstacle detection, fail-safe
@@ -137,10 +142,10 @@
             distance sensors and actuators.
           </p>
           <ul class="tags">
-            <li>C++</li><li>Arduino</li><li>PCB Design</li>
+            <li>C++</li><li>Arduino</li><li data-i18n="tag.pcb">PCB Design</li>
           </ul>
           <p class="links">
-            <a href="https://github.com/algordeev/autonomous-tram-system">Source code →</a>
+            <a href="https://github.com/algordeev/autonomous-tram-system" data-i18n="proj.src">Source code →</a>
           </p>
         </div>
       </article>
@@ -149,24 +154,24 @@
       <article class="card">
 
         <div class="gallery">
-          <img src="assets/monopoly-1.jpg" alt="Red Monopoly game board" loading="lazy">
-          <img src="assets/monopoly-2.jpg" alt="Red Monopoly lobby screen" loading="lazy">
+          <img src="assets/monopoly-1.jpg" alt="Red Monopoly game board" data-i18n-alt="proj.mono.alt1" loading="lazy">
+          <img src="assets/monopoly-2.jpg" alt="Red Monopoly lobby screen" data-i18n-alt="proj.mono.alt2" loading="lazy">
         </div>
         
         <div class="card-body">
           <h3>Red Monopoly</h3>
-          <p class="date">Jan – May 2025</p>
-          <p>
+          <p class="date" data-i18n="proj.mono.date">Jan – May 2025</p>
+          <p data-i18n="proj.mono.desc">
             A networked desktop game with IP-based multiplayer for up to eight
             players. Object-oriented design patterns drive an adaptive AI and
             game status handling, with game logic kept separate from the GUI.
             Built in a Scrum team.
           </p>
           <ul class="tags">
-            <li>Java</li><li>OOP</li><li>Networking</li><li>GUI</li><li>Scrum</li>
+            <li>Java</li><li>OOP</li><li data-i18n="tag.networking">Networking</li><li>GUI</li><li>Scrum</li>
           </ul>
           <p class="links">
-            <a href="https://github.com/SwEng-UCM/red-monopoly">Source code →</a>
+            <a href="https://github.com/SwEng-UCM/red-monopoly" data-i18n="proj.src">Source code →</a>
           </p>
         </div>
       </article>
@@ -175,13 +180,13 @@
       <article class="card">
        
         <div class="gallery">
-          <img src="assets/asv-1.jpg" alt="Multi-ASV trajectory planning result" loading="lazy">
+          <img src="assets/asv-1.jpg" alt="Multi-ASV trajectory planning result" data-i18n-alt="proj.asv.alt" loading="lazy">
         </div>
       
         <div class="card-body">
-          <h3>Multi-ASV Trajectory Planning</h3>
-          <p class="date">Jun – Jul 2026 · ISCAR Research Group</p>
-          <p>
+          <h3 data-i18n="proj.asv.title">Multi-ASV Trajectory Planning</h3>
+          <p class="date" data-i18n="proj.asv.date">Jun – Jul 2026 · ISCAR Research Group</p>
+          <p data-i18n="proj.asv.desc">
             Coordinated mission planning for several autonomous surface
             vehicles monitoring cyanobacterial blooms. Multi-objective
             optimization with NSGA-II and NSGA-III balances collision
@@ -189,7 +194,7 @@
             statistically across parallel simulation runs.
           </p>
           <ul class="tags">
-            <li>MATLAB</li><li>NSGA-II / III</li><li>Optimization</li>
+            <li>MATLAB</li><li>NSGA-II / III</li><li data-i18n="tag.optimization">Optimization</li>
           </ul>
         </div>
       </article>
@@ -198,50 +203,50 @@
   </section>
 
   <section id="achievements">
-    <h2>Selected Achievements</h2>
+    <h2 data-i18n="achievements.title">Selected Achievements</h2>
     <ul class="achievements">
-      <li><strong>International Finalist</strong>, World Robot Olympiad (WRO) 2021</li>
-      <li><strong>First Place</strong>, All-Russian Festival of Research Design Works "Vector" (2022)</li>
-      <li><strong>Winner, Ecological Urban Infrastructure</strong>, Russian Robot Olympiad 2021</li>
-      <li><strong>Second Place</strong>, Baltic Science and Engineering Competition (2022)</li>
-      <li><strong>Third Place</strong>, XIV All-Russian Youth Competition ROST-ISEF (2022)</li>
+      <li data-i18n="ach.1"><strong>International Finalist</strong>, World Robot Olympiad (WRO) 2021</li>
+      <li data-i18n="ach.2"><strong>First Place</strong>, All-Russian Festival of Research Design Works "Vector" (2022)</li>
+      <li data-i18n="ach.3"><strong>Winner, Ecological Urban Infrastructure</strong>, Russian Robot Olympiad 2021</li>
+      <li data-i18n="ach.4"><strong>Second Place</strong>, Baltic Science and Engineering Competition (2022)</li>
+      <li data-i18n="ach.5"><strong>Third Place</strong>, XIV All-Russian Youth Competition ROST-ISEF (2022)</li>
     </ul>
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
+    <h2 data-i18n="skills">Skills</h2>
     <div class="skills">
       <div>
-        <h3>Programming</h3>
+        <h3 data-i18n="sk.prog">Programming</h3>
         <p>C/C++, Java, Python, SQL</p>
       </div>
       <div>
-        <h3>Low-level</h3>
-        <p>MIPS and RISC-V Assembly</p>
+        <h3 data-i18n="sk.low">Low-level</h3>
+        <p data-i18n="sk.low.v">MIPS and RISC-V Assembly</p>
       </div>
       <div>
-        <h3>Engineering</h3>
-        <p>Arduino, embedded systems, PCB design, digital design, electronics</p>
+        <h3 data-i18n="sk.eng">Engineering</h3>
+        <p data-i18n="sk.eng.v">Arduino, embedded systems, PCB design, digital design, electronics</p>
       </div>
       <div>
-        <h3>CS concepts</h3>
-        <p>OOP, data structures, algorithms, computer networks, Scrum</p>
+        <h3 data-i18n="sk.cs">CS concepts</h3>
+        <p data-i18n="sk.cs.v">OOP, data structures, algorithms, computer networks, Scrum</p>
       </div>
       <div>
-        <h3>Tools</h3>
+        <h3 data-i18n="sk.tools">Tools</h3>
         <p>Git, GitHub, MATLAB, LaTeX</p>
       </div>
       <div>
-        <h3>Languages</h3>
-        <p>Russian (native), English (C1), Turkish (B1), Spanish (A2)</p>
+        <h3 data-i18n="sk.lang">Languages</h3>
+        <p data-i18n="sk.lang.v">Russian (native), English (C1), Turkish (B1), Spanish (A2)</p>
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
+    <h2 data-i18n="contact">Contact</h2>
     <p>
-      Email: <a href="mailto:algordeev18@gmail.com">algordeev18@gmail.com</a><br>
+      <span data-i18n="contact.email">Email:</span> <a href="mailto:algordeev18@gmail.com">algordeev18@gmail.com</a><br>
       GitHub: <a href="https://github.com/algordeev">github.com/algordeev</a><br>
       LinkedIn: <a href="https://www.linkedin.com/in/algordeev/">linkedin.com/in/algordeev</a>
     </p>
@@ -250,9 +255,10 @@
 </main>
 
 <footer>
-  <p>© <span id="year"></span> Aleksandr Gordeev</p>
+  <p>© <span id="year"></span> <span data-i18n="name">Aleksandr Gordeev</span></p>
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="lang.js"></script>
 </body>
 </html>
