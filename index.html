@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aleksandr Gordeev – Robotics & Embedded Engineering</title>
+  <title>Aleksandr Gordeev | Robotics and Embedded Engineering</title>
   <meta name="description" content="Portfolio of Aleksandr Gordeev: computer engineering student working on robotics, optimization and embedded systems.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="nav">
-  <a class="brand" href="#top">Aleksandr Gordeev</a>
+  <a class="brand" href="#top">A. Gordeev</a>
   <nav>
     <a href="#about">About</a>
     <a href="#education">Education</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -24,46 +25,48 @@
 <main id="top">
 
   <section class="hero">
-    <p class="eyebrow">Computer Engineering · Robotics · Optimization</p>
-    <h1>Aleksandr Gordeev</h1>
-    <p class="lead">
-      Computer engineering student building autonomous systems, from embedded
-      hardware to trajectory optimization. Based in İzmir, Türkiye.
-    </p>
-    <p class="cta">
-      <a class="btn" href="#projects">See my projects</a>
-      <a class="btn ghost" href="https://github.com/algordeev">GitHub</a>
-      <!-- Put your CV at assets/cv.pdf, then keep this line -->
-      <a class="btn ghost" href="assets/cv.pdf">Download CV</a>
-    </p>
+    <div class="hero-text">
+      <p class="eyebrow">Computer Engineering · Robotics · Optimization</p>
+      <h1>Aleksandr Gordeev</h1>
+      <p class="lead">
+        Computer engineering student building autonomous systems, from embedded
+        firmware and custom PCBs to multi-objective trajectory optimization.
+        Based in İzmir, Türkiye.
+      </p>
+      <p class="cta">
+        <a class="btn" href="#projects">See my projects</a>
+        <a class="btn ghost" href="https://github.com/algordeev">GitHub</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/algordeev/">LinkedIn</a>
+        <a class="btn ghost" href="assets/cv.pdf">Download CV</a>
+      </p>
+    </div>
+    <img class="portrait" src="assets/me.jpg" alt="Portrait of Aleksandr Gordeev">
   </section>
 
   <section id="about">
     <h2>About</h2>
     <p>
-      I'm a B.S. Computer Engineering student at Yaşar University with a focus on
-      robotics and autonomous systems. I enjoy work that crosses the stack:
-      PCB design and Arduino-level embedded code on one end, multi-objective
-      optimization and path planning on the other.
+     Computer Engineering student at Yaşar University with interests in autonomous systems, robotics, software development, and optimization.
+
+    I have worked on multi-agent autonomous surface vehicle trajectory planning at the ISCAR Research Group of Universidad Complutense de Madrid, using MATLAB, multi-objective optimization, and statistical analysis. 
+    I also develop independent engineering projects combining embedded systems, software, electronics, and intelligent transportation systems.
+
+    My technical experience includes C/C++, Java, SQL, MATLAB, Python, embedded systems, PCB design, data structures and algorithms. I am particularly interested in software engineering, autonomous systems, robotics, databases, and intelligent transportation.
     </p>
-    <!-- Optional: add a photo at assets/me.jpg and uncomment
-    <img class="portrait" src="assets/me.jpg" alt="Portrait of Aleksandr Gordeev">
-    -->
   </section>
 
   <section id="education">
     <h2>Education</h2>
     <div class="timeline">
       <article>
-        <span class="date">2023 – 2027 (expected)</span>
-        <h3>B.S. Computer Engineering</h3>
-        <p class="meta">Yaşar University, İzmir, Türkiye</p>
-        <!-- Add GPA, relevant courses, honors here -->
+        <span class="date">2023 – expected 2027</span>
+        <h3>B.S. in Computer Engineering</h3>
+        <p class="meta">Yaşar University, İzmir, Türkiye · 100% scholarship</p>
       </article>
       <article>
         <span class="date">2024 – 2025</span>
         <h3>Erasmus+ Exchange</h3>
-        <p class="meta">Universidad Complutense de Madrid, Spain</p>
+        <p class="meta">Universidad Complutense de Madrid, Spain · Grant recipient</p>
       </article>
     </div>
   </section>
@@ -80,70 +83,117 @@
           <li>Applied multi-objective evolutionary optimization (NSGA-II / NSGA-III).</li>
         </ul>
       </article>
+      <article>
+        <span class="date">2018 – 2022</span>
+        <h3>Assistant Robotics Instructor and Competition Judge</h3>
+        <p class="meta">Palace of Children's Creativity, Nizhny Novgorod, Russia</p>
+        <ul>
+          <li>Guided junior students in robotics projects and evaluated mechanics and algorithms at youth competitions.</li>
+        </ul>
+      </article>
+      <article>
+        <span class="date">2018 – 2020</span>
+        <h3>Robotics Mentor and Event Coordinator</h3>
+        <p class="meta">Regional Charity Organisation "Zabota", Nizhny Novgorod, Russia</p>
+        <ul>
+          <li>Taught LEGO EV3 and Arduino fundamentals to underprivileged youth and helped organize robotics events.</li>
+        </ul>
+      </article>
     </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <p class="muted">Replace the files in <code>assets/</code> with your own images and videos. Each card supports a video, an image gallery, or both.</p>
 
     <div class="grid">
 
-      <!-- ============ PROJECT 1 ============ -->
+      <!-- ============ Autonomous Tram System ============ -->
       <article class="card">
+        <!-- Add your video at assets/tram-demo.mp4 and a thumbnail at assets/tram-poster.jpg -->
         <video controls preload="metadata" poster="assets/tram-poster.jpg">
           <source src="assets/tram-demo.mp4" type="video/mp4">
         </video>
         <div class="card-body">
-          <h3>Autonomous Tram Digital Twin</h3>
+          <h3>Autonomous Tram System</h3>
+          <p class="date">2020 – 2022</p>
           <p>
-            An autonomous, energy-efficient tram system with a digital twin for
-            simulation and control.
+            An autonomous model tram that won the WRO 2021 Russian National
+            Final and competed at the international final. Modular real-time
+            firmware handles motion control, obstacle detection, fail-safe
+            behavior and vehicle-to-infrastructure communication. Custom PCBs
+            integrate an Arduino Nano, motor drivers, wireless modules,
+            distance sensors and actuators.
           </p>
           <ul class="tags">
-            <li>Python</li><li>Simulation</li><li>Control</li>
+            <li>C++</li><li>Arduino</li><li>PCB Design</li>
           </ul>
           <p class="links">
-            <a href="https://github.com/algordeev/autonomous-tram-digital-twin">Source code →</a>
+            <a href="https://github.com/algordeev/autonomous-tram-system">Source code →</a>
           </p>
         </div>
       </article>
 
-      <!-- ============ PROJECT 2 ============ -->
+      <!-- ============ Red Monopoly ============ -->
       <article class="card">
+
+        <div class="gallery">
+          <img src="assets/monopoly-1.jpg" alt="Red Monopoly game board" loading="lazy">
+          <img src="assets/monopoly-2.jpg" alt="Red Monopoly lobby screen" loading="lazy">
+        </div>
+        
+        <div class="card-body">
+          <h3>Red Monopoly</h3>
+          <p class="date">Jan – May 2025</p>
+          <p>
+            A networked desktop game with IP-based multiplayer for up to eight
+            players. Object-oriented design patterns drive an adaptive AI and
+            game status handling, with game logic kept separate from the GUI.
+            Built in a Scrum team.
+          </p>
+          <ul class="tags">
+            <li>Java</li><li>OOP</li><li>Networking</li><li>GUI</li><li>Scrum</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/SwEng-UCM/red-monopoly">Source code →</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- ============ Multi-ASV Trajectory Planning ============ -->
+      <article class="card">
+       
         <div class="gallery">
           <img src="assets/asv-1.jpg" alt="Multi-ASV trajectory planning result" loading="lazy">
-          <img src="assets/asv-2.jpg" alt="Pareto front from NSGA-III run" loading="lazy">
         </div>
+      
         <div class="card-body">
           <h3>Multi-ASV Trajectory Planning</h3>
+          <p class="date">Jun – Jul 2026 · ISCAR Research Group</p>
           <p>
-            Multi-objective trajectory optimization for a fleet of autonomous
-            surface vehicles using NSGA-II and NSGA-III.
+            Coordinated mission planning for several autonomous surface
+            vehicles monitoring cyanobacterial blooms. Multi-objective
+            optimization with NSGA-II and NSGA-III balances collision
+            avoidance, route overlap and workload, with Pareto fronts compared
+            statistically across parallel simulation runs.
           </p>
           <ul class="tags">
-            <li>MATLAB</li><li>NSGA-II/III</li><li>Optimization</li>
+            <li>MATLAB</li><li>NSGA-II / III</li><li>Optimization</li>
           </ul>
-          <p class="links"><a href="#">Details →</a></p>
-        </div>
-      </article>
-
-      <!-- ============ PROJECT 3 (copy this block for more) ============ -->
-      <article class="card">
-        <div class="gallery">
-          <img src="assets/pcb-1.jpg" alt="Custom PCB board" loading="lazy">
-        </div>
-        <div class="card-body">
-          <h3>Embedded / PCB Project</h3>
-          <p>Short description of a hardware project: Arduino, custom PCB, sensors.</p>
-          <ul class="tags">
-            <li>Arduino</li><li>PCB Design</li><li>C/C++</li>
-          </ul>
-          <p class="links"><a href="#">Details →</a></p>
         </div>
       </article>
 
     </div>
+  </section>
+
+  <section id="achievements">
+    <h2>Selected Achievements</h2>
+    <ul class="achievements">
+      <li><strong>International Finalist</strong>, World Robot Olympiad (WRO) 2021</li>
+      <li><strong>First Place</strong>, All-Russian Festival of Research Design Works "Vector" (2022)</li>
+      <li><strong>Winner, Ecological Urban Infrastructure</strong>, Russian Robot Olympiad 2021</li>
+      <li><strong>Second Place</strong>, Baltic Science and Engineering Competition (2022)</li>
+      <li><strong>Third Place</strong>, XIV All-Russian Youth Competition ROST-ISEF (2022)</li>
+    </ul>
   </section>
 
   <section id="skills">
@@ -151,11 +201,23 @@
     <div class="skills">
       <div>
         <h3>Programming</h3>
-        <p>C/C++, Java, Python, MATLAB, SQL, Assembly (MIPS, RISC-V)</p>
+        <p>C/C++, Java, Python, SQL</p>
+      </div>
+      <div>
+        <h3>Low-level</h3>
+        <p>MIPS and RISC-V Assembly</p>
       </div>
       <div>
         <h3>Engineering</h3>
-        <p>Arduino, embedded systems, PCB design, trajectory planning, multi-objective optimization</p>
+        <p>Arduino, embedded systems, PCB design, digital design, electronics</p>
+      </div>
+      <div>
+        <h3>CS concepts</h3>
+        <p>OOP, data structures, algorithms, computer networks, Scrum</p>
+      </div>
+      <div>
+        <h3>Tools</h3>
+        <p>Git, GitHub, MATLAB, LaTeX</p>
       </div>
       <div>
         <h3>Languages</h3>
@@ -167,10 +229,9 @@
   <section id="contact">
     <h2>Contact</h2>
     <p>
-      <!-- Replace with your real email -->
       Email: <a href="mailto:algordeev18@gmail.com">algordeev18@gmail.com</a><br>
       GitHub: <a href="https://github.com/algordeev">github.com/algordeev</a><br>
-      LinkedIn: <a href="https://www.linkedin.com/in/algordeev/">https://www.linkedin.com/in/algordeev/</a>
+      LinkedIn: <a href="https://www.linkedin.com/in/algordeev/">linkedin.com/in/algordeev</a>
     </p>
   </section>
 
