@@ -106,7 +106,8 @@
       "sk.lang": `Языки`,
       "sk.lang.v": `русский (родной), английский (C1), турецкий (B1), испанский (A2)`,
 
-      "contact.email": `Почта:`
+      "contact.email": `Почта:`,
+      "footer.rights": "Все права защищены."
     },
 
     tr: {
@@ -202,7 +203,8 @@
       "sk.lang": `Diller`,
       "sk.lang.v": `Rusça (ana dil), İngilizce (C1), Türkçe (B1), İspanyolca (A2)`,
 
-      "contact.email": `E-posta:`
+      "contact.email": `E-posta:`,
+      "footer.rights": "Tüm hakları saklıdır."
     }
   };
 
