@@ -290,3 +290,99 @@ body.dialog-open { overflow: hidden; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+#credentials-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+
+#credentials-list .credential-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 24px;
+  padding: 16px 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+}
+
+
+#credentials-list .eyebrow {
+  display: none;
+}
+
+#credentials-list h3 {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+#credentials-list p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+#credentials-list .meta {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#credentials-list .date {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: start;
+  white-space: nowrap;
+}
+
+#credentials-list p:not(.eyebrow):not(.meta):not(.date):not(.links) {
+  grid-column: 1;
+  font-size: 0.8rem;
+}
+
+#credentials-list .links {
+  grid-column: 1 / -1;
+  margin-top: 4px;
+}
+
+@media (max-width: 560px) {
+  #credentials-list .credential-card {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  #credentials-list .date {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+.certificate-dialog {
+  width: min(960px, calc(100% - 32px));
+}
+
+.certificate-dialog .dialog-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.certificate-content img {
+  display: block;
+  width: 100%;
+  max-height: 72dvh;
+  object-fit: contain;
+}
+
+.certificate-content iframe {
+  display: block;
+  width: 100%;
+  height: 72dvh;
+  border: 0;
+  background: var(--bg);
+}

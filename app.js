@@ -84,17 +84,85 @@
     });
   });
 
+  const certificateDialog = document.createElement("dialog");
+certificateDialog.className = "project-dialog certificate-dialog";
+certificateDialog.setAttribute("aria-labelledby", "certificate-title");
+
+certificateDialog.innerHTML = `
+  <div class="dialog-header">
+    <h2 id="certificate-title"></h2>
+    <button type="button" class="icon-button certificate-close">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="certificate-content"></div>
+`;
+
+document.body.append(certificateDialog);
+
+const certificateClose = certificateDialog.querySelector(".certificate-close");
+const certificateContent = certificateDialog.querySelector(".certificate-content");
+let certificateTrigger = null;
+
+certificateClose.addEventListener("click", () => {
+  certificateDialog.close();
+});
+
+certificateDialog.addEventListener("close", () => {
+  certificateContent.replaceChildren();
+  document.body.classList.remove("dialog-open");
+  if (certificateTrigger) certificateTrigger.focus();
+});
+
+function openCertificate(url, title, lang, trigger) {
+  certificateTrigger = trigger;
+
+  certificateDialog.querySelector("#certificate-title").textContent = title;
+  certificateClose.setAttribute(
+    "aria-label",
+    { en: "Close", ru: "Закрыть", tr: "Kapat" }[lang] || "Close"
+  );
+
+  const isPdf = new URL(url).pathname.toLowerCase().endsWith(".pdf");
+  const preview = document.createElement(isPdf ? "iframe" : "img");
+
+  preview.src = url;
+
+  if (isPdf) {
+    preview.title = title;
+  } else {
+    preview.alt = title;
+  }
+
+  certificateContent.replaceChildren(preview);
+  certificateDialog.showModal();
+  document.body.classList.add("dialog-open");
+  certificateClose.focus();
+}
+
   const viewLabels = { en: 'View certificate →', ru: 'Открыть сертификат →', tr: 'Sertifikayı görüntüle →' };
   function localText(value, lang) {
     return typeof value === 'string' ? value : (value && (value[lang] || value.en)) || '';
   }
   function safeLink(value) {
-    if (!value) return null;
-    try {
-      const url = new URL(value, location.href);
-      return ['https:', 'http:'].includes(url.protocol) ? url.href : null;
-    } catch (_) { return null; }
+  if (typeof value !== "string" || !value.trim()) return null;
+
+  try {
+    const url = new URL(value, location.href);
+
+    if (url.protocol === "https:" || url.protocol === "http:") {
+      return url.href;
+    }
+
+    if (location.protocol === "file:" && url.protocol === "file:") {
+      return url.href;
+    }
+
+    return null;
+  } catch (_) {
+    return null;
   }
+}
   function renderCredentials(lang) {
     const list = document.getElementById('credentials-list');
     const records = Array.isArray(window.PORTFOLIO_CREDENTIALS) ? window.PORTFOLIO_CREDENTIALS : [];
@@ -117,13 +185,34 @@
       if (record.date) text('p', 'date', localText(record.date, lang));
       if (record.description) text('p', '', localText(record.description, lang));
       const url = safeLink(record.url);
-      if (url) {
-        const row = text('p', 'links', '');
-        const link = document.createElement('a');
-        link.href = url;
-        link.textContent = viewLabels[lang] || viewLabels.en;
-        row.append(link);
-      }
+if (url) {
+  const row = text("p", "links", "");
+  const link = document.createElement("a");
+
+  link.href = url;
+  link.textContent = viewLabels[lang] || viewLabels.en;
+  link.setAttribute("aria-haspopup", "dialog");
+
+  link.addEventListener("click", event => {
+    // Обычный клик открывает окно; Cmd/Ctrl+клик сохраняет поведение ссылки.
+    if (
+      event.ctrlKey || event.metaKey ||
+      event.shiftKey || event.altKey
+    ) return;
+
+    event.preventDefault();
+
+    openCertificate(
+      url,
+      localText(record.title, lang),
+      lang,
+      link
+    );
+  });
+
+  row.append(link);
+}
+
       list.append(card);
     });
   }
