@@ -5,25 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aleksandr Gordeev | Robotics and Embedded Engineering</title>
   <meta name="description" content="Portfolio of Aleksandr Gordeev: computer engineering student working on robotics, optimization and embedded systems.">
+  <script>
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark'
+        ? savedTheme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch (e) { /* CSS follows the system preference when storage is unavailable. */ }
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="nav">
   <a class="brand" href="#top">AG</a>
-  <nav>
-    <a href="#about" data-i18n="about">About</a>
-    <a href="#education" data-i18n="education">Education</a>
-    <a href="#experience" data-i18n="experience">Experience</a>
-    <a href="#projects" data-i18n="projects">Projects</a>
-    <a href="#achievements" data-i18n="achievements">Achievements</a>
-    <a href="#skills" data-i18n="skills">Skills</a>
-    <a href="#contact" data-i18n="contact">Contact</a>
-  </nav>
-  <div class="lang" role="group" aria-label="Language">
-    <button type="button" data-lang="ru">RU</button>
-    <button type="button" data-lang="en">EN</button>
-    <button type="button" data-lang="tr">TR</button>
+  <div class="nav-actions">
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="tr">TR</button>
+    </div>
+    <button type="button" class="icon-button" id="theme-toggle" aria-pressed="false" aria-labelledby="theme-label">
+      <svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+      <svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/></svg>
+      <span class="sr-only" id="theme-label" data-i18n="ui.theme">Dark theme</span>
+    </button>
+    <div class="menu-wrap">
+      <button type="button" class="icon-button" id="menu-toggle" aria-expanded="false" aria-controls="section-menu" aria-labelledby="menu-label">
+        <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="sr-only" id="menu-label" data-i18n="ui.menu">Navigation menu</span>
+      </button>
+      <nav id="section-menu" hidden aria-labelledby="menu-label">
+        <a href="#about" data-i18n="about">About</a>
+        <a href="#education" data-i18n="education">Education</a>
+        <a href="#experience" data-i18n="experience">Experience</a>
+        <a href="#projects" data-i18n="projects">Projects</a>
+        <a href="#credentials" data-i18n="credentials">Certificates & Courses</a>
+        <a href="#achievements" data-i18n="achievements">Achievements</a>
+        <a href="#skills" data-i18n="skills">Skills</a>
+        <a href="#contact" data-i18n="contact">Contact</a>
+      </nav>
+    </div>
   </div>
 </header>
 
@@ -133,18 +154,12 @@
         <div class="card-body">
           <h3 data-i18n="proj.tram.title">Autonomous Tram System</h3>
           <p class="date">2020 – 2022</p>
-          <p data-i18n="proj.tram.desc">
-            An autonomous model tram that won the WRO 2021 Russian National
-            Final and competed at the international final. Modular real-time
-            firmware handles motion control, obstacle detection, fail-safe
-            behavior and vehicle-to-infrastructure communication. Custom PCBs
-            integrate an Arduino Nano, motor drivers, wireless modules,
-            distance sensors and actuators.
-          </p>
+          <p data-i18n="proj.tram.summary">Autonomous model tram with custom electronics, real-time control and vehicle-to-infrastructure communication.</p>
           <ul class="tags">
             <li>C++</li><li>Arduino</li><li data-i18n="tag.pcb">PCB Design</li>
           </ul>
           <p class="links">
+            <button type="button" class="details-button" data-project="tram" aria-haspopup="dialog" aria-controls="project-tram"><span data-i18n="ui.details">Details</span><span aria-hidden="true"> ↗</span></button>
             <a href="https://github.com/algordeev/autonomous-tram-system" data-i18n="proj.src">Source code →</a>
           </p>
         </div>
@@ -161,16 +176,12 @@
         <div class="card-body">
           <h3>Red Monopoly</h3>
           <p class="date" data-i18n="proj.mono.date">Jan – May 2025</p>
-          <p data-i18n="proj.mono.desc">
-            A networked desktop game with IP-based multiplayer for up to eight
-            players. Object-oriented design patterns drive an adaptive AI and
-            game status handling, with game logic kept separate from the GUI.
-            Built in a Scrum team.
-          </p>
+          <p data-i18n="proj.mono.summary">A Java desktop board game with multiplayer for up to eight players, adaptive AI and a separate game logic layer.</p>
           <ul class="tags">
             <li>Java</li><li>OOP</li><li data-i18n="tag.networking">Networking</li><li>GUI</li><li>Scrum</li>
           </ul>
           <p class="links">
+            <button type="button" class="details-button" data-project="mono" aria-haspopup="dialog" aria-controls="project-mono"><span data-i18n="ui.details">Details</span><span aria-hidden="true"> ↗</span></button>
             <a href="https://github.com/SwEng-UCM/red-monopoly" data-i18n="proj.src">Source code →</a>
           </p>
         </div>
@@ -186,20 +197,22 @@
         <div class="card-body">
           <h3 data-i18n="proj.asv.title">Multi-ASV Trajectory Planning</h3>
           <p class="date" data-i18n="proj.asv.date">Jun – Jul 2026 · ISCAR Research Group</p>
-          <p data-i18n="proj.asv.desc">
-            Coordinated mission planning for several autonomous surface
-            vehicles monitoring cyanobacterial blooms. Multi-objective
-            optimization with NSGA-II and NSGA-III balances collision
-            avoidance, route overlap and workload, with Pareto fronts compared
-            statistically across parallel simulation runs.
-          </p>
+          <p data-i18n="proj.asv.summary">Multi-objective mission planning for fleets of autonomous surface vehicles monitoring cyanobacterial blooms.</p>
           <ul class="tags">
             <li>MATLAB</li><li>NSGA-II / III</li><li data-i18n="tag.optimization">Optimization</li>
           </ul>
+          <p class="links"><button type="button" class="details-button" data-project="asv" aria-haspopup="dialog" aria-controls="project-asv"><span data-i18n="ui.details">Details</span><span aria-hidden="true"> ↗</span></button></p>
         </div>
       </article>
 
     </div>
+  </section>
+
+  <section id="credentials">
+    <h2 data-i18n="credentials">Certificates &amp; Courses</h2>
+    <p class="muted" data-i18n="credentials.intro">Additional learning and professional development.</p>
+    <div id="credentials-list" class="grid"></div>
+    <p id="credentials-empty" class="empty-state" data-i18n="credentials.empty">Course and certificate details will be added here soon.</p>
   </section>
 
   <section id="achievements">
@@ -254,11 +267,56 @@
 
 </main>
 
+<dialog class="project-dialog" id="project-tram" aria-labelledby="title-tram">
+  <div class="dialog-header"><p class="eyebrow" data-i18n="ui.project">Project details</p><button type="button" class="icon-button dialog-close" aria-labelledby="close-tram"><span aria-hidden="true">×</span><span class="sr-only" id="close-tram" data-i18n="ui.close">Close</span></button></div>
+  <h2 id="title-tram" data-i18n="proj.tram.title">Autonomous Tram System</h2>
+  <p data-i18n="proj.tram.desc">
+            An autonomous model tram that won the WRO 2021 Russian National
+            Final and competed at the international final. Modular real-time
+            firmware handles motion control, obstacle detection, fail-safe
+            behavior and vehicle-to-infrastructure communication. Custom PCBs
+            integrate an Arduino Nano, motor drivers, wireless modules,
+            distance sensors and actuators.
+          </p>
+  <div class="detail-facts"><div><h3 data-i18n="ui.stack">Technology</h3><p>C++ · Arduino Nano · PCB design</p></div><div><h3 data-i18n="ui.focus">Key features</h3><p data-i18n="proj.tram.features">Motion control · Obstacle detection · Fail-safe behavior · Infrastructure communication</p></div></div>
+  <div class="detail-gallery"><img src="assets/tram-logo.jpg" alt="Autonomous model tram" loading="lazy" data-i18n-alt="proj.tram.alt"></div>
+  <p><a class="btn" href="https://github.com/algordeev/autonomous-tram-system" data-i18n="proj.src">Source code →</a></p>
+</dialog>
+<dialog class="project-dialog" id="project-mono" aria-labelledby="title-mono">
+  <div class="dialog-header"><p class="eyebrow" data-i18n="ui.project">Project details</p><button type="button" class="icon-button dialog-close" aria-labelledby="close-mono"><span aria-hidden="true">×</span><span class="sr-only" id="close-mono" data-i18n="ui.close">Close</span></button></div>
+  <h2 id="title-mono">Red Monopoly</h2>
+  <p data-i18n="proj.mono.desc">
+            A networked desktop game with IP-based multiplayer for up to eight
+            players. Object-oriented design patterns drive an adaptive AI and
+            game status handling, with game logic kept separate from the GUI.
+            Built in a Scrum team.
+          </p>
+  <div class="detail-facts"><div><h3 data-i18n="ui.stack">Technology</h3><p>Java · OOP · Networking · GUI · Scrum</p></div><div><h3 data-i18n="ui.focus">Key features</h3><p data-i18n="proj.mono.features">IP-based multiplayer · Adaptive AI · Game state management · Logic / GUI separation</p></div></div>
+  <div class="detail-gallery"><img src="assets/monopoly-1.jpg" alt="Red Monopoly game board" loading="lazy" data-i18n-alt="proj.mono.alt1"><img src="assets/monopoly-2.jpg" alt="Red Monopoly lobby screen" data-i18n-alt="proj.mono.alt2" loading="lazy"></div>
+  <p><a class="btn" href="https://github.com/SwEng-UCM/red-monopoly" data-i18n="proj.src">Source code →</a></p>
+</dialog>
+<dialog class="project-dialog" id="project-asv" aria-labelledby="title-asv">
+  <div class="dialog-header"><p class="eyebrow" data-i18n="ui.project">Project details</p><button type="button" class="icon-button dialog-close" aria-labelledby="close-asv"><span aria-hidden="true">×</span><span class="sr-only" id="close-asv" data-i18n="ui.close">Close</span></button></div>
+  <h2 id="title-asv" data-i18n="proj.asv.title">Multi-ASV Trajectory Planning</h2>
+  <p data-i18n="proj.asv.desc">
+            Coordinated mission planning for several autonomous surface
+            vehicles monitoring cyanobacterial blooms. Multi-objective
+            optimization with NSGA-II and NSGA-III balances collision
+            avoidance, route overlap and workload, with Pareto fronts compared
+            statistically across parallel simulation runs.
+          </p>
+  <div class="detail-facts"><div><h3 data-i18n="ui.stack">Technology</h3><p>MATLAB · NSGA-II · NSGA-III</p></div><div><h3 data-i18n="ui.focus">Key features</h3><p data-i18n="proj.asv.features">Collision avoidance · Route overlap · Workload balancing · Statistical comparison of Pareto fronts</p></div></div>
+  <div class="detail-gallery"><img src="assets/asv-1.jpg" alt="Multi-ASV trajectory planning result" loading="lazy" data-i18n-alt="proj.asv.alt"></div>
+  
+</dialog>
+
 <footer>
   <p>© <span id="year"></span> <span data-i18n="name">Aleksandr Gordeev. All rights reserved.</span></p>
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="credentials.js"></script>
+<script src="app.js"></script>
 <script src="lang.js"></script>
 </body>
 </html>

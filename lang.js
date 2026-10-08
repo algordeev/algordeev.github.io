@@ -14,6 +14,25 @@
 
   var T = {
     ru: {
+      "ui.theme": "Тёмная тема",
+      "ui.menu": "Меню разделов",
+      "ui.details": "Подробнее",
+      "ui.close": "Закрыть",
+      "ui.project": "О проекте",
+      "ui.stack": "Технологии",
+      "ui.focus": "Основные возможности",
+      "credentials": "Сертификаты и курсы",
+      "credentials.intro": "Дополнительное обучение и профессиональное развитие.",
+      "credentials.empty": "Информация о курсах и сертификатах скоро появится здесь.",
+      "credentials.view": "Открыть сертификат →",
+      "proj.tram.alt": "Автономная модель трамвая",
+      "proj.tram.features": "Управление движением · Обнаружение препятствий · Безопасное поведение при отказах · Связь с инфраструктурой",
+      "proj.mono.features": "Сетевой режим по IP · Адаптивный ИИ · Управление состоянием игры · Разделение логики и интерфейса",
+      "proj.asv.features": "Избегание столкновений · Перекрытие маршрутов · Распределение нагрузки · Статистическое сравнение фронтов Парето",
+      "proj.tram.summary": "Автономная модель трамвая с собственной электроникой, управлением в реальном времени и связью с инфраструктурой.",
+      "proj.mono.summary": "Настольная игра на Java: сетевой режим до восьми игроков, адаптивный ИИ и отдельный слой игровой логики.",
+      "proj.asv.summary": "Многокритериальное планирование миссий группы автономных надводных аппаратов для мониторинга цветения цианобактерий.",
+
       "meta.title": `Александр Гордеев | Робототехника и встраиваемые системы`,
       "meta.desc": `Портфолио Александра Гордеева: студент компьютерной инженерии, работающий над робототехникой, оптимизацией и встраиваемыми системами.`,
 
@@ -91,6 +110,25 @@
     },
 
     tr: {
+      "ui.theme": "Koyu tema",
+      "ui.menu": "Gezinme menüsü",
+      "ui.details": "Ayrıntılar",
+      "ui.close": "Kapat",
+      "ui.project": "Proje ayrıntıları",
+      "ui.stack": "Teknolojiler",
+      "ui.focus": "Temel özellikler",
+      "credentials": "Sertifikalar ve Kurslar",
+      "credentials.intro": "Ek öğrenim ve mesleki gelişim.",
+      "credentials.empty": "Kurs ve sertifika bilgileri yakında burada yer alacak.",
+      "credentials.view": "Sertifikayı görüntüle →",
+      "proj.tram.alt": "Otonom model tramvay",
+      "proj.tram.features": "Hareket kontrolü · Engel algılama · Arıza durumunda güvenli davranış · Altyapı iletişimi",
+      "proj.mono.features": "IP tabanlı çok oyunculu mod · Uyarlanabilir yapay zekâ · Oyun durumu yönetimi · Mantık ve arayüz ayrımı",
+      "proj.asv.features": "Çarpışma önleme · Rota çakışması · İş yükü dengeleme · Pareto cephelerinin istatistiksel karşılaştırması",
+      "proj.tram.summary": "Özel elektronik, gerçek zamanlı kontrol ve araç-altyapı iletişimine sahip otonom model tramvay.",
+      "proj.mono.summary": "Sekiz oyuncuya kadar çok oyunculu mod, uyarlanabilir yapay zekâ ve ayrı oyun mantığı katmanı içeren Java masaüstü oyunu.",
+      "proj.asv.summary": "Siyanobakteri çoğalmalarını izleyen otonom yüzey aracı filoları için çok amaçlı görev planlama.",
+
       "meta.title": `Aleksandr Gordeev | Robotik ve Gömülü Sistemler Mühendisliği`,
       "meta.desc": `Aleksandr Gordeev'in portfolyosu: robotik, optimizasyon ve gömülü sistemler üzerine çalışan bilgisayar mühendisliği öğrencisi.`,
 
@@ -198,6 +236,7 @@
     document.title = pick(dict, "meta.title", EN.title);
     if (descTag) descTag.setAttribute("content", pick(dict, "meta.desc", EN.desc));
     document.documentElement.lang = lang;
+    document.dispatchEvent(new CustomEvent("portfolio:language", { detail: lang }));
 
     buttons.forEach(function (b) {
       b.setAttribute("aria-pressed", b.getAttribute("data-lang") === lang ? "true" : "false");
