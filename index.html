@@ -145,27 +145,76 @@
 
     <div class="grid">
 
-      <!-- ============ Autonomous Tram System ============ -->
       <article class="card">
-        <!-- Add your video at assets/tram-demo.mp4 and a thumbnail at assets/tram-poster.jpg -->
-        <video controls preload="metadata" poster="assets/tram-logo.jpg">
-          <source src="assets/tram-demo.mp4" type="video/mp4">
-        </video>
+  <div class="gallery">
+    <img
+      src="assets/tram-digital-twin.jpg"
+      alt="Autonomous tram digital twin simulator"
+      data-i18n-alt="proj.twin.alt"
+      loading="lazy"
+    >
+  </div>
+
+  <div class="card-body">
+    <h3 data-i18n="proj.twin.title">Autonomous Tram Digital Twin</h3>
+    <p class="date" data-i18n="proj.twin.date">2026 – ongoing</p>
+
+    <p data-i18n="proj.twin.summary">
+      A simulator for multi-tram operations, passenger demand,
+      dispatch control and energy-efficiency experiments.
+    </p>
+
+    <ul class="tags">
+      <li>C++</li>
+      <li>TypeScript</li>
+      <li>WebAssembly</li>
+      <li data-i18n="proj.twin.tag">Simulation</li>
+    </ul>
+
+    <p class="links">
+      <button
+        type="button"
+        class="details-button"
+        data-project="twin"
+        aria-haspopup="dialog"
+        aria-controls="project-twin"
+      >
+        <span data-i18n="ui.details">Details</span>
+        <span aria-hidden="true"> ↗</span>
+      </button>
+
+      <a
+        href="https://algordeev.github.io/autonomous-tram-digital-twin/"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-i18n="proj.twin.demo"
+      >Live demo →</a>
+
+      <a
+        href="https://github.com/algordeev/autonomous-tram-digital-twin"
+        data-i18n="proj.src"
+      >Source code →</a>
+    </p>
+  </div>
+</article>
+
+      <article class="card">
+       
+        <div class="gallery">
+          <img src="assets/asv-1.jpg" alt="Multi-ASV trajectory planning result" data-i18n-alt="proj.asv.alt" loading="lazy">
+        </div>
+      
         <div class="card-body">
-          <h3 data-i18n="proj.tram.title">Autonomous Tram System</h3>
-          <p class="date">2020 – 2022</p>
-          <p data-i18n="proj.tram.summary">Autonomous model tram with custom electronics, real-time control and vehicle-to-infrastructure communication.</p>
+          <h3 data-i18n="proj.asv.title">Multi-ASV Trajectory Planning</h3>
+          <p class="date" data-i18n="proj.asv.date">Jun – Jul 2026 · ISCAR Research Group</p>
+          <p data-i18n="proj.asv.summary">Multi-objective mission planning for fleets of autonomous surface vehicles monitoring cyanobacterial blooms.</p>
           <ul class="tags">
-            <li>C++</li><li>Arduino</li><li data-i18n="tag.pcb">PCB Design</li>
+            <li>MATLAB</li><li>NSGA-II / III</li><li data-i18n="tag.optimization">Optimization</li>
           </ul>
-          <p class="links">
-            <button type="button" class="details-button" data-project="tram" aria-haspopup="dialog" aria-controls="project-tram"><span data-i18n="ui.details">Details</span><span aria-hidden="true"> ↗</span></button>
-            <a href="https://github.com/algordeev/autonomous-tram-system" data-i18n="proj.src">Source code →</a>
-          </p>
+          <p class="links"><button type="button" class="details-button" data-project="asv" aria-haspopup="dialog" aria-controls="project-asv"><span data-i18n="ui.details">Details</span><span aria-hidden="true"> ↗</span></button></p>
         </div>
       </article>
 
-      <!-- ============ Red Monopoly ============ -->
       <article class="card">
 
         <div class="gallery">
@@ -187,21 +236,22 @@
         </div>
       </article>
 
-      <!-- ============ Multi-ASV Trajectory Planning ============ -->
       <article class="card">
-       
-        <div class="gallery">
-          <img src="assets/asv-1.jpg" alt="Multi-ASV trajectory planning result" data-i18n-alt="proj.asv.alt" loading="lazy">
-        </div>
-      
+        <!-- Add your video at assets/tram-demo.mp4 and a thumbnail at assets/tram-poster.jpg -->
+        <video controls preload="metadata" poster="assets/tram-logo.jpg">
+          <source src="assets/tram-demo.mp4" type="video/mp4">
+        </video>
         <div class="card-body">
-          <h3 data-i18n="proj.asv.title">Multi-ASV Trajectory Planning</h3>
-          <p class="date" data-i18n="proj.asv.date">Jun – Jul 2026 · ISCAR Research Group</p>
-          <p data-i18n="proj.asv.summary">Multi-objective mission planning for fleets of autonomous surface vehicles monitoring cyanobacterial blooms.</p>
+          <h3 data-i18n="proj.tram.title">Autonomous Tram System</h3>
+          <p class="date">2020 – 2022</p>
+          <p data-i18n="proj.tram.summary">Autonomous model tram with custom electronics, real-time control and vehicle-to-infrastructure communication.</p>
           <ul class="tags">
-            <li>MATLAB</li><li>NSGA-II / III</li><li data-i18n="tag.optimization">Optimization</li>
+            <li>C++</li><li>Arduino</li><li data-i18n="tag.pcb">PCB Design</li>
           </ul>
-          <p class="links"><button type="button" class="details-button" data-project="asv" aria-haspopup="dialog" aria-controls="project-asv"><span data-i18n="ui.details">Details</span><span aria-hidden="true"> ↗</span></button></p>
+          <p class="links">
+            <button type="button" class="details-button" data-project="tram" aria-haspopup="dialog" aria-controls="project-tram"><span data-i18n="ui.details">Details</span><span aria-hidden="true"> ↗</span></button>
+            <a href="https://github.com/algordeev/autonomous-tram-system" data-i18n="proj.src">Source code →</a>
+          </p>
         </div>
       </article>
 
@@ -307,6 +357,82 @@
   <div class="detail-facts"><div><h3 data-i18n="ui.stack">Technology</h3><p>MATLAB · NSGA-II · NSGA-III</p></div><div><h3 data-i18n="ui.focus">Key features</h3><p data-i18n="proj.asv.features">Collision avoidance · Route overlap · Workload balancing · Statistical comparison of Pareto fronts</p></div></div>
   <div class="detail-gallery"><img src="assets/asv-1.jpg" alt="Multi-ASV trajectory planning result" loading="lazy" data-i18n-alt="proj.asv.alt"></div>
   
+</dialog>
+
+<dialog
+  class="project-dialog"
+  id="project-twin"
+  aria-labelledby="title-twin"
+>
+  <div class="dialog-header">
+    <p class="eyebrow" data-i18n="ui.project">Project details</p>
+
+    <button
+      type="button"
+      class="icon-button dialog-close"
+      aria-labelledby="close-twin"
+    >
+      <span aria-hidden="true">×</span>
+      <span
+        class="sr-only"
+        id="close-twin"
+        data-i18n="ui.close"
+      >Close</span>
+    </button>
+  </div>
+
+  <h2 id="title-twin" data-i18n="proj.twin.title">
+    Autonomous Tram Digital Twin
+  </h2>
+
+  <p data-i18n="proj.twin.desc">
+    An independent project extending my physical autonomous tram
+    prototype into a simulation environment for multi-tram operations.
+    It models passenger demand, stops, traffic signals, track switches
+    and depot dispatch. Scenarios based on tram networks in Nizhny
+    Novgorod and İzmir support experiments with service headways,
+    vehicle dynamics, regenerative braking and flywheel energy storage.
+  </p>
+
+  <div class="detail-facts">
+    <div>
+      <h3 data-i18n="ui.stack">Technology</h3>
+      <p>C++ · TypeScript · WebAssembly · Canvas</p>
+    </div>
+
+    <div>
+      <h3 data-i18n="ui.focus">Key features</h3>
+      <p data-i18n="proj.twin.features">
+        Passenger simulation · Depot dispatch · Headway control ·
+        Traffic signals and switches · Energy analysis
+      </p>
+    </div>
+  </div>
+
+  <div class="detail-gallery">
+    <img
+      src="assets/tram-digital-twin.jpg"
+      alt="Autonomous tram digital twin simulator"
+      data-i18n-alt="proj.twin.alt"
+      loading="lazy"
+    >
+  </div>
+
+  <p class="cta">
+    <a
+      class="btn"
+      href="https://algordeev.github.io/autonomous-tram-digital-twin/"
+      target="_blank"
+      rel="noopener noreferrer"
+      data-i18n="proj.twin.demo"
+    >Live demo →</a>
+
+    <a
+      class="btn ghost"
+      href="https://github.com/algordeev/autonomous-tram-digital-twin"
+      data-i18n="proj.src"
+    >Source code →</a>
+  </p>
 </dialog>
 
 <footer>
