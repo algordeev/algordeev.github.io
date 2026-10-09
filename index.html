@@ -17,7 +17,7 @@
 <body>
 
 <header class="nav">
-  <a class="brand" href="#top">AG</a>
+  <a class="brand" href="#top">Aleksandr Gordeev</a>
   <div class="nav-actions">
     <div class="lang" role="group" aria-label="Language">
       <button type="button" data-lang="ru">RU</button>
@@ -319,14 +319,14 @@
 <dialog class="project-dialog" id="project-tram" aria-labelledby="title-tram">
   <div class="dialog-header"><p class="eyebrow" data-i18n="ui.project">Project details</p><button type="button" class="icon-button dialog-close" aria-labelledby="close-tram"><span aria-hidden="true">×</span><span class="sr-only" id="close-tram" data-i18n="ui.close">Close</span></button></div>
   <h2 id="title-tram" data-i18n="proj.tram.title">Autonomous Tram System</h2>
-  <p data-i18n="proj.tram.desc">
-            An autonomous model tram that won the WRO 2021 Russian National
-            Final and competed at the international final. Modular real-time
-            firmware handles motion control, obstacle detection, fail-safe
-            behavior and vehicle-to-infrastructure communication. Custom PCBs
-            integrate an Arduino Nano, motor drivers, wireless modules,
-            distance sensors and actuators.
-          </p>
+  <div class="project-story">
+    <h3 data-i18n="ui.problem">The challenge</h3>
+    <p data-i18n="proj.tram.problem">Build a physical model tram that can control its movement, detect obstacles and communicate with infrastructure through an integrated embedded system.</p>
+    <h3 data-i18n="ui.work">My work</h3>
+    <p data-i18n="proj.tram.work">I developed the model’s embedded control system, combining Arduino Nano hardware, C++ firmware and custom PCBs. The firmware handles motion control, obstacle detection, fail-safe behaviour and vehicle-to-infrastructure communication; the electronics integrate motor drivers, wireless modules, distance sensors and actuators.</p>
+    <h3 data-i18n="ui.result">Outcome</h3>
+    <p data-i18n="proj.tram.result">A working autonomous tram model that won the WRO 2021 Russian National Final and competed at the international final. The physical prototype later became the starting point for my autonomous tram digital twin.</p>
+  </div>
   <div class="detail-facts"><div><h3 data-i18n="ui.stack">Technology</h3><p>C++ · Arduino Nano · PCB design</p></div><div><h3 data-i18n="ui.focus">Key features</h3><p data-i18n="proj.tram.features">Motion control · Obstacle detection · Fail-safe behavior · Infrastructure communication</p></div></div>
   <div class="detail-gallery"><img src="assets/tram-logo.jpg" alt="Autonomous model tram" loading="lazy" data-i18n-alt="proj.tram.alt"></div>
   <p><a class="btn" href="https://github.com/algordeev/autonomous-tram-system" data-i18n="proj.src">Source code →</a></p>
@@ -334,12 +334,34 @@
 <dialog class="project-dialog" id="project-mono" aria-labelledby="title-mono">
   <div class="dialog-header"><p class="eyebrow" data-i18n="ui.project">Project details</p><button type="button" class="icon-button dialog-close" aria-labelledby="close-mono"><span aria-hidden="true">×</span><span class="sr-only" id="close-mono" data-i18n="ui.close">Close</span></button></div>
   <h2 id="title-mono">Red Monopoly</h2>
-  <p data-i18n="proj.mono.desc">
-            A networked desktop game with IP-based multiplayer for up to eight
-            players. Object-oriented design patterns drive an adaptive AI and
-            game status handling, with game logic kept separate from the GUI.
-            Built in a Scrum team.
-          </p>
+  <div class="project-story">
+  <h3 data-i18n="ui.problem">The challenge</h3>
+  <p data-i18n="proj.mono.problem">
+    Build a Soviet-themed Monopoly-style desktop game in Java as a Scrum
+    team project, combining board-game rules, a graphical interface,
+    AI opponents and IP-based multiplayer for up to eight players.
+  </p>
+
+  <h3 data-i18n="ui.work">My work</h3>
+  <p data-i18n="proj.mono.work">
+    As Product Owner and Java developer, I managed the team backlog
+    and implemented property and railroad purchases, rent payments,
+    taxes and card events. I integrated difficulty-dependent AI
+    purchasing decisions, added gameplay dialogs and player icons,
+    and co-developed undo using the Command pattern. I also fixed
+    gameplay and multiplayer messaging issues, maintained the wiki
+    and presented features during sprint reviews.
+  </p>
+
+  <h3 data-i18n="ui.result">Outcome</h3>
+  <p data-i18n="proj.mono.result">
+    A playable Java desktop game with a themed board, AI opponents
+    with three difficulty levels, save/load, undo and a networked
+    multiplayer mode. The team delivered the game through six
+    Scrum sprints, with source code and development documentation
+    available on GitHub.
+  </p>
+</div>
   <div class="detail-facts"><div><h3 data-i18n="ui.stack">Technology</h3><p>Java · OOP · Networking · GUI · Scrum</p></div><div><h3 data-i18n="ui.focus">Key features</h3><p data-i18n="proj.mono.features">IP-based multiplayer · Adaptive AI · Game state management · Logic / GUI separation</p></div></div>
   <div class="detail-gallery"><img src="assets/monopoly-1.jpg" alt="Red Monopoly game board" loading="lazy" data-i18n-alt="proj.mono.alt1"><img src="assets/monopoly-2.jpg" alt="Red Monopoly lobby screen" data-i18n-alt="proj.mono.alt2" loading="lazy"></div>
   <p><a class="btn" href="https://github.com/SwEng-UCM/red-monopoly" data-i18n="proj.src">Source code →</a></p>
@@ -347,13 +369,14 @@
 <dialog class="project-dialog" id="project-asv" aria-labelledby="title-asv">
   <div class="dialog-header"><p class="eyebrow" data-i18n="ui.project">Project details</p><button type="button" class="icon-button dialog-close" aria-labelledby="close-asv"><span aria-hidden="true">×</span><span class="sr-only" id="close-asv" data-i18n="ui.close">Close</span></button></div>
   <h2 id="title-asv" data-i18n="proj.asv.title">Multi-ASV Trajectory Planning</h2>
-  <p data-i18n="proj.asv.desc">
-            Coordinated mission planning for several autonomous surface
-            vehicles monitoring cyanobacterial blooms. Multi-objective
-            optimization with NSGA-II and NSGA-III balances collision
-            avoidance, route overlap and workload, with Pareto fronts compared
-            statistically across parallel simulation runs.
-          </p>
+  <div class="project-story">
+    <h3 data-i18n="ui.problem">The challenge</h3>
+    <p data-i18n="proj.asv.problem">Plan coordinated missions for several autonomous surface vehicles monitoring cyanobacterial blooms. Routes must balance collision avoidance, route overlap and workload across the fleet.</p>
+    <h3 data-i18n="ui.work">My work</h3>
+    <p data-i18n="proj.asv.work">During my ISCAR internship at Universidad Complutense de Madrid, I extended an existing single-vehicle MATLAB planner to multi-vehicle scenarios. I worked with NSGA-II and NSGA-III, ran repeated simulations for two- and three-vehicle fleets, and analysed Pareto fronts using hypervolume evaluation and non-parametric statistical comparisons.</p>
+    <h3 data-i18n="ui.result">Outcome</h3>
+    <p data-i18n="proj.asv.result">Multi-vehicle planning experiments with trajectory plots, comparative figures and an internship report. The work provided a basis for assessing trade-offs between competing mission objectives and comparing optimisation methods across repeated simulation runs.</p>
+  </div>
   <div class="detail-facts"><div><h3 data-i18n="ui.stack">Technology</h3><p>MATLAB · NSGA-II · NSGA-III</p></div><div><h3 data-i18n="ui.focus">Key features</h3><p data-i18n="proj.asv.features">Collision avoidance · Route overlap · Workload balancing · Statistical comparison of Pareto fronts</p></div></div>
   <div class="detail-gallery"><img src="assets/asv-1.jpg" alt="Multi-ASV trajectory planning result" loading="lazy" data-i18n-alt="proj.asv.alt"></div>
   
@@ -385,14 +408,14 @@
     Autonomous Tram Digital Twin
   </h2>
 
-  <p data-i18n="proj.twin.desc">
-    An independent project extending my physical autonomous tram
-    prototype into a simulation environment for multi-tram operations.
-    It models passenger demand, stops, traffic signals, track switches
-    and depot dispatch. Scenarios based on tram networks in Nizhny
-    Novgorod and İzmir support experiments with service headways,
-    vehicle dynamics, regenerative braking and flywheel energy storage.
-  </p>
+  <div class="project-story">
+    <h3 data-i18n="ui.problem">The challenge</h3>
+    <p data-i18n="proj.twin.problem">Extend a physical autonomous tram prototype into a simulation environment for studying how several trams interact with passengers, infrastructure and service schedules.</p>
+    <h3 data-i18n="ui.work">My work</h3>
+    <p data-i18n="proj.twin.work">I develop the tram simulation and control logic, including passenger generation, depot dispatch, terminal holding and headway regulation. The model includes vehicle dynamics, traffic signals and track switches, with scenarios based on Nizhny Novgorod and İzmir. I also work on energy analysis with regenerative braking and flywheel storage, using a C++ core and a TypeScript interface.</p>
+    <h3 data-i18n="ui.result">Outcome</h3>
+    <p data-i18n="proj.twin.result">An interactive web simulator with a live demo, time-distance diagrams and energy statistics. It provides a platform for comparing operating strategies and exploring how delays, passenger demand and dispatch decisions affect the simulated network. Development and refinement of the models are ongoing.</p>
+  </div>
 
   <div class="detail-facts">
     <div>

@@ -14,6 +14,21 @@
 
   var T = {
     ru: {
+      "ui.problem": "Задача",
+"ui.work": "Моя работа",
+"ui.result": "Результат",
+
+"proj.twin.problem": "Развить физический прототип автономного трамвая в среду моделирования, чтобы изучать взаимодействие нескольких вагонов с пассажирами, инфраструктурой и расписанием движения.",
+"proj.twin.work": "Я разрабатываю симуляцию и логику управления трамваями: генерацию пассажиров, выпуск из депо, удержание на конечных и регулирование интервалов. Модель учитывает динамику вагонов, светофоры и стрелки; сценарии основаны на сетях Нижнего Новгорода и Измира. Также развиваю анализ энергопотребления с рекуперацией и маховиковыми накопителями, используя ядро на C++ и интерфейс на TypeScript.",
+"proj.twin.result": "Интерактивный веб-симулятор с доступным демо, графиками движения и энергетической статистикой. Он позволяет сравнивать стратегии работы и исследовать влияние задержек, пассажирского спроса и диспетчерских решений на моделируемую сеть. Разработка и уточнение моделей продолжаются.",
+
+"proj.asv.problem": "Планировать согласованные миссии нескольких автономных надводных аппаратов для мониторинга цветения цианобактерий. Маршруты должны учитывать избегание столкновений, перекрытие путей и распределение нагрузки между аппаратами.",
+"proj.asv.work": "Во время стажировки в ISCAR при Мадридском университете Комплутенсе я расширил существующий планировщик на MATLAB для одного аппарата до сценариев с несколькими. Работал с NSGA-II и NSGA-III, проводил повторные симуляции для групп из двух и трёх аппаратов, анализировал фронты Парето с помощью гиперобъёма и непараметрических статистических сравнений.",
+"proj.asv.result": "Эксперименты с планированием для нескольких аппаратов, графики траекторий, сравнительные иллюстрации и отчёт о стажировке. Работа позволила оценивать компромиссы между конкурирующими целями миссии и сравнивать методы оптимизации по результатам повторных симуляций.",
+
+"proj.tram.problem": "Создать физическую модель трамвая, которая управляет движением, обнаруживает препятствия и взаимодействует с инфраструктурой с помощью единой встраиваемой системы.",
+"proj.tram.work": "Я разработал встраиваемую систему управления моделью, объединив Arduino Nano, прошивку на C++ и собственные печатные платы. Прошивка отвечает за управление движением, обнаружение препятствий, безопасное поведение при отказах и связь с инфраструктурой; электроника объединяет драйверы моторов, беспроводные модули, датчики расстояния и исполнительные механизмы.",
+"proj.tram.result": "Работающая автономная модель трамвая, победившая в национальном финале WRO 2021 в России и участвовавшая в международном финале. Позднее физический прототип стал отправной точкой для моего цифрового двойника трамвая.",
       "ui.theme": "Тёмная тема",
       "ui.menu": "Меню разделов",
       "ui.details": "Подробнее",
@@ -81,6 +96,9 @@
       "proj.mono.alt2": `Экран лобби Red Monopoly`,
       "proj.mono.date": `янв – май 2025`,
       "proj.mono.desc": `Сетевая десктопная игра с мультиплеером по IP-адресам до восьми игроков. Паттерны объектно-ориентированного проектирования лежат в основе адаптивного ИИ и обработки состояния игры, а игровая логика отделена от графического интерфейса. Разработана в команде по методологии Scrum.`,
+      "proj.mono.problem": "Разработать настольную игру по мотивам Monopoly в советской тематике на Java в рамках командного Scrum-проекта: объединить игровые правила, графический интерфейс, AI-соперников и сетевой режим по IP для восьми игроков.",
+      "proj.mono.result": "Рабочая настольная игра на Java с тематическим полем, AI-соперниками трёх уровней сложности, сохранением и загрузкой, отменой действий и сетевым режимом. Команда разработала игру за шесть Scrum-спринтов; исходный код и документация доступны на GitHub.",
+      "proj.mono.work": "Как Product Owner и Java-разработчик, я управлял бэклогом команды и реализовал основные игровые механики: покупку недвижимости и железных дорог, оплату аренды, налоги и события карточек. Интегрировал решения AI о покупке в зависимости от уровня сложности, добавил игровые диалоги и иконки игроков, а также совместно разработал отмену действий с использованием паттерна Command. Исправлял ошибки игрового процесса и сообщений в сетевом режиме, поддерживал вики и демонстрировал новые функции на обзорах спринтов.",
       "tag.networking": `Сети`,
       "proj.asv.alt": `Результат планирования траекторий для нескольких ASV`,
       "proj.asv.title": `Планирование траекторий для нескольких ASV`,
@@ -119,6 +137,21 @@
     },
 
     tr: {
+      "ui.problem": "Amaç",
+"ui.work": "Katkım",
+"ui.result": "Sonuç",
+
+"proj.twin.problem": "Fiziksel otonom tramvay prototipini, birden fazla tramvayın yolcularla, altyapıyla ve sefer planlarıyla etkileşimini inceleyen bir simülasyon ortamına dönüştürmek.",
+"proj.twin.work": "Yolcu üretimi, depodan sevk, terminalde bekletme ve sefer aralığı düzenlemesi dahil tramvay simülasyonunu ve kontrol mantığını geliştiriyorum. Model; araç dinamiği, trafik sinyalleri ve hat makaslarını içeriyor. Senaryolar Nijni Novgorod ve İzmir ağlarına dayanıyor. C++ çekirdeği ve TypeScript arayüzü kullanarak rejeneratif frenleme ve volan depolama ile enerji analizini de geliştiriyorum.",
+"proj.twin.result": "Çevrimiçi demosu, zaman-mesafe diyagramları ve enerji istatistikleri olan etkileşimli bir web simülatörü. İşletim stratejilerini karşılaştırmaya ve gecikmelerin, yolcu talebinin ve sevk kararlarının simüle edilen ağa etkisini incelemeye olanak sağlıyor. Model geliştirme ve iyileştirme çalışmaları devam ediyor.",
+
+"proj.asv.problem": "Siyanobakteri çoğalmalarını izleyen birden fazla otonom yüzey aracı için koordineli görevler planlamak. Rotalar; çarpışma önleme, rota çakışması ve filodaki iş yükü dağılımını dengelemeli.",
+"proj.asv.work": "Madrid Complutense Üniversitesi ISCAR grubundaki stajımda, mevcut tek araçlı MATLAB planlayıcısını çok araçlı senaryolara genişlettim. NSGA-II ve NSGA-III ile çalıştım, iki ve üç araçlı filolar için tekrarlı simülasyonlar yürüttüm; Pareto cephelerini hiperhacim ölçümü ve parametrik olmayan istatistiksel karşılaştırmalarla analiz ettim.",
+"proj.asv.result": "Çok araçlı planlama deneyleri, yörünge grafikleri, karşılaştırmalı görseller ve bir staj raporu. Çalışma, görev hedefleri arasındaki ödünleşimleri değerlendirmeye ve optimizasyon yöntemlerini tekrarlı simülasyonlar üzerinden karşılaştırmaya temel sağladı.",
+
+"proj.tram.problem": "Entegre bir gömülü sistem aracılığıyla hareketini kontrol eden, engelleri algılayan ve altyapıyla iletişim kuran fiziksel bir tramvay modeli oluşturmak.",
+"proj.tram.work": "Arduino Nano donanımı, C++ yazılımı ve özel PCB’leri birleştirerek modelin gömülü kontrol sistemini geliştirdim. Yazılım; hareket kontrolünü, engel algılamayı, arıza durumunda güvenli davranışı ve araç-altyapı iletişimini yönetiyor. Elektronik sistem motor sürücülerini, kablosuz modülleri, mesafe sensörlerini ve aktüatörleri bir araya getiriyor.",
+"proj.tram.result": "WRO 2021 Rusya Ulusal Finali’ni kazanan ve uluslararası finalde yarışan çalışan bir otonom tramvay modeli. Fiziksel prototip daha sonra otonom tramvay dijital ikizimin başlangıç noktası oldu.",
       "ui.theme": "Koyu tema",
       "ui.menu": "Gezinme menüsü",
       "ui.details": "Ayrıntılar",
@@ -133,6 +166,8 @@
       "proj.tram.alt": "Otonom model tramvay",
       "proj.tram.features": "Hareket kontrolü · Engel algılama · Arıza durumunda güvenli davranış · Altyapı iletişimi",
       "proj.mono.features": "IP tabanlı çok oyunculu mod · Uyarlanabilir yapay zekâ · Oyun durumu yönetimi · Mantık ve arayüz ayrımı",
+      "proj.mono.problem": "Bir Scrum takım projesi kapsamında Java ile Sovyet temalı, Monopoly tarzında bir masaüstü oyunu geliştirmek: oyun kurallarını, grafik arayüzü, yapay zekâ rakiplerini ve sekiz oyuncuya kadar IP tabanlı çok oyunculu modu bir araya getirmek.",
+      "proj.mono.result": "Temalı oyun tahtası, üç zorluk seviyesinde yapay zekâ rakipleri, kaydetme/yükleme, geri alma ve ağ üzerinden çok oyunculu mod içeren oynanabilir bir Java masaüstü oyunu. Takım oyunu altı Scrum sprintinde geliştirdi; kaynak kodu ve geliştirme belgeleri GitHub’da mevcut.",
       "proj.asv.features": "Çarpışma önleme · Rota çakışması · İş yükü dengeleme · Pareto cephelerinin istatistiksel karşılaştırması",
       "proj.tram.summary": "Özel elektronik, gerçek zamanlı kontrol ve araç-altyapı iletişimine sahip otonom model tramvay.",
       "proj.mono.summary": "Sekiz oyuncuya kadar çok oyunculu mod, uyarlanabilir yapay zekâ ve ayrı oyun mantığı katmanı içeren Java masaüstü oyunu.",
@@ -186,6 +221,7 @@
       "proj.mono.alt2": `Red Monopoly lobi ekranı`,
       "proj.mono.date": `Ocak – Mayıs 2025`,
       "proj.mono.desc": `IP tabanlı çok oyunculu (sekiz oyuncuya kadar) ağ üzerinden oynanan bir masaüstü oyunu. Nesne yönelimli tasarım desenleri uyarlanabilir yapay zekâyı ve oyun durumu yönetimini yönlendirir; oyun mantığı arayüzden ayrı tutulmuştur. Bir Scrum ekibinde geliştirildi.`,
+      "proj.mono.work": "Product Owner ve Java geliştiricisi olarak takımın iş listesini yönettim; mülk ve demiryolu satın alma, kira ödemeleri, vergiler ve kart olayları gibi temel oyun mekaniklerini geliştirdim. Zorluk seviyesine bağlı yapay zekâ satın alma kararlarını entegre ettim, oyun diyaloglarını ve oyuncu simgelerini ekledim. Command tasarım desenini kullanarak geri alma işlevini birlikte geliştirdik. Ayrıca oyun ve çok oyunculu moddaki mesajlaşma hatalarını düzelttim, wiki belgelerini güncel tuttum ve sprint değerlendirmelerinde yeni özellikleri sundum.",
       "tag.networking": `Ağ Programlama`,
       "proj.asv.alt": `Çoklu ASV yörünge planlama sonucu`,
       "proj.asv.title": `Çoklu ASV Yörünge Planlama`,
