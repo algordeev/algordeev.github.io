@@ -10,8 +10,9 @@ style.css
 assets/
   cv.pdf            <- your CV
   me.jpg            <- optional portrait
-  tram-demo.mp4     <- project video
-  tram-poster.jpg   <- video thumbnail
+  tram-logo.jpg     <- YouTube demo preview
+  tram-composition.jpg <- tram project photo
+  tram-body.jpg     <- tram project photo
   asv-1.jpg ...     <- project images
 ```
 
@@ -34,7 +35,7 @@ assets/
 ## Adding content
 
 - **Project:** copy one `<article class="card">...</article>` block in `index.html`.
-- **Video:** use a short `.mp4` (H.264). Keep each file under about 25 MB; GitHub warns above 50 MB and blocks files over 100 MB. For long videos, upload to YouTube and replace the `<video>` tag with the embed `<iframe>`.
+- **Video:** the tram card and Details link to the demo on YouTube. To change the demo, update both YouTube links in `index.html`.
 - **Images:** resize to about 1600 px wide and export as JPG or WebP to keep the page fast.
 - **Placeholders:** search `index.html` for `your.email@example.com`, `href="#"` and the `assets/` file names and replace them with real ones.
 

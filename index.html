@@ -256,10 +256,9 @@
       </article>
 
       <article class="card">
-        <!-- Add your video at assets/tram-demo.mp4 and a thumbnail at assets/tram-poster.jpg -->
-        <video controls preload="metadata" poster="assets/tram-logo.jpg">
-          <source src="assets/tram-demo.mp4" type="video/mp4">
-        </video>
+        <div class="gallery">
+          <img src="assets/tram-composition.jpg" alt="Autonomous model tram composition" loading="lazy" data-i18n-alt="proj.tram.composition.alt">
+        </div>
         <div class="card-body">
           <h3 data-i18n="proj.tram.title">Autonomous Tram System</h3>
           <p class="date">2020 – 2022</p>
@@ -269,6 +268,7 @@
           </ul>
           <p class="links">
             <button type="button" class="details-button" data-project="tram" aria-haspopup="dialog" aria-controls="project-tram"><span data-i18n="ui.details">Details</span><span aria-hidden="true"> ↗</span></button>
+            <a href="https://youtu.be/tfnsq6qUQj4" target="_blank" rel="noopener" data-i18n="proj.tram.demo">Video demo →</a>
             <a href="https://github.com/algordeev/autonomous-tram-system" data-i18n="proj.src">Source code →</a>
           </p>
         </div>
@@ -347,8 +347,11 @@
     <p data-i18n="proj.tram.result">A working autonomous tram model that won the WRO 2021 Russian National Final and competed at the international final. The physical prototype later became the starting point for my autonomous tram digital twin.</p>
   </div>
   <div class="detail-facts"><div><h3 data-i18n="ui.stack">Technology</h3><p>C++ · Arduino Nano · PCB design</p></div><div><h3 data-i18n="ui.focus">Key features</h3><p data-i18n="proj.tram.features">Motion control · Obstacle detection · Fail-safe behavior · Infrastructure communication</p></div></div>
-  <div class="detail-gallery"><img src="assets/tram-logo.jpg" alt="Autonomous model tram" loading="lazy" data-i18n-alt="proj.tram.alt"></div>
-  <p><a class="btn" href="https://github.com/algordeev/autonomous-tram-system" data-i18n="proj.src">Source code →</a></p>
+  <div class="detail-gallery">
+    <img src="assets/tram-composition.jpg" alt="Autonomous model tram composition" loading="lazy" data-i18n-alt="proj.tram.composition.alt">
+    <img src="assets/tram-body.jpg" alt="Autonomous model tram body" loading="lazy" data-i18n-alt="proj.tram.body.alt">
+  </div>
+  <p class="links"><a href="https://youtu.be/tfnsq6qUQj4" target="_blank" rel="noopener" data-i18n="ui.watchYoutube">Watch on YouTube ↗</a><a class="btn" href="https://github.com/algordeev/autonomous-tram-system" data-i18n="proj.src">Source code →</a></p>
 </dialog>
 <dialog class="project-dialog" id="project-mono" aria-labelledby="title-mono">
   <div class="dialog-header"><p class="eyebrow" data-i18n="ui.project">Project details</p><button type="button" class="icon-button dialog-close" aria-labelledby="close-mono"><span aria-hidden="true">×</span><span class="sr-only" id="close-mono" data-i18n="ui.close">Close</span></button></div>
