@@ -155,7 +155,6 @@ h3 { font-size: 1.1rem; }
   display: flex;
   flex-direction: column;
 }
-.card video,
 .gallery img {
   display: block;
   width: 100%;
@@ -277,6 +276,7 @@ section { scroll-margin-top: 86px; }
 .detail-facts h3 { font-size: .9rem; }
 .detail-facts p { color: var(--muted); font-size: .95rem; margin: 0; }
 .detail-gallery { display: grid; gap: 16px; }
+.project-dialog > .links { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 16px; margin-top: 16px; }
 .detail-gallery img { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 10px; }
 body.dialog-open { overflow: hidden; }
 @media (max-width: 560px) {
