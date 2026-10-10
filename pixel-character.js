@@ -30,6 +30,8 @@
       player: 'Mini Aleksandr. Use left and right arrows or A/D to walk; Up, W or Space to jump. Click to say hi.',
       controls: 'Character controls', left: 'Walk left', right: 'Walk right', jump: 'Jump',
       hello: 'Hi! I build autonomous systems 🤖',
+      walkIntro: 'Walk me with ←→',
+      touchIntro: 'Tap empty space to walk me',
       clicks: ['Hi there! 👋', 'Tiny pixels, big dreams ✨', 'Thanks for stopping by! ✨', 'You found me! 👀', 'Have a lovely day! ☀️']
     },
     ru: {
@@ -40,6 +42,8 @@
       player: 'Мини-Александр. Стрелки влево и вправо или A/D — идти; ↑, W или пробел — прыгнуть. Нажмите, чтобы поздороваться.',
       controls: 'Управление персонажем', left: 'Идти влево', right: 'Идти вправо', jump: 'Прыгнуть',
       hello: 'Привет! Я создаю автономные системы 🤖',
+      walkIntro: 'Управляйте мной с помощью ←→',
+      touchIntro: 'Коснитесь пустого места, чтобы я пошёл',
       clicks: ['Привет-привет! 👋', 'Маленькие пиксели, большие мечты ✨', 'Спасибо, что заглянули! ✨', 'Вы меня нашли! 👀', 'Хорошего вам дня! ☀️']
     },
     tr: {
@@ -50,6 +54,8 @@
       player: 'Mini Aleksandr. Yürümek için sol/sağ okları veya A/D; zıplamak için ↑, W veya Boşluk. Selam vermek için tıkla.',
       controls: 'Karakter kontrolleri', left: 'Sola yürü', right: 'Sağa yürü', jump: 'Zıpla',
       hello: 'Merhaba! Otonom sistemler geliştiriyorum 🤖',
+      walkIntro: '←→ ile beni yürüt',
+      touchIntro: 'Yürümem için boş alana dokun',
       clicks: ['Selam! 👋', 'Küçük pikseller, büyük hayaller ✨', 'Uğradığın için teşekkürler! ✨', 'Beni buldun! 👀', 'Harika bir gün geçir! ☀️']
     }
   };
@@ -149,6 +155,8 @@
   let blinkUntil = 0, nextBlink = performance.now() + 2500 + Math.random() * 3000;
   let activeSection = 'home', speechSection = null;
   let lastClickMessage = -1, speechClick = null;
+  let introGreetingPending = false, speechIntroHint = false;
+  const introHint = () => touch.matches ? words.touchIntro : words.walkIntro;
   const sectionWords = () => sectionCopy[document.documentElement.lang] || sectionCopy.en;
   const width = () => player.offsetWidth || 56;
   const limit = () => Math.max(0, document.documentElement.clientWidth - width());
@@ -188,6 +196,8 @@
     bubble.style.setProperty('--bubble-shift', `${Math.max(90 - x - width() / 2, Math.min(0, document.documentElement.clientWidth - 90 - x - width() / 2))}px`);
   }
   function say(text, section = null) {
+    introGreetingPending = false;
+    speechIntroHint = false;
     bubble.textContent = text;
     speechSection = section;
     speechClick = null;
@@ -205,6 +215,7 @@
     const dt = last ? Math.min((now - last) / 1000, 0.032) : 0;
     last = now;
     if (blocked()) { clearInput(); last = 0; return; }
+    if (introGreetingPending && now >= bubbleUntil) saySection();
     let dir = pointerDirection || (pressed.has('left') ? -1 : 0) + (pressed.has('right') ? 1 : 0);
     if (!dir && target !== null) {
       const distance = target - x;
@@ -220,7 +231,7 @@
       if (Math.random() < 0.4) vy = 470;
     }
     render(now, !!dir);
-    if (!motion.matches || dir || target !== null || y > 0 || vy > 0 || now < bubbleUntil) frameId = requestAnimationFrame(loop);
+    if (!motion.matches || dir || target !== null || y > 0 || vy > 0 || now < bubbleUntil) start();
     else last = 0;
   }
   function start() { if (!frameId && !blocked()) frameId = requestAnimationFrame(loop); }
@@ -241,11 +252,13 @@
     controls.classList.toggle('pixel-is-hidden', hidden);
     if (speechSection) bubble.textContent = sectionWords()[speechSection];
     else if (speechClick !== null) bubble.textContent = words.clicks[speechClick];
+    else if (speechIntroHint) bubble.textContent = introHint();
     render(performance.now(), false);
     start();
   }
   toggle.addEventListener('click', () => {
     hidden = !hidden;
+    introGreetingPending = false;
     clearInput(); y = vy = 0; bubbleUntil = 0;
     try { localStorage.setItem('portfolio:character-hidden', hidden ? '1' : '0'); } catch (_) {}
     setHelp(false);
@@ -396,6 +409,8 @@
   }
   refresh();
   if (!hidden) {
-    saySection();
+    say(introHint());
+    speechIntroHint = true;
+    introGreetingPending = true;
   }
 })();
