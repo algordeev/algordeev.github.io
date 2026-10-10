@@ -66,3 +66,19 @@ images or libraries. The interaction is inspired by
 
 Adjust `palette`, `portrait`, `body`, and `legs` in `pixel-character.js` to change its appearance;
 the companion layout is at the end of `style.css`.
+
+## Browser icon and link previews
+
+The favicon and Apple touch icon use an AG monogram. The share card uses the
+portrait photo from `assets/me.jpg`. The share
+preview uses `assets/social-card.png` (1200 × 630), declared in the static HTML
+with [Open Graph](https://ogp.me/) and Twitter Card metadata.
+
+To regenerate these assets after changing the photo or card layout, run from the repository
+root on macOS:
+
+```bash
+swift -module-cache-path /tmp/portfolio-swift-cache scripts/generate-brand-assets.swift
+```
+
+The generated assets are committed with the site; GitHub Pages needs no build step.
