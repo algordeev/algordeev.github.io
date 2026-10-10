@@ -38,7 +38,7 @@
       hint: 'Клик по пустому месту — идти · клик по мне — прыгнуть',
       keys: '← → / A D — идти · ↑ / W / Пробел — прыгнуть',
       touch: 'Касание пустого места — идти · касание меня — прыгнуть',
-      hide: 'Скрыть меня', show: 'Показать пиксельного меня', top: 'Снова наверх ↑',
+      hide: 'Скрыть меня', show: 'Показать мини меня', top: 'Снова наверх ↑',
       player: 'Мини-Александр. Стрелки влево и вправо или A/D — идти; ↑, W или пробел — прыгнуть. Нажмите, чтобы поздороваться.',
       controls: 'Управление персонажем', left: 'Идти влево', right: 'Идти вправо', jump: 'Прыгнуть',
       hello: 'Привет! Я создаю автономные системы 🤖',
@@ -155,7 +155,7 @@
   let blinkUntil = 0, nextBlink = performance.now() + 2500 + Math.random() * 3000;
   let activeSection = 'home', speechSection = null;
   let lastClickMessage = -1, speechClick = null;
-  let introGreetingPending = false, speechIntroHint = false;
+  let introHintPending = false, speechIntroHint = false;
   const introHint = () => touch.matches ? words.touchIntro : words.walkIntro;
   const sectionWords = () => sectionCopy[document.documentElement.lang] || sectionCopy.en;
   const width = () => player.offsetWidth || 56;
@@ -195,13 +195,13 @@
     bubble.hidden = now > bubbleUntil;
     bubble.style.setProperty('--bubble-shift', `${Math.max(90 - x - width() / 2, Math.min(0, document.documentElement.clientWidth - 90 - x - width() / 2))}px`);
   }
-  function say(text, section = null) {
-    introGreetingPending = false;
+  function say(text, section = null, duration = 4200) {
+    introHintPending = false;
     speechIntroHint = false;
     bubble.textContent = text;
     speechSection = section;
     speechClick = null;
-    bubbleUntil = performance.now() + 4200;
+    bubbleUntil = performance.now() + duration;
     start();
   }
   function saySection() {
@@ -215,7 +215,10 @@
     const dt = last ? Math.min((now - last) / 1000, 0.032) : 0;
     last = now;
     if (blocked()) { clearInput(); last = 0; return; }
-    if (introGreetingPending && now >= bubbleUntil) saySection();
+    if (introHintPending && now >= bubbleUntil) {
+      say(introHint(), null, 2000);
+      speechIntroHint = true;
+    }
     let dir = pointerDirection || (pressed.has('left') ? -1 : 0) + (pressed.has('right') ? 1 : 0);
     if (!dir && target !== null) {
       const distance = target - x;
@@ -258,7 +261,7 @@
   }
   toggle.addEventListener('click', () => {
     hidden = !hidden;
-    introGreetingPending = false;
+    introHintPending = false;
     clearInput(); y = vy = 0; bubbleUntil = 0;
     try { localStorage.setItem('portfolio:character-hidden', hidden ? '1' : '0'); } catch (_) {}
     setHelp(false);
@@ -409,8 +412,7 @@
   }
   refresh();
   if (!hidden) {
-    say(introHint());
-    speechIntroHint = true;
-    introGreetingPending = true;
+    say(words.hello, 'home', 2000);
+    introHintPending = true;
   }
 })();
