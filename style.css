@@ -412,6 +412,7 @@ body.dialog-open { overflow: hidden; }
 .pixel-is-hidden .pixel-help, .pixel-is-hidden .pixel-touch { display: none; }
 footer { padding-bottom: 70px; }
 @media (hover: none), (max-width: 600px) {
+  #pixel-help-toggle, .pixel-help { display: none; }
   .pixel-game { bottom: calc(6px + env(safe-area-inset-bottom, 0px)); }
   .pixel-player { width: 42px; height: 72px; }
   .pixel-touch { display: flex; }
