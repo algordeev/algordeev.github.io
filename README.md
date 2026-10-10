@@ -56,8 +56,7 @@ images or libraries. The interaction is inspired by
 - Click an empty part of the page to move there; click the character to jump.
 - On mobile, tap **?** for controls, hold the arrow buttons to run, and tap **↑** to jump.
 - The compact corner button shows **Hide me / Show pixel me** in English and remembers your choice. Labels follow RU / EN / TR.
-- Instructions appear for 2.4 seconds on startup, then on hover or keyboard focus.
-  The **?** button also opens them on touch screens.
+- Instructions open only when the **?** button is activated, including on touch screens.
 - Each section, including the introduction, has its own friendly speech bubble
   in RU / EN / TR. Messages appear as you scroll, disappear after a few seconds,
   and appear again when you return to a section. Edit them in `sectionCopy`.

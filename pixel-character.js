@@ -249,7 +249,6 @@
     clearInput(); y = vy = 0; bubbleUntil = 0;
     try { localStorage.setItem('portfolio:character-hidden', hidden ? '1' : '0'); } catch (_) {}
     setHelp(false);
-    controls.classList.remove('pixel-intro');
     refresh();
     if (!hidden) saySection();
   });
@@ -265,7 +264,6 @@
   controls.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
       setHelp(false);
-      controls.classList.remove('pixel-intro');
       helpButton.blur();
     }
   });
@@ -399,7 +397,5 @@
   refresh();
   if (!hidden) {
     saySection();
-    controls.classList.add('pixel-intro');
-    setTimeout(() => controls.classList.remove('pixel-intro'), 2400);
   }
 })();
