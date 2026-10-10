@@ -466,9 +466,32 @@
 </p>
 </footer>
 
+<!-- The supplied pixel character, with section-specific speech bubbles. -->
+<div class="pixel-game" id="pixel-game" hidden>
+  <button type="button" class="pixel-player" id="pixel-player" aria-describedby="pixel-hint">
+    <span class="pixel-bubble" id="pixel-bubble" aria-hidden="true"></span>
+    <canvas id="pixel-sprite" width="56" height="96" aria-hidden="true"></canvas>
+  </button>
+  <span class="pixel-shadow" id="pixel-shadow" aria-hidden="true"></span>
+</div>
+<aside class="pixel-controls" id="pixel-controls" hidden aria-label="Character controls">
+  <div class="pixel-help" id="pixel-help">
+    <span id="pixel-key-hint"></span>
+    <span id="pixel-hint"></span>
+    <div class="pixel-touch">
+      <button type="button" data-pixel-move="-1">←</button>
+      <button type="button" id="pixel-jump">↑</button>
+      <button type="button" data-pixel-move="1">→</button>
+    </div>
+  </div>
+  <button type="button" id="pixel-help-toggle" aria-controls="pixel-help" aria-expanded="false">?</button>
+  <button type="button" id="pixel-toggle" aria-controls="pixel-game" aria-expanded="true"></button>
+</aside>
+
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="credentials.js"></script>
 <script src="app.js"></script>
 <script src="lang.js"></script>
+<script src="pixel-character.js"></script>
 </body>
 </html>
