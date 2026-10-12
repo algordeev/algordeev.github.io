@@ -69,6 +69,7 @@
       "hero.projects": `Мои проекты`,
       "hero.cv": `Скачать резюме`,
       "hero.alt": `Портрет Александра Гордеева`,
+      "hero.open": `Открыт к стажировкам в робототехнике и встраиваемых системах`,
 
       "about.p1": `Студент направления «Компьютерная инженерия» в Университете Яшар, интересуюсь автономными системами, робототехникой, разработкой программного обеспечения и оптимизацией.`,
       "about.p2": `Я работал над мультиагентным планированием траекторий автономных надводных аппаратов в исследовательской группе ISCAR при Мадридском университете Комплутенсе, используя MATLAB, многокритериальную оптимизацию и статистический анализ. Также развиваю собственные инженерные проекты на стыке встраиваемых систем, программного обеспечения, электроники и интеллектуальных транспортных систем.`,
@@ -137,6 +138,8 @@
       "sk.lang.v": `русский (родной), английский (C1), турецкий (B1), испанский (A2)`,
 
       "contact.email": `Почта:`,
+      "contact.copy": `Скопировать почту`,
+      "contact.copied": `Скопировано ✓`,
       "footer.rights": "Все права защищены."
     },
 
@@ -198,6 +201,7 @@
       "hero.projects": `Projelerim`,
       "hero.cv": `CV'yi indir`,
       "hero.alt": `Aleksandr Gordeev'in portresi`,
+      "hero.open": `Robotik ve gömülü sistemler alanında staj fırsatlarına açığım`,
 
       "about.p1": `Yaşar Üniversitesi'nde Bilgisayar Mühendisliği öğrencisiyim; otonom sistemler, robotik, yazılım geliştirme ve optimizasyon alanlarına ilgi duyuyorum.`,
       "about.p2": `Madrid Complutense Üniversitesi'nin ISCAR Araştırma Grubu'nda MATLAB, çok amaçlı optimizasyon ve istatistiksel analiz kullanarak çok etmenli otonom yüzey araçları için yörünge planlama üzerine çalıştım. Ayrıca gömülü sistemleri, yazılımı, elektroniği ve akıllı ulaşım sistemlerini bir araya getiren bağımsız mühendislik projeleri geliştiriyorum.`,
@@ -264,6 +268,8 @@
       "sk.lang.v": `Rusça (ana dil), İngilizce (C1), Türkçe (B1), İspanyolca (A2)`,
 
       "contact.email": `E-posta:`,
+      "contact.copy": `E-postayı kopyala`,
+      "contact.copied": `Kopyalandı ✓`,
       "footer.rights": "Tüm hakları saklıdır."
     }
   };

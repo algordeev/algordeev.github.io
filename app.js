@@ -219,3 +219,81 @@ if (url) {
   document.addEventListener('portfolio:language', event => renderCredentials(event.detail));
   renderCredentials(root.lang || 'en');
 })();
+
+
+/* Copy email button and gentle scroll reveal. */
+(function () {
+  'use strict';
+
+  const copyButton = document.getElementById('copy-email');
+  if (copyButton) {
+    const label = copyButton.querySelector('.copy-label');
+    const done = copyButton.querySelector('.copied-label');
+    const status = document.getElementById('copy-status');
+    let timer;
+    async function copyText(text) {
+      try { await navigator.clipboard.writeText(text); return true; } catch (_) {}
+      const field = document.createElement('textarea');
+      field.value = text;
+      field.setAttribute('readonly', '');
+      field.style.cssText = 'position:fixed;opacity:0;top:0;left:0';
+      document.body.appendChild(field);
+      field.select();
+      let ok = false;
+      try { ok = document.execCommand('copy'); } catch (_) {}
+      field.remove();
+      return ok;
+    }
+    copyButton.addEventListener('click', async () => {
+      const email = copyButton.dataset.email;
+      if (!(await copyText(email))) { location.href = 'mailto:' + email; return; }
+      label.hidden = true;
+      done.hidden = false;
+      if (status) status.textContent = done.textContent;
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        done.hidden = true;
+        label.hidden = false;
+        if (status) status.textContent = '';
+      }, 2000);
+    });
+  }
+
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const items = [...document.querySelectorAll(
+    'main section:not(.hero) > h2, #about p, .timeline article, #projects .card, ' +
+    '.achievements li, .skills > div, #credentials-list > *, #contact p:not(.sr-only)'
+  )];
+  if (!items.length) return;
+  document.documentElement.classList.add('js-reveal');
+  const seen = new Map();
+  items.forEach(el => {
+    el.classList.add('reveal');
+    const index = seen.get(el.parentElement) || 0;
+    seen.set(el.parentElement, index + 1);
+    el.style.transitionDelay = Math.min(index, 5) * 70 + 'ms';
+  });
+  // Everything at or above the bottom edge of the screen is shown, so sections
+  // skipped by a menu jump or a fast scroll never stay invisible.
+  let pending = items;
+  let queued = false;
+  function reveal() {
+    queued = false;
+    const edge = innerHeight * 0.94;
+    pending = pending.filter(el => {
+      if (el.getBoundingClientRect().top >= edge) return true;
+      el.classList.add('is-visible');
+      return false;
+    });
+    if (!pending.length) {
+      removeEventListener('scroll', onScroll);
+      removeEventListener('resize', onScroll);
+    }
+  }
+  function onScroll() {
+    if (!queued) { queued = true; requestAnimationFrame(reveal); }
+  }
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', onScroll);
+  reveal();
+})();

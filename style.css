@@ -424,3 +424,60 @@ footer { padding-bottom: 70px; }
 @media (prefers-reduced-motion: reduce) {
   .pixel-help { transition: none; }
 }
+
+
+/* Images keep their natural ratio when width/height attributes are present */
+img { height: auto; }
+
+/* Availability pill in the hero */
+.availability { margin: 20px 0 0; }
+.availability a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+.availability a:hover { text-decoration: none; border-color: var(--accent); }
+.availability .dot {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #2e9e5b;
+  box-shadow: 0 0 0 0 rgba(46, 158, 91, 0.5);
+  animation: availability-pulse 2.4s ease-out infinite;
+}
+@keyframes availability-pulse {
+  70% { box-shadow: 0 0 0 8px rgba(46, 158, 91, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 158, 91, 0); }
+}
+.availability + .cta { margin-top: 20px; }
+
+/* Contact buttons */
+button.btn { border: 0; font: inherit; font-weight: 600; font-size: 15px; cursor: pointer; }
+button.btn.ghost { border: 1px solid var(--border); }
+.contact-actions { margin-top: 20px; }
+.copy-label[hidden], .copied-label[hidden] { display: none; }
+#copy-email { min-width: 150px; }
+
+/* Scroll reveal (only active when JS adds .js-reveal) */
+.js-reveal .reveal { opacity: 0; transform: translateY(14px); }
+.js-reveal .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .availability .dot { animation: none; }
+  .js-reveal .reveal { opacity: 1; transform: none; }
+}
+@media print {
+  .js-reveal .reveal { opacity: 1 !important; transform: none !important; }
+}
