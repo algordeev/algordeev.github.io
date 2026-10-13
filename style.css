@@ -512,6 +512,7 @@ button.btn.ghost { border: 1px solid var(--border); }
 .asv-stat span{font-size:.92rem;opacity:.85}
 
 .asv-note{font-size:.88rem;opacity:.75;margin:.6rem 0 0}
+.asv-outcome-title{margin-top:1.5rem}
 .asv-funding{margin:1.5rem 0 0}
 
 .asv-gallery-title{margin:1.75rem 0 .75rem}
