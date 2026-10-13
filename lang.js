@@ -20,7 +20,7 @@
       "proj.asv.stat.note": "Сравнение целевых функций: самый длинный маршрут и сумма маршрутов; NSGA-II, 100 итераций. Пять повторов на случай; результаты предварительные.",
 
       "proj.twin.f.context": "Контекст",
-      "proj.twin.f.context.v": "Независимый исследовательский прототип · с 2026 года",
+      "proj.twin.f.context.v": "Независимый исследовательский прототип",
       "proj.twin.f.focus": "Моя работа",
       "proj.twin.f.focus.v": "Работа сети, управление и тяговая энергия",
       "proj.twin.stat.scenarios": "Сетевых сценария: маршрут 2, маршруты 2 + 21 и линия Konak",
@@ -325,7 +325,7 @@
       "proj.asv.stat.note": "Amaç karşılaştırması: en uzun rota ve rota toplamı; NSGA-II, 100 iterasyon. Her durum için beş tekrar; sonuçlar keşif niteliğindedir.",
 
       "proj.twin.f.context": "Bağlam",
-      "proj.twin.f.context.v": "Bağımsız araştırma prototipi · 2026–devam ediyor",
+      "proj.twin.f.context.v": "Bağımsız araştırma prototipi",
       "proj.twin.f.focus": "Odak alanım",
       "proj.twin.f.focus.v": "Ağ işletimi, kontrol ve çekiş enerjisi",
       "proj.twin.stat.scenarios": "Ağ senaryosu: Hat 2, Hat 2 + 21 ve Konak Tramvayı",
