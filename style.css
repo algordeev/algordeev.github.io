@@ -524,3 +524,17 @@ button.btn.ghost { border: 1px solid var(--border); }
   .asv-bar-row{grid-template-columns:1fr 3.2rem;}
   .asv-bar-row > span:first-child{grid-column:1 / -1;font-size:.85rem}
 }
+
+/* Red Monopoly project details */
+.mono-strategies{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:1rem 0 1.75rem}
+.mono-strategies article{border:1px solid var(--border);border-radius:14px;padding:1rem 1.1rem}
+.mono-strategies h4{margin:0 0 .5rem;color:var(--accent)}
+.mono-strategies p{margin:0;font-size:.92rem}
+.mono-flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;list-style:none;padding:0;margin:1rem 0 1.75rem}
+.mono-flow li{padding:1rem;border-radius:14px;background:var(--bg);border-top:3px solid var(--accent)}
+.mono-flow strong,.mono-flow span{display:block}
+.mono-flow span{margin-top:.4rem;font-size:.9rem;color:var(--muted)}
+.mono-timeline{list-style:none;padding:0 0 0 1.25rem;margin:1rem 0 1.75rem;border-left:2px solid var(--border)}
+.mono-timeline li{position:relative;padding:0 0 .75rem .5rem}
+.mono-timeline li::before{content:"";position:absolute;left:-1.65rem;top:.4rem;width:.65rem;height:.65rem;border-radius:50%;background:var(--accent)}
+.mono-timeline p{margin:.4rem 0 .5rem;font-size:.95rem;color:var(--muted)}

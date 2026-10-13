@@ -367,6 +367,15 @@
 <dialog class="project-dialog" id="project-mono" aria-labelledby="title-mono">
   <div class="dialog-header"><p class="eyebrow" data-i18n="ui.project">Project details</p><button type="button" class="icon-button dialog-close" aria-labelledby="close-mono"><span aria-hidden="true">×</span><span class="sr-only" id="close-mono" data-i18n="ui.close">Close</span></button></div>
   <h2 id="title-mono">Red Monopoly</h2>
+  <dl class="asv-facts">
+    <div><dt data-i18n="proj.mono.f.context">Context</dt><dd data-i18n="proj.mono.f.context.v">Software engineering team project · UCM</dd></div>
+    <div><dt data-i18n="proj.mono.f.role">My role</dt><dd data-i18n="proj.mono.f.role.v">Product Owner &amp; Java developer</dd></div>
+  </dl>
+  <div class="asv-stats">
+    <div class="asv-stat"><strong>2–8</strong><span data-i18n="proj.mono.stat.players">Players in the documented LAN multiplayer mode</span></div>
+    <div class="asv-stat"><strong>3</strong><span data-i18n="proj.mono.stat.ai">AI difficulty levels with different purchase rules</span></div>
+    <div class="asv-stat"><strong>6</strong><span data-i18n="proj.mono.stat.sprints">Scrum sprints documented in the project wiki</span></div>
+  </div>
   <div class="project-story">
   <h3 data-i18n="ui.problem">The challenge</h3>
   <p data-i18n="proj.mono.problem">
@@ -386,6 +395,35 @@
     and presented features during sprint reviews.
   </p>
 
+  <ul class="asv-list">
+    <li data-i18n="proj.mono.do.rules">Implemented purchases, rent, taxes and card events across the board.</li>
+    <li data-i18n="proj.mono.do.ai">Integrated difficulty-dependent purchasing for AI opponents.</li>
+    <li data-i18n="proj.mono.do.undo">Co-developed Command-based undo and added gameplay dialogs and player icons.</li>
+    <li data-i18n="proj.mono.do.team">Managed the backlog, maintained the wiki and demonstrated features at sprint reviews.</li>
+  </ul>
+
+  <h3 data-i18n="proj.mono.ai.h">Three ways to decide a purchase</h3>
+  <p data-i18n="proj.mono.ai.p">The AI uses explicit purchasing rules. Each difficulty changes how an opponent decides whether to buy a property or railroad.</p>
+  <div class="mono-strategies">
+    <article><h4 data-i18n="proj.mono.ai.easy">Easy</h4><p data-i18n="proj.mono.ai.easy.p">Buys when its cash covers the price.</p></article>
+    <article><h4 data-i18n="proj.mono.ai.medium">Medium</h4><p data-i18n="proj.mono.ai.medium.p">Requires cash of at least 120% of the price to keep a buffer.</p></article>
+    <article><h4 data-i18n="proj.mono.ai.hard">Hard</h4><p data-i18n="proj.mono.ai.hard.p">Requires cash above the price and a rent-to-price ratio greater than 5%.</p></article>
+  </div>
+
+  <h3 data-i18n="proj.mono.state.h">Keeping the game state consistent</h3>
+  <p data-i18n="proj.mono.state.p">The Swing interface, controller and game model separate presentation from rules. JSON save/load preserves game state; a command history supports undo. In multiplayer, a TCP host coordinates client messages and turn handling.</p>
+  <ol class="mono-flow">
+    <li><strong data-i18n="proj.mono.flow.view">Swing interface</strong><span data-i18n="proj.mono.flow.view.p">Board, dialogs and player information</span></li>
+    <li><strong data-i18n="proj.mono.flow.controller">Controller</strong><span data-i18n="proj.mono.flow.controller.p">Actions, undo history and save/load</span></li>
+    <li><strong data-i18n="proj.mono.flow.model">Game model</strong><span data-i18n="proj.mono.flow.model.p">Players, tiles and AI strategies</span></li>
+  </ol>
+
+  <h3 data-i18n="proj.mono.sprints.h">From board rules to multiplayer</h3>
+  <ol class="mono-timeline">
+    <li><strong data-i18n="proj.mono.sprints.early">Sprints 1–3 · Core gameplay</strong><p data-i18n="proj.mono.sprints.early.p">Dice, purchases and rent, followed by a visual board, player movement and tile events.</p></li>
+    <li><strong data-i18n="proj.mono.sprints.middle">Sprints 4–5 · State and opponents</strong><p data-i18n="proj.mono.sprints.middle.p">JSON save/load, Command-based undo, three AI strategies and a redesigned themed board.</p></li>
+    <li><strong data-i18n="proj.mono.sprints.last">Sprint 6 · Playing together</strong><p data-i18n="proj.mono.sprints.last.p">Deeper undo, pre-game figure selection, tax dialogs and an alpha host/join multiplayer mode.</p></li>
+  </ol>
   <h3 data-i18n="ui.result">Outcome</h3>
   <p data-i18n="proj.mono.result">
     A playable Java desktop game with a themed board, AI opponents
@@ -396,8 +434,9 @@
   </p>
 </div>
   <div class="detail-facts"><div><h3 data-i18n="ui.stack">Technology</h3><p data-i18n="proj.mono.stack">Java · OOP · Networking · GUI · Scrum</p></div><div><h3 data-i18n="ui.focus">Key features</h3><p data-i18n="proj.mono.features">IP-based multiplayer · Adaptive AI · Game state management · Logic / GUI separation</p></div></div>
-  <div class="detail-gallery"><img width="784" height="787" src="assets/monopoly-1.jpg" alt="Red Monopoly game board" loading="lazy" data-i18n-alt="proj.mono.alt1"><img width="1185" height="793" src="assets/monopoly-2.jpg" alt="Red Monopoly lobby screen" data-i18n-alt="proj.mono.alt2" loading="lazy"></div>
-  <p><a class="btn" href="https://github.com/SwEng-UCM/red-monopoly" data-i18n="proj.src">Source code →</a></p>
+  <h3 class="asv-gallery-title" data-i18n="proj.mono.gallery.h">Inside the game</h3>
+  <div class="detail-gallery"><figure><img width="784" height="787" src="assets/monopoly-1.jpg" alt="Red Monopoly game board" loading="lazy" data-i18n-alt="proj.mono.alt1"><figcaption data-i18n="proj.mono.cap1">The themed board, with player positions and gameplay controls.</figcaption></figure><figure><img width="1185" height="793" src="assets/monopoly-2.jpg" alt="Red Monopoly lobby screen" data-i18n-alt="proj.mono.alt2" loading="lazy"><figcaption data-i18n="proj.mono.cap2">Game setup and lobby interface.</figcaption></figure><figure><img width="703" height="443" src="assets/monopoly-characters.png" alt="Red Monopoly character selection screen" data-i18n-alt="proj.mono.alt3" loading="lazy"><figcaption data-i18n="proj.mono.cap3">Pre-game character selection with Soviet-themed figures.</figcaption></figure></div>
+  <p class="links"><a class="btn" href="https://github.com/SwEng-UCM/red-monopoly" data-i18n="proj.src">Source code →</a><a class="btn ghost" href="https://github.com/SwEng-UCM/red-monopoly/wiki" data-i18n="proj.mono.wiki">Sprint documentation →</a></p>
 </dialog>
 <dialog class="project-dialog" id="project-asv" aria-labelledby="title-asv">
   <div class="dialog-header"><p class="eyebrow" data-i18n="ui.project">Project details</p><button type="button" class="icon-button dialog-close" aria-labelledby="close-asv"><span aria-hidden="true">×</span><span class="sr-only" id="close-asv" data-i18n="ui.close">Close</span></button></div>
