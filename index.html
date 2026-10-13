@@ -402,17 +402,76 @@
 <dialog class="project-dialog" id="project-asv" aria-labelledby="title-asv">
   <div class="dialog-header"><p class="eyebrow" data-i18n="ui.project">Project details</p><button type="button" class="icon-button dialog-close" aria-labelledby="close-asv"><span aria-hidden="true">×</span><span class="sr-only" id="close-asv" data-i18n="ui.close">Close</span></button></div>
   <h2 id="title-asv" data-i18n="proj.asv.title">Multi-ASV Trajectory Planning</h2>
+
+  <!-- Internship at a glance -->
+  <dl class="asv-facts">
+    <div><dt data-i18n="proj.asv.f.period">Period</dt><dd data-i18n="proj.asv.f.period.v">June – July 2026</dd></div>
+    <div><dt data-i18n="proj.asv.f.place">Where</dt><dd data-i18n="proj.asv.f.place.v">ISCAR Research Group, Universidad Complutense de Madrid</dd></div>
+    <div><dt data-i18n="proj.asv.f.team">Supervisors</dt><dd>José Antonio López Orozco · Eva Besada Portas</dd></div>
+    <div><dt data-i18n="proj.asv.f.role">My focus</dt><dd data-i18n="proj.asv.f.role.v">Planner extension, experiments and analysis</dd></div>
+  </dl>
+
   <div class="project-story">
     <h3 data-i18n="ui.problem">The challenge</h3>
     <p data-i18n="proj.asv.problem">Plan coordinated missions for several autonomous surface vehicles monitoring cyanobacterial blooms. Routes must balance collision avoidance, route overlap and workload across the fleet.</p>
     <h3 data-i18n="ui.work">My work</h3>
     <p data-i18n="proj.asv.work">During my ISCAR internship at Universidad Complutense de Madrid, I extended an existing single-vehicle MATLAB planner to multi-vehicle scenarios. I worked with NSGA-II and NSGA-III, ran repeated simulations for two- and three-vehicle fleets, and analysed Pareto fronts using hypervolume evaluation and non-parametric statistical comparisons.</p>
+    <ul class="asv-list">
+      <li data-i18n="proj.asv.do.1">Gave every vehicle its own path variables, with collision avoidance between vehicles</li>
+      <li data-i18n="proj.asv.do.2">Counted collected density once across the fleet, so overlapping routes are not rewarded twice</li>
+      <li data-i18n="proj.asv.do.3">Replaced total distance with the longest individual route as the distance objective</li>
+      <li data-i18n="proj.asv.do.4">Migrated the optimiser from NSGA-II to NSGA-III</li>
+      <li data-i18n="proj.asv.do.5">Automated repeated runs (five per fleet size, lake and configuration) and the analysis pipeline</li>
+    </ul>
+
+    <h3 data-i18n="proj.asv.obj.h">A more realistic distance objective</h3>
+    <p data-i18n="proj.asv.obj.p">Summing every route treats the fleet as if it shared one battery. Minimising the longest individual route matches reality: each vehicle carries its own battery.</p>
+    <div class="asv-bars">
+      <p class="asv-bars-title" data-i18n="proj.asv.bar.title">Fleet idle time during the mission (minutes, lower is better)</p>
+      <div class="asv-bar-group">
+        <p class="asv-bar-group-label" data-i18n="proj.asv.bar.g2">Two vehicles</p>
+        <div class="asv-bar-row"><span data-i18n="proj.asv.bar.sum">Sum of routes</span><span class="asv-bar-track" aria-hidden="true"><span class="asv-bar" style="width:100%"></span></span><strong>61.1</strong></div>
+        <div class="asv-bar-row"><span data-i18n="proj.asv.bar.max">Longest route</span><span class="asv-bar-track" aria-hidden="true"><span class="asv-bar is-after" style="width:38.3%"></span></span><strong>23.4</strong></div>
+      </div>
+      <div class="asv-bar-group">
+        <p class="asv-bar-group-label" data-i18n="proj.asv.bar.g3">Three vehicles</p>
+        <div class="asv-bar-row"><span data-i18n="proj.asv.bar.sum">Sum of routes</span><span class="asv-bar-track" aria-hidden="true"><span class="asv-bar" style="width:92.4%"></span></span><strong>56.4</strong></div>
+        <div class="asv-bar-row"><span data-i18n="proj.asv.bar.max">Longest route</span><span class="asv-bar-track" aria-hidden="true"><span class="asv-bar is-after" style="width:31.6%"></span></span><strong>19.3</strong></div>
+      </div>
+      <p class="asv-note" data-i18n="proj.asv.obj.sum">Best density score: +44.4% with two vehicles, +16.6% with three. Idle time: −61.7% and −65.8%. (NSGA-II tests, 100 iterations.)</p>
+    </div>
+
+    <h3 data-i18n="proj.asv.res.h">Two or three vehicles?</h3>
+    <p data-i18n="proj.asv.res.p">Fleets were compared with one common hypervolume reference, at equal generations, at equal wall-clock time and at their configured end points.</p>
+    <div class="asv-stats">
+      <div class="asv-stat"><strong>−11.3%</strong><span data-i18n="proj.asv.res.t1">Three vs two vehicles at equal generations (200)</span></div>
+      <div class="asv-stat"><strong>−12.8%</strong><span data-i18n="proj.asv.res.t2">Three vs two vehicles at equal wall-clock time</span></div>
+      <div class="asv-stat"><strong>+17.8%</strong><span data-i18n="proj.asv.res.t3">Three vs two at configured end points (500 vs 200 generations, so not a fair comparison)</span></div>
+    </div>
+    <p class="asv-note" data-i18n="proj.asv.res.note">Pooled common-reference hypervolume. With five repeats per case, the results are exploratory.</p>
+
     <h3 data-i18n="ui.result">Outcome</h3>
     <p data-i18n="proj.asv.result">Multi-vehicle planning experiments with trajectory plots, comparative figures and an internship report. The work provided a basis for assessing trade-offs between competing mission objectives and comparing optimisation methods across repeated simulation runs.</p>
   </div>
+
   <div class="detail-facts"><div><h3 data-i18n="ui.stack">Technology</h3><p>MATLAB · NSGA-II · NSGA-III</p></div><div><h3 data-i18n="ui.focus">Key features</h3><p data-i18n="proj.asv.features">Collision avoidance · Route overlap · Workload balancing · Statistical comparison of Pareto fronts</p></div></div>
-  <div class="detail-gallery"><img width="2048" height="1281" src="assets/asv-1.jpg" alt="Multi-ASV trajectory planning result" loading="lazy" data-i18n-alt="proj.asv.alt"></div>
-  
+
+  <h3 class="asv-gallery-title" data-i18n="proj.asv.gal.h">Selected figures</h3>
+  <div class="detail-gallery">
+    <figure><img width="2048" height="1281" src="assets/asv-1.jpg" alt="Multi-ASV trajectory planning result" loading="lazy" data-i18n-alt="proj.asv.alt"><figcaption data-i18n="proj.asv.cap1">Intermediate MATLAB simulation graphs: Pareto fronts, trajectories and density fields.</figcaption></figure>
+    <figure><img width="1600" height="804" src="assets/asv-2.jpg" alt="Lake E2: two-vehicle and three-vehicle hypervolume at equal generations, equal time and final budgets" loading="lazy" data-i18n-alt="proj.asv.alt2"><figcaption data-i18n="proj.asv.cap2">Lake E2: hypervolume at three budgets. Dots are repeats, diamonds are means.</figcaption></figure>
+    <figure><img width="1600" height="1081" src="assets/asv-3.jpg" alt="Lake E4: two-vehicle and three-vehicle hypervolume at equal generations, equal time and final budgets" loading="lazy" data-i18n-alt="proj.asv.alt3"><figcaption data-i18n="proj.asv.cap3">Lake E4: the three-vehicle advantage at the final budget is smaller and more variable.</figcaption></figure>
+    <figure><img width="1600" height="1072" src="assets/asv-4.jpg" alt="Pareto projections for lake E4 showing mission duration, longest path and density contribution" loading="lazy" data-i18n-alt="proj.asv.alt4"><figcaption data-i18n="proj.asv.cap4">Lake E4: non-dominated solutions projected onto each pair of objectives.</figcaption></figure>
+  </div>
+
+  <h3 class="asv-gallery-title" data-i18n="proj.asv.hw.h">The hardware behind the project</h3>
+  <div class="detail-gallery asv-photos">
+    <figure><img width="741" height="556" src="assets/asv-photo-vehicle.jpg" alt="The autonomous surface vehicle used in the research" loading="lazy" data-i18n-alt="proj.asv.alt5"><figcaption data-i18n="proj.asv.cap5">The autonomous surface vehicle</figcaption></figure>
+    <figure><img width="733" height="549" src="assets/asv-photo-sensor.jpg" alt="Cyanobacteria sensor module from the vehicle" loading="lazy" data-i18n-alt="proj.asv.alt6"><figcaption data-i18n="proj.asv.cap6">Cyanobacteria sensor module</figcaption></figure>
+    <figure><img width="729" height="547" src="assets/asv-photo-board.jpg" alt="The vehicle control board" loading="lazy" data-i18n-alt="proj.asv.alt7"><figcaption data-i18n="proj.asv.cap7">Vehicle control board</figcaption></figure>
+  </div>
+
+  <p class="asv-note asv-funding" data-i18n="proj.asv.fund">The project is funded by Comunidad de Madrid and co-funded by the European Union through the European Regional Development Fund (ERDF).</p>
 </dialog>
 
 <dialog

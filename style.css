@@ -481,3 +481,38 @@ button.btn.ghost { border: 1px solid var(--border); }
 @media print {
   .js-reveal .reveal { opacity: 1 !important; transform: none !important; }
 }
+
+/* Multi-ASV project dialog: internship details */
+.asv-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem 1.5rem;margin:1.25rem 0 1.75rem}
+.asv-facts dt{font-size:.78rem;text-transform:uppercase;letter-spacing:.07em;opacity:.7}
+.asv-facts dd{margin:.2rem 0 0;font-weight:600}
+
+.asv-list{margin:.75rem 0 1.5rem;padding-left:1.2rem;display:grid;gap:.4rem}
+
+.asv-bars{margin:1rem 0 1.75rem;padding:1.1rem 1.25rem;border:1px solid var(--border,rgba(128,128,128,.3));border-radius:14px}
+.asv-bars-title{font-weight:600;margin:0 0 .9rem}
+.asv-bar-group{margin-bottom:1rem}
+.asv-bar-group-label{margin:0 0 .35rem;font-size:.85rem;opacity:.75}
+.asv-bar-row{display:grid;grid-template-columns:minmax(110px,170px) 1fr 3.2rem;gap:.75rem;align-items:center;margin:.3rem 0}
+.asv-bar-track{display:block;height:.9rem;border-radius:999px;background:var(--border,rgba(128,128,128,.2));overflow:hidden}
+.asv-bar{display:block;height:100%;border-radius:999px;background:var(--accent,#3b5bdb)}
+.asv-bar.is-after{background:#2f9e44}
+.asv-bar-row strong{text-align:right;font-variant-numeric:tabular-nums}
+
+.asv-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;margin:1rem 0}
+.asv-stat{border:1px solid var(--border,rgba(128,128,128,.3));border-radius:14px;padding:1rem 1.1rem}
+.asv-stat strong{display:block;font-size:1.9rem;line-height:1.1;margin-bottom:.35rem;font-variant-numeric:tabular-nums}
+.asv-stat span{font-size:.92rem;opacity:.85}
+
+.asv-note{font-size:.88rem;opacity:.75;margin:.6rem 0 0}
+.asv-funding{margin:1.5rem 0 0}
+
+.asv-gallery-title{margin:1.75rem 0 .75rem}
+.detail-gallery figure{margin:0}
+.detail-gallery figcaption{font-size:.85rem;opacity:.75;margin-top:.45rem}
+.asv-photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+
+@media (max-width:520px){
+  .asv-bar-row{grid-template-columns:1fr 3.2rem;}
+  .asv-bar-row > span:first-child{grid-column:1 / -1;font-size:.85rem}
+}
