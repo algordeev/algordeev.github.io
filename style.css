@@ -538,3 +538,11 @@ button.btn.ghost { border: 1px solid var(--border); }
 .mono-timeline li{position:relative;padding:0 0 .75rem .5rem}
 .mono-timeline li::before{content:"";position:absolute;left:-1.65rem;top:.4rem;width:.65rem;height:.65rem;border-radius:50%;background:var(--accent)}
 .mono-timeline p{margin:.4rem 0 .5rem;font-size:.95rem;color:var(--muted)}
+
+/* Autonomous tram project details */
+#project-tram > .asv-stats{margin-bottom:1.75rem}
+.tram-controllers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1rem 0 1.75rem}
+.tram-controllers article{padding:1rem 1.1rem;border:1px solid var(--border);border-radius:14px;background:var(--bg)}
+.tram-controllers h4{margin:0 0 .5rem;color:var(--accent)}
+.tram-controllers p{margin:0;font-size:.92rem}
+#project-tram .detail-gallery img{max-height:620px;object-fit:contain;background:var(--bg)}
