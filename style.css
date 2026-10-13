@@ -546,3 +546,9 @@ button.btn.ghost { border: 1px solid var(--border); }
 .tram-controllers h4{margin:0 0 .5rem;color:var(--accent)}
 .tram-controllers p{margin:0;font-size:.92rem}
 #project-tram .detail-gallery img{max-height:620px;object-fit:contain;background:var(--bg)}
+
+/* Digital twin project details */
+#project-twin > .asv-stats{margin-bottom:1.75rem}
+.twin-topology{margin:1rem 0 1.75rem}
+.twin-research-note{margin-bottom:1.5rem}
+#project-twin .cta{display:flex;flex-wrap:wrap;gap:12px}
