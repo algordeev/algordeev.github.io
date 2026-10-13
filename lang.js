@@ -14,11 +14,16 @@
 
   var T = {
     ru: {
+      "proj.asv.stat.fleet": "Автономные надводные аппараты (ASV)",
+      "proj.asv.stat.density": "Улучшение лучшего показателя плотности",
+      "proj.asv.stat.algorithm": "Переход на новый алгоритм оптимизации",
+      "proj.asv.stat.note": "Сравнение целевых функций: самый длинный маршрут и сумма маршрутов; NSGA-II, 100 итераций. Пять повторов на случай; результаты предварительные.",
+
       "proj.twin.f.context": "Контекст",
       "proj.twin.f.context.v": "Независимый исследовательский прототип · с 2026 года",
       "proj.twin.f.focus": "Моя работа",
       "proj.twin.f.focus.v": "Работа сети, управление и тяговая энергия",
-      "proj.twin.stat.scenarios": "Сетевых сценария: маршрут 2, маршруты 2 + 21 и Konak Tram",
+      "proj.twin.stat.scenarios": "Сетевых сценария: маршрут 2, маршруты 2 + 21 и линия Konak",
       "proj.twin.stat.cities": "Моделируемых города: Нижний Новгород и Измир",
       "proj.twin.stat.energy": "Энергетические стратегии при одинаковых условиях движения",
       "proj.twin.do.core": "Разработал ядро управления на C++/WebAssembly со слоем сценариев и экспериментов на TypeScript.",
@@ -314,6 +319,11 @@
     },
 
     tr: {
+      "proj.asv.stat.fleet": "Otonom Yüzey Araçları (ASV)",
+      "proj.asv.stat.density": "En iyi yoğunluk skorundaki iyileşme",
+      "proj.asv.stat.algorithm": "Optimizasyon algoritmasının geliştirilmesi",
+      "proj.asv.stat.note": "Amaç karşılaştırması: en uzun rota ve rota toplamı; NSGA-II, 100 iterasyon. Her durum için beş tekrar; sonuçlar keşif niteliğindedir.",
+
       "proj.twin.f.context": "Bağlam",
       "proj.twin.f.context.v": "Bağımsız araştırma prototipi · 2026–devam ediyor",
       "proj.twin.f.focus": "Odak alanım",

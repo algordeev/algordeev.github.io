@@ -512,7 +512,7 @@ button.btn.ghost { border: 1px solid var(--border); }
 .asv-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;margin:1rem 0}
 .asv-stat{border:1px solid var(--border,rgba(128,128,128,.3));border-radius:14px;padding:1rem 1.1rem}
 .asv-stat strong{display:block;font-size:1.9rem;line-height:1.1;margin-bottom:.35rem;font-variant-numeric:tabular-nums}
-.asv-stat span{font-size:.92rem;opacity:.85}
+.asv-stat > span{font-size:.92rem;opacity:.85}
 
 .asv-note{font-size:.88rem;opacity:.75;margin:.6rem 0 0}
 .asv-outcome-title{margin-top:1.5rem}
@@ -555,3 +555,5 @@ button.btn.ghost { border: 1px solid var(--border); }
 .twin-topology{margin:1rem 0 1.75rem}
 .twin-research-note{margin-bottom:1.5rem}
 #project-twin .cta{display:flex;flex-wrap:wrap;gap:12px}
+
+.asv-highlights-note{margin-bottom:1.75rem}
