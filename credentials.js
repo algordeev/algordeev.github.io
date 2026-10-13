@@ -1,6 +1,25 @@
 window.PORTFOLIO_CREDENTIALS = [
   {
     type: {
+      en: "Attendance certificate",
+      ru: "Сертификат участия",
+      tr: "Katılım sertifikası"
+    },
+    title: {
+      en: "2026 Türkiye STEM Competition: Knovel and Engineering Village Training Session",
+      ru: "STEM-конкурс Турции 2026: обучение работе с Knovel и Engineering Village",
+      tr: "2026 Türkiye STEM Yarışması: Knovel ve Engineering Village Eğitim Oturumu"
+    },
+    issuer: "Elsevier / İYTE",
+    date: {
+      en: "October 2026",
+      ru: "Октябрь 2026",
+      tr: "Ekim 2026"
+    },
+    url: "assets/certificates/stem-comp.jpg"
+  },
+  {
+    type: {
       en: "Course certificate",
       ru: "Сертификат курса",
       tr: "Kurs sertifikası"
