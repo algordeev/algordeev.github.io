@@ -84,6 +84,38 @@
     });
   });
 
+  const imageDialog = document.getElementById('project-image-viewer');
+  const enlargedImage = imageDialog.querySelector('img');
+  let imageTrigger = null;
+  document.querySelectorAll('.project-dialog .detail-gallery img').forEach(img => {
+    const trigger = document.createElement('button');
+    trigger.type = 'button';
+    trigger.className = 'image-zoom-trigger';
+    trigger.setAttribute('aria-haspopup', 'dialog');
+    trigger.setAttribute('aria-controls', imageDialog.id);
+    img.before(trigger);
+    trigger.append(img);
+    trigger.addEventListener('click', () => {
+      imageTrigger = trigger;
+      enlargedImage.src = img.currentSrc || img.src;
+      enlargedImage.alt = img.alt;
+      imageDialog.setAttribute('aria-label', img.alt);
+      imageDialog.showModal();
+    });
+  });
+  imageDialog.querySelector('button').addEventListener('click', () => imageDialog.close());
+  let imageBackdropDown = false;
+  imageDialog.addEventListener('pointerdown', event => {
+    imageBackdropDown = event.target === imageDialog;
+  });
+  imageDialog.addEventListener('click', event => {
+    if (imageBackdropDown && event.target === imageDialog) imageDialog.close();
+  });
+  imageDialog.addEventListener('close', () => {
+    enlargedImage.removeAttribute('src');
+    if (imageTrigger) imageTrigger.focus({ preventScroll: true });
+  });
+
   const certificateDialog = document.createElement("dialog");
 certificateDialog.className = "project-dialog certificate-dialog";
 certificateDialog.setAttribute("aria-labelledby", "certificate-title");
