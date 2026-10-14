@@ -10,7 +10,11 @@ window.PORTFOLIO_CREDENTIALS = [
       ru: "STEM-конкурс Турции 2026: обучение работе с Knovel и Engineering Village",
       tr: "2026 Türkiye STEM Yarışması: Knovel ve Engineering Village Eğitim Oturumu"
     },
-    issuer: "Elsevier / İYTE",
+    issuer: {
+      en: "Elsevier / Izmir Institute of Technology (İYTE)",
+      ru: "Elsevier / Измирский технологический институт (İYTE)",
+      tr: "Elsevier / İzmir Yüksek Teknoloji Enstitüsü (İYTE)"
+    },
     date: {
       en: "October 2026",
       ru: "Октябрь 2026",
