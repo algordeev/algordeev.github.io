@@ -67,7 +67,7 @@ code {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
-.brand { font-weight: 700; color: var(--text); }
+.brand { font-family: "Onest", system-ui, sans-serif; font-weight: 700; color: var(--text); white-space: nowrap; }
 .nav nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 15px; }
 .nav nav a { color: var(--muted); }
 .nav nav a:hover { color: var(--text); text-decoration: none; }
