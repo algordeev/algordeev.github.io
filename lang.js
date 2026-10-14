@@ -246,7 +246,7 @@
       "hero.open": `Открыт к неполной занятости и стажировкам`,
 
       "about.p1": `Международный финалист World Robot Olympiad 2021 с автономной трамвайной системой, сейчас студент направления "Компьютерная инженерия" в Университете Яшар; учился по обмену Erasmus+ в Мадридском университете Комплутенсе.`,
-      "about.p2": `В 2026 году занимался планированием траекторий для нескольких транспортных средств в исследовательской группе ISCAR в Мадриде: расширил планировщик на MATLAB оптимизацией NSGA-II/III для флотов автономных надводных аппаратов.`,
+      "about.p2": `В 2026 году занимался планированием траекторий для групп автономных надводных аппаратов в исследовательской группе ISCAR в Мадриде: расширил планировщик на MATLAB до нескольких аппаратов и применил многокритериальную оптимизацию NSGA-II/III.`,
       "about.p3": `Сейчас разрабатываю цифровой двойник автономного трамвая: симулятор на C++/WebAssembly для работы нескольких трамваев и повышения энергоэффективности.`,
      
 
@@ -553,7 +553,7 @@
       "hero.open": `Yarı zamanlı iş ve staj fırsatlarına açığım`,
 
       "about.p1": `Otonom tramvay sistemiyle World Robot Olympiad 2021 uluslararası finalisti; şu anda Yaşar Üniversitesi’nde Bilgisayar Mühendisliği öğrencisiyim ve Madrid Complutense Üniversitesi’nde bir Erasmus+ yılı geçirdim.`,
-      "about.p2": ` 2026’da Madrid’deki ISCAR Araştırma Grubu’nda çoklu araç yörünge planlaması üzerinde çalıştım: otonom su üstü araç filoları için bir MATLAB planlayıcısını NSGA-II/III optimizasyonuyla genişlettim.`,
+      "about.p2": `2026’da Madrid’deki ISCAR Araştırma Grubu’nda otonom su üstü araç filoları için yörünge planlaması üzerinde çalıştım: MATLAB tabanlı planlayıcıyı birden fazla araca genişlettim ve NSGA-II/III çok amaçlı optimizasyonunu uyguladım.`,
       "about.p3": `Bugün otonom tramvay dijital ikizi üzerinde çalışıyorum: çoklu tramvay operasyonları ve enerji verimliliği için C++/WebAssembly tabanlı bir simülatör.`,
 
       "edu.date": `2023 – beklenen mezuniyet 2027`,
