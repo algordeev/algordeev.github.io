@@ -61,11 +61,34 @@
     if (!event.target.closest('.menu-wrap')) closeMenu(false);
   });
 
+  const tramDialog = document.getElementById('project-tram');
+  const tramVideo = document.getElementById('tram-video');
+  const tramVideoButton = tramDialog.querySelector('.tram-video-play');
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  function updateTramPlaybackButton() {
+    tramVideoButton.hidden = !tramVideo.paused;
+  }
+  function playTramVideo() {
+    // A rejected autoplay request leaves the manual play control available.
+    tramVideo.play().then(() => {
+      if (!tramDialog.open) tramVideo.pause();
+      updateTramPlaybackButton();
+    }).catch(updateTramPlaybackButton);
+  }
+  tramVideoButton.addEventListener('click', playTramVideo);
+  tramVideo.addEventListener('play', updateTramPlaybackButton);
+  tramVideo.addEventListener('pause', updateTramPlaybackButton);
+  reducedMotion.addEventListener('change', event => {
+    if (event.matches) tramVideo.pause();
+  });
+  updateTramPlaybackButton();
+
   document.querySelectorAll('[data-project]').forEach(button => {
     const dialog = document.getElementById('project-' + button.dataset.project);
     button.addEventListener('click', () => {
       closeMenu(false);
       dialog.showModal();
+      if (dialog === tramDialog && !reducedMotion.matches) playTramVideo();
       document.body.classList.add('dialog-open');
       dialog.querySelector('.dialog-close').focus();
     });
@@ -79,6 +102,7 @@
     dialog.addEventListener('pointerdown', event => { backdropDown = outside(event); });
     dialog.addEventListener('click', event => { if (backdropDown && outside(event)) dialog.close(); });
     dialog.addEventListener('close', () => {
+      if (dialog === tramDialog) tramVideo.pause();
       document.body.classList.remove('dialog-open');
       button.focus();
     });

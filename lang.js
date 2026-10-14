@@ -14,6 +14,10 @@
 
   var T = {
     ru: {
+      "proj.tram.video.caption": "AI-визуализация на основе физического прототипа.",
+      "proj.tram.video.demo": "Посмотреть реальную работу прототипа ↗",
+      "proj.tram.video.play": "Воспроизвести видео",
+
       "proj.asv.stat.fleet": "Автономные надводные аппараты (ASV)",
       "proj.asv.stat.density": "Улучшение лучшего показателя плотности",
       "proj.asv.stat.algorithm": "Переход на новый алгоритм оптимизации",
@@ -319,6 +323,10 @@
     },
 
     tr: {
+      "proj.tram.video.caption": "Fiziksel prototipten esinlenen yapay zekâ ile oluşturulmuş görselleştirme.",
+      "proj.tram.video.demo": "Gerçek prototipin çalışmasını izle ↗",
+      "proj.tram.video.play": "Videoyu oynat",
+
       "proj.asv.stat.fleet": "Otonom Yüzey Araçları (ASV)",
       "proj.asv.stat.density": "En iyi yoğunluk skorundaki iyileşme",
       "proj.asv.stat.algorithm": "Optimizasyon algoritmasının geliştirilmesi",

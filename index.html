@@ -342,6 +342,23 @@
   <h2 id="title-tram" data-i18n="proj.tram.title">Autonomous Tram System</h2>
 <dl class="asv-facts"><div><dt data-i18n="proj.tram.f.context">Context</dt><dd data-i18n="proj.tram.f.context.v">Individual robotics project · WRO 2021</dd></div><div><dt data-i18n="proj.tram.f.role">My focus</dt><dd data-i18n="proj.tram.f.role.v">Embedded control, custom PCBs & system integration</dd></div></dl>
 <div class="asv-stats"><div class="asv-stat"><strong>4</strong><span data-i18n="proj.tram.stat.controllers">Arduino Nano controllers: tram, remote, switch and signals</span></div><div class="asv-stat"><strong>3</strong><span data-i18n="proj.tram.stat.pcbs">Custom PCBs: tram, remote and traffic lights</span></div><div class="asv-stat"><strong>2 + 2</strong><span data-i18n="proj.tram.stat.communication">2 NRF24L01 wireless modules and 2 RFID readers</span></div></div>
+  <figure class="tram-video">
+    <div class="tram-video-player">
+      <video id="tram-video" width="1280" height="720" muted loop playsinline preload="none" aria-describedby="tram-video-caption">
+        <source src="assets/ai-tram-video.mp4" type="video/mp4">
+      </video>
+      <button type="button" class="tram-video-play" aria-controls="tram-video">
+        <span data-video-play>
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+          <span class="sr-only" data-i18n="proj.tram.video.play">Play video</span>
+        </span>
+      </button>
+    </div>
+    <figcaption id="tram-video-caption">
+      <span data-i18n="proj.tram.video.caption">AI-generated visualization inspired by the physical prototype.</span>
+      <a href="https://youtu.be/tfnsq6qUQj4" target="_blank" rel="noopener" data-i18n="proj.tram.video.demo">Watch the real prototype demo ↗</a>
+    </figcaption>
+  </figure>
   <div class="project-story">
     <h3 data-i18n="ui.problem">The challenge</h3>
     <p data-i18n="proj.tram.problem">Build a physical model tram that can control its movement, detect obstacles and communicate with infrastructure through an integrated embedded system.</p>
@@ -362,7 +379,7 @@
 <figure><img width="1048" height="612" src="assets/tram-remote.png" alt="Physical tram remote with screen, buttons and speed control" loading="lazy" data-i18n-alt="proj.tram.remote.alt"><figcaption data-i18n="proj.tram.remote.cap">The printed remote enclosure with display and manual controls.</figcaption></figure>
 </div>
 <p class="asv-note" data-i18n="proj.tram.credit">Mechanical base: tram body, rails and track-switch designs by Depronized; modified for this prototype, with custom infrastructure and electronic integration.</p>
-  <p class="links"><a href="https://youtu.be/tfnsq6qUQj4" target="_blank" rel="noopener" data-i18n="ui.watchYoutube">Watch on YouTube ↗</a><a class="btn" href="https://github.com/algordeev/autonomous-tram-system" data-i18n="proj.src">Source code →</a><a href="https://github.com/algordeev/autonomous-tram-system/tree/main/firmware" data-i18n="proj.tram.firmware">Firmware &amp; controller guide →</a></p>
+  <p class="links"><a class="btn" href="https://github.com/algordeev/autonomous-tram-system" data-i18n="proj.src">Source code →</a><a href="https://youtu.be/tfnsq6qUQj4" target="_blank" rel="noopener" data-i18n="ui.watchYoutube">Watch on YouTube ↗</a><a href="https://github.com/algordeev/autonomous-tram-system/tree/main/firmware" data-i18n="proj.tram.firmware">Firmware &amp; controller guide →</a></p>
 </dialog>
 <dialog class="project-dialog" id="project-mono" aria-labelledby="title-mono">
   <div class="dialog-header"><p class="eyebrow" data-i18n="ui.project">Project details</p><button type="button" class="icon-button dialog-close" aria-labelledby="close-mono"><span aria-hidden="true">×</span><span class="sr-only" id="close-mono" data-i18n="ui.close">Close</span></button></div>

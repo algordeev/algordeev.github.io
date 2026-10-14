@@ -569,3 +569,14 @@ button.btn.ghost { border: 1px solid var(--border); }
 #project-twin .cta{display:flex;flex-wrap:wrap;gap:12px}
 
 .asv-highlights-note{margin-bottom:1.75rem}
+
+/* AI visualization in the physical tram project dialog. */
+.tram-video { margin: 0 0 1.75rem; }
+.tram-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; border-radius: var(--radius); background: var(--bg); }
+.tram-video-player { position: relative; }
+.tram-video-play { position: absolute; left: 12px; bottom: 12px; display: grid; place-items: center; width: 52px; height: 52px; padding: 0; border: 1px solid #ffffff66; border-radius: 50%; background: #101214cc; color: #fff; cursor: pointer; }
+.tram-video-play:hover { background: #101214; }
+.tram-video-play svg { display: block; }
+.tram-video-play:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.tram-video figcaption { margin-top: .65rem; color: var(--muted); font-size: .875rem; line-height: 1.6; }
+.tram-video figcaption a { display: block; margin-top: .25rem; }
