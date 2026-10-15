@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const artifacts = process.env.PARETO_ARTIFACT_DIR || path.join(__dirname, 'verification');
 fs.mkdirSync(artifacts, {recursive:true});
-const baseURL = process.env.PARETO_URL || 'http://127.0.0.1:8000/website_visualization/pareto_explorer/';
+const baseURL = process.env.PARETO_URL || 'http://127.0.0.1:8000/pareto-explorer/';
 let activeBrowser;
 (async()=>{
  const browser=await chromium.launch({executablePath:process.env.PARETO_CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true,args:['--no-first-run','--disable-background-networking']});

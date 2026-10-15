@@ -12,8 +12,8 @@
         ? savedTheme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     } catch (_) { document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
   </script>
-  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="styles.css">
   <script src="lang.js" defer></script>
   <script src="theme.js" defer></script>
@@ -22,7 +22,7 @@
 <body>
 <main>
   <nav class="page-navigation" aria-label="Language">
-    <a id="portfolio-link" href="../../index.html#projects">← <span>Back to portfolio</span></a>
+    <a id="portfolio-link" href="../index.html#projects">← <span>Back to portfolio</span></a>
     <div class="nav-actions">
     <div class="lang" role="group" aria-label="Language">
       <button type="button" data-lang="ru" lang="ru" aria-pressed="false">RU</button>

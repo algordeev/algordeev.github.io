@@ -9,14 +9,14 @@ Requires MATLAB R2024b (tested), the original Planner repository, and its existi
 From MATLAB:
 
 ```matlab
-addpath('/path/to/portfolio/website_visualization/pareto_explorer');
+addpath('/path/to/portfolio/pareto-explorer');
 export_pareto_explorer_data('/path/to/Multi-ASV_Planner');
 ```
 
 Exact command for the inspected local repositories:
 
 ```sh
-/Applications/MATLAB_R2024b.app/bin/matlab -batch "addpath('/Users/macbookbro/algordeev.github.io/website_visualization/pareto_explorer'); export_pareto_explorer_data('/Users/macbookbro/Downloads/Multi-ASV_Planner');"
+/Applications/MATLAB_R2024b.app/bin/matlab -batch "addpath('/Users/macbookbro/algordeev.github.io/pareto-explorer'); export_pareto_explorer_data('/Users/macbookbro/Downloads/Multi-ASV_Planner');"
 ```
 
 An optional second argument selects the output directory. The default is `data/` beside the exporter, irrespective of the working directory. The exporter reads Planner files and writes only its output directory. Expect several minutes: it recomputes density contribution for **every exported mission**, rather than only checking filenames or sample counts. The generated `data/validation_report.json` records actual numerical discrepancies.
@@ -117,7 +117,7 @@ From this folder:
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000/`. Or serve the portfolio root and open `/website_visualization/pareto_explorer/`. You can also open `index.html` directly from your computer. Local file previews load `data/pareto_solutions.js`; HTTP and GitHub Pages load the JSON dataset. The MATLAB exporter writes both versions from the same data.
+Open `http://localhost:8000/`. Or serve the portfolio root and open `/pareto-explorer/`. You can also open `index.html` directly from your computer. Local file previews load `data/pareto_solutions.js`; HTTP and GitHub Pages load the JSON dataset. The MATLAB exporter writes both versions from the same data.
 
 To deploy, copy only:
 
@@ -136,7 +136,7 @@ Keep the exporter, this README, the verifier and validation reports for reproduc
 The recommended portfolio entry is a link to the dedicated, responsive full-page explorer:
 
 ```html
-<a href="website_visualization/pareto_explorer/index.html"
+<a href="pareto-explorer/index.html"
    target="_blank" rel="noopener">Open the Pareto Solution Explorer ↗</a>
 ```
 
@@ -172,7 +172,7 @@ underlying exported scientific data remain unchanged.
 
 ## Portfolio appearance
 
-The page loads `../../style.css` for the portfolio's fonts, color tokens, language
+The page loads `../style.css` for the portfolio's fonts, color tokens, language
 switcher and theme button; keep it at its current location within the portfolio.
 Its local stylesheet supplies the chart layout and responsive rules. Both themes
 use the portfolio's shared `theme` preference, follow system appearance until an

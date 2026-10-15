@@ -688,6 +688,7 @@
     if (descTag) descTag.setAttribute("content", pick(dict, "meta.desc", EN.desc));
     document.querySelectorAll('a[data-i18n="proj.asv.demo"]').forEach(function (link) {
       var url = new URL(link.href);
+      if (url.protocol === "file:" && url.pathname.endsWith("/")) url.pathname += "index.html";
       url.searchParams.set("lang", lang);
       link.href = url.href;
     });
