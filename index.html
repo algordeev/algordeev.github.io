@@ -475,6 +475,32 @@
   <div class="project-story">
     <h3 data-i18n="ui.problem">The challenge</h3>
     <p data-i18n="proj.asv.problem">Plan coordinated missions for several autonomous surface vehicles monitoring cyanobacterial blooms. Routes must balance collision avoidance, route overlap and workload across the fleet.</p>
+  <h3 class="asv-gallery-title" data-i18n="proj.asv.sim.h">Simulated monitoring missions</h3>
+  <div class="detail-gallery asv-simulations">
+    <figure>
+      <video controls muted loop playsinline preload="metadata" width="1920" height="1080" poster="assets/E2A2R3X2-poster.png" aria-labelledby="asv-e2-caption">
+        <source src="assets/E2A2R3X2.mp4" type="video/mp4">
+        <a href="assets/E2A2R3X2.mp4" data-i18n="proj.asv.sim.download">Download the simulation video</a>
+      </video>
+      <figcaption id="asv-e2-caption"><strong data-i18n="proj.asv.sim.e2.title">Lake Mendota · Two ASVs · 62-minute simulated mission</strong></figcaption>
+    </figure>
+    <figure>
+      <video controls muted loop playsinline preload="metadata" width="1920" height="1080" poster="assets/E4A2R3X2-poster.png" aria-labelledby="asv-e4-caption">
+        <source src="assets/E4A2R3X2.mp4" type="video/mp4">
+        <a href="assets/E4A2R3X2.mp4" data-i18n="proj.asv.sim.download">Download the simulation video</a>
+      </video>
+      <figcaption id="asv-e4-caption"><strong data-i18n="proj.asv.sim.e4.title">Lake Campillo · Two ASVs · 91-minute simulated mission</strong></figcaption>
+    </figure>
+  </div>
+  <details class="asv-simulation-details">
+    <summary data-i18n="proj.asv.sim.details">Simulation details</summary>
+    <h4 data-i18n="proj.asv.sim.e2.lake">Lake Mendota</h4>
+    <p data-i18n="proj.asv.sim.e2.note">E2 · A2R3X2 · Two ASVs. Repeat 1, generation 200, solution 6 (MATLAB 1-based index). Mission duration: approximately 62.3456 minutes; recorded simulation hours 54.0–55.0391. A balanced solution from the final Pareto front, selected by minimising distance to the ideal point after equally min-max normalising the three objectives.</p>
+    <h4 data-i18n="proj.asv.sim.e4.lake">Lake Campillo</h4>
+    <p data-i18n="proj.asv.sim.e4.note">E4 · A2R3X2 · Two ASVs. Repeat 4, generation 200, solution 11 (MATLAB 1-based index). Mission duration: approximately 90.7035 minutes; recorded simulation hours 47.0–48.5117. A balanced solution from the final Pareto front, selected by minimising distance to the ideal point after equally min-max normalising the three objectives.</p>
+<p class="asv-note" data-i18n="proj.asv.sim.note">Both runs use the median-hypervolume repeat among five repeats. The maps show recorded cyanobacteria motion and planned trajectories; synchronised charts show local projected density (model units), horizontal speed over ground (m/s) and probe depth (m). Density is a model projection, not calibrated concentration.</p>
+  </details>
+
     <h3 data-i18n="ui.work">My work</h3>
     <p data-i18n="proj.asv.work">During my ISCAR internship at Universidad Complutense de Madrid, I extended an existing single-vehicle MATLAB planner to multi-vehicle scenarios. I worked with NSGA-II and NSGA-III, ran repeated simulations for two- and three-vehicle fleets, and analysed Pareto fronts using hypervolume evaluation and non-parametric statistical comparisons.</p>
     <ul class="asv-list">
@@ -515,25 +541,6 @@
   </div>
 
   <div class="detail-facts"><div><h3 data-i18n="ui.stack">Technology</h3><p data-i18n="proj.asv.stack">MATLAB · NSGA-II / III · Optimization</p></div><div><h3 data-i18n="ui.focus">Key features</h3><p data-i18n="proj.asv.features">Collision avoidance · Route overlap · Workload balancing · Statistical comparison of Pareto fronts</p></div></div>
-
-  <h3 class="asv-gallery-title" data-i18n="proj.asv.sim.h">Simulated monitoring missions</h3>
-  <div class="detail-gallery asv-simulations">
-    <figure>
-      <video controls muted loop playsinline preload="metadata" width="1920" height="1080" poster="assets/E2A2R3X2-poster.png" aria-labelledby="asv-e2-caption">
-        <source src="assets/E2A2R3X2.mp4" type="video/mp4">
-        <a href="assets/E2A2R3X2.mp4" data-i18n="proj.asv.sim.download">Download the simulation video</a>
-      </video>
-      <figcaption id="asv-e2-caption"><strong data-i18n="proj.asv.sim.e2.title">Mendota · E2 · A2R3X2 · Two ASVs</strong><p data-i18n="proj.asv.sim.e2.note">Repeat 1, generation 200, solution 6. A balanced solution from the final Pareto front, selected after equally normalising the three objectives. The 62.3-minute mission is shown in accelerated playback, using recorded simulation hours 54.0–55.0391.</p></figcaption>
-    </figure>
-    <figure>
-      <video controls muted loop playsinline preload="metadata" width="1920" height="1080" poster="assets/E4A2R3X2-poster.png" aria-labelledby="asv-e4-caption">
-        <source src="assets/E4A2R3X2.mp4" type="video/mp4">
-        <a href="assets/E4A2R3X2.mp4" data-i18n="proj.asv.sim.download">Download the simulation video</a>
-      </video>
-      <figcaption id="asv-e4-caption"><strong data-i18n="proj.asv.sim.e4.title">Campillo · E4 · A2R3X2 · Two ASVs</strong><p data-i18n="proj.asv.sim.e4.note">Repeat 4, generation 200, solution 11. A balanced solution from the final Pareto front, selected after equally normalising the three objectives. The 90.7-minute mission is shown in accelerated playback, using recorded simulation hours 47.0–48.5117.</p></figcaption>
-    </figure>
-  </div>
-  <p class="asv-note" data-i18n="proj.asv.sim.note">Both runs use the median-hypervolume repeat among five repeats. The maps show recorded cyanobacteria motion and planned trajectories; synchronised charts show local projected density (model units), horizontal speed over ground (m/s) and probe depth (m). Density is a model projection, not calibrated concentration.</p>
 
   <h3 class="asv-gallery-title" data-i18n="proj.asv.gal.h">Selected figures</h3>
   <div class="detail-gallery">

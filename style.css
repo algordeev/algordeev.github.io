@@ -583,3 +583,10 @@ button.btn.ghost { border: 1px solid var(--border); }
 
 .asv-simulations video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 1px solid var(--border); border-radius: 10px; background: var(--bg); }
 .asv-simulations figcaption p { margin: .35rem 0 0; }
+
+.asv-simulation-details { width: fit-content; max-width: 100%; box-sizing: border-box; margin: .75rem 0 1.5rem; padding: .45rem .7rem; border: 1px solid var(--border); border-radius: 10px; }
+.asv-simulation-details[open] { width: 100%; }
+.asv-simulation-details summary { cursor: pointer; font-size: .8rem; font-weight: 600; }
+.asv-simulation-details summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.asv-simulation-details h4 { margin: 1rem 0 .35rem; }
+.asv-simulation-details p { font-size: .875rem; line-height: 1.6; }
