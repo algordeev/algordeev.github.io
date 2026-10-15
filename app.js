@@ -102,7 +102,7 @@
     dialog.addEventListener('pointerdown', event => { backdropDown = outside(event); });
     dialog.addEventListener('click', event => { if (backdropDown && outside(event)) dialog.close(); });
     dialog.addEventListener('close', () => {
-      if (dialog === tramDialog) tramVideo.pause();
+      dialog.querySelectorAll('video').forEach(video => video.pause());
       document.body.classList.remove('dialog-open');
       button.focus();
     });

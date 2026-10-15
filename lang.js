@@ -14,6 +14,14 @@
 
   var T = {
     ru: {
+      "proj.asv.sim.h": "Моделирование миссий мониторинга",
+      "proj.asv.sim.download": "Скачать видео моделирования",
+      "proj.asv.sim.e2.title": "Мендота · E2 · A2R3X2 · Два ASV",
+      "proj.asv.sim.e4.title": "Кампильо · E4 · A2R3X2 · Два ASV",
+      "proj.asv.sim.e2.note": "Повтор 1, поколение 200, решение 6. Сбалансированное решение финального фронта Парето, выбранное после равновесной нормализации трёх целевых функций. Миссия длительностью 62,3 минуты показана в ускоренном воспроизведении по сохранённым данным за часы моделирования 54,0–55,0391.",
+      "proj.asv.sim.e4.note": "Повтор 4, поколение 200, решение 11. Сбалансированное решение финального фронта Парето, выбранное после равновесной нормализации трёх целевых функций. Миссия длительностью 90,7 минуты показана в ускоренном воспроизведении по сохранённым данным за часы моделирования 47,0–48,5117.",
+      "proj.asv.sim.note": "Для обоих сценариев выбран повтор с медианным гиперобъёмом из пяти повторов. Карты показывают сохранённое движение цианобактерий и запланированные траектории; синхронные графики — локальную проекционную плотность (модельные единицы), горизонтальную скорость относительно земли (м/с) и глубину зонда (м). Плотность — модельная проекция, а не калиброванная концентрация.",
+
       "proj.tram.video.caption": "AI-визуализация на основе физического прототипа.",
       "proj.tram.video.demo": "Посмотреть реальную работу прототипа ↗",
       "proj.tram.video.play": "Воспроизвести видео",
@@ -323,6 +331,14 @@
     },
 
     tr: {
+      "proj.asv.sim.h": "Simüle edilen izleme görevleri",
+      "proj.asv.sim.download": "Simülasyon videosunu indir",
+      "proj.asv.sim.e2.title": "Mendota · E2 · A2R3X2 · İki ASV",
+      "proj.asv.sim.e4.title": "Campillo · E4 · A2R3X2 · İki ASV",
+      "proj.asv.sim.e2.note": "Tekrar 1, nesil 200, çözüm 6. Üç amaç eşit ağırlıkla normalize edildikten sonra son Pareto cephesinden seçilen dengeli bir çözüm. 62,3 dakikalık görev, simülasyonun 54,0–55,0391 saatleri arasındaki kayıtlarla hızlandırılmış olarak gösterilir.",
+      "proj.asv.sim.e4.note": "Tekrar 4, nesil 200, çözüm 11. Üç amaç eşit ağırlıkla normalize edildikten sonra son Pareto cephesinden seçilen dengeli bir çözüm. 90,7 dakikalık görev, simülasyonun 47,0–48,5117 saatleri arasındaki kayıtlarla hızlandırılmış olarak gösterilir.",
+      "proj.asv.sim.note": "Her iki senaryoda da beş tekrar arasından medyan hiperhacimli tekrar kullanılır. Haritalar kaydedilmiş siyanobakteri hareketini ve planlanan yörüngeleri; eşzamanlı grafikler ise yerel izdüşüm yoğunluğunu (model birimleri), yatay yer hızını (m/s) ve prob derinliğini (m) gösterir. Yoğunluk, kalibre edilmiş konsantrasyon değil, model izdüşümüdür.",
+
       "proj.tram.video.caption": "Fiziksel prototipten esinlenen yapay zekâ ile oluşturulmuş görselleştirme.",
       "proj.tram.video.demo": "Gerçek prototipin çalışmasını izle ↗",
       "proj.tram.video.play": "Videoyu oynat",

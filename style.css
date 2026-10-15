@@ -580,3 +580,6 @@ button.btn.ghost { border: 1px solid var(--border); }
 .tram-video-play:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 .tram-video figcaption { margin-top: .65rem; color: var(--muted); font-size: .875rem; line-height: 1.6; }
 .tram-video figcaption a { display: block; margin-top: .25rem; }
+
+.asv-simulations video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 1px solid var(--border); border-radius: 10px; background: var(--bg); }
+.asv-simulations figcaption p { margin: .35rem 0 0; }
