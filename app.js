@@ -61,34 +61,38 @@
     if (!event.target.closest('.menu-wrap')) closeMenu(false);
   });
 
-  const tramDialog = document.getElementById('project-tram');
-  const tramVideo = document.getElementById('tram-video');
-  const tramVideoButton = tramDialog.querySelector('.tram-video-play');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  function updateTramPlaybackButton() {
-    tramVideoButton.hidden = !tramVideo.paused;
-  }
-  function playTramVideo() {
-    // A rejected autoplay request leaves the manual play control available.
-    tramVideo.play().then(() => {
-      if (!tramDialog.open) tramVideo.pause();
-      updateTramPlaybackButton();
-    }).catch(updateTramPlaybackButton);
-  }
-  tramVideoButton.addEventListener('click', playTramVideo);
-  tramVideo.addEventListener('play', updateTramPlaybackButton);
-  tramVideo.addEventListener('pause', updateTramPlaybackButton);
-  reducedMotion.addEventListener('change', event => {
-    if (event.matches) tramVideo.pause();
+  const introPlayers = new Map();
+  document.querySelectorAll('.tram-video').forEach(figure => {
+    const dialog = figure.closest('.project-dialog');
+    const video = figure.querySelector('video');
+    const playButton = figure.querySelector('.tram-video-play');
+    function updatePlaybackButton() {
+      playButton.hidden = !video.paused;
+    }
+    function playVideo() {
+      // A rejected autoplay request leaves the manual play control available.
+      video.play().then(() => {
+        if (!dialog.open) video.pause();
+        updatePlaybackButton();
+      }).catch(updatePlaybackButton);
+    }
+    introPlayers.set(dialog, playVideo);
+    playButton.addEventListener('click', playVideo);
+    video.addEventListener('play', updatePlaybackButton);
+    video.addEventListener('pause', updatePlaybackButton);
+    reducedMotion.addEventListener('change', event => {
+      if (event.matches) video.pause();
+    });
+    updatePlaybackButton();
   });
-  updateTramPlaybackButton();
 
   document.querySelectorAll('[data-project]').forEach(button => {
     const dialog = document.getElementById('project-' + button.dataset.project);
     button.addEventListener('click', () => {
       closeMenu(false);
       dialog.showModal();
-      if (dialog === tramDialog && !reducedMotion.matches) playTramVideo();
+      if (!reducedMotion.matches && introPlayers.has(dialog)) introPlayers.get(dialog)();
       document.body.classList.add('dialog-open');
       dialog.querySelector('.dialog-close').focus();
     });

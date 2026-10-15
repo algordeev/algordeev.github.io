@@ -14,6 +14,7 @@
 
   var T = {
     ru: {
+      "proj.mono.video.caption": "Вступительный ролик, созданный ИИ; не игровой процесс.",
       "proj.asv.sim.h": "Моделирование миссий мониторинга",
       "proj.asv.sim.download": "Скачать видео моделирования",
       "proj.asv.sim.e2.title": "Озеро Мендота · Два ASV · 62-минутная моделируемая миссия",
@@ -334,6 +335,7 @@
     },
 
     tr: {
+      "proj.mono.video.caption": "Yapay zekâ ile oluşturulmuş tanıtım; oynanış görüntüsü değildir.",
       "proj.asv.sim.h": "Simüle edilen izleme görevleri",
       "proj.asv.sim.download": "Simülasyon videosunu indir",
       "proj.asv.sim.e2.title": "Mendota Gölü · İki ASV · 62 dakikalık simüle edilmiş görev",
