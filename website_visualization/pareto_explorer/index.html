@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Multi-ASV · Pareto Solution Explorer</title>
+  <script>
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark'
+        ? savedTheme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch (_) { document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+  </script>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="lang.js" defer></script>
+  <script src="theme.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+<main>
+  <nav class="page-navigation" aria-label="Language">
+    <a id="portfolio-link" href="../../index.html#projects">← <span>Back to portfolio</span></a>
+    <div class="nav-actions">
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="ru" lang="ru" aria-pressed="false">RU</button>
+      <button type="button" data-lang="en" lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="tr" lang="tr" aria-pressed="false">TR</button>
+    </div>
+    <button type="button" class="icon-button" id="theme-toggle" aria-pressed="false" aria-labelledby="theme-label">
+      <svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+      <svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/></svg>
+      <span class="sr-only" id="theme-label">Dark theme</span>
+    </button>
+    </div>
+  </nav>
+  <header class="intro">
+    <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> MULTI-ASV PLANNER <span class="divider">/</span> MISSION DESIGN</div>
+    <h1>One lake. Many possible missions.</h1>
+    <p>Each point represents one feasible nondominated mission found in the final population. Select a point to see how the trade-off between mission time, longest individual route and Cyanobacteria-density coverage changes the planned ASV trajectories.</p>
+    <a id="full-page-link" class="full-page-link" href="./index.html" target="_blank" rel="noopener" hidden>Open full-page explorer ↗</a>
+  </header>
+  <p id="load-status" role="status">Loading recorded missions…</p>
+  <section id="explorer" aria-label="Pareto solution explorer" hidden>
+    <div class="controls">
+      <label>Lake / scenario<select id="lake"></select></label>
+      <label>Fleet size<select id="fleet"><option value="2">2 ASVs</option><option value="3">3 ASVs</option></select></label>
+      <label>Configuration<select id="configuration"></select></label>
+      <div class="dataset-note"><span class="status-dot" aria-hidden="true"></span><span id="dataset-note"></span></div>
+    </div>
+    <div class="panels">
+      <section class="card front-card" aria-labelledby="front-title">
+        <div class="card-heading"><div><span class="eyebrow">01 / EXPLORE THE TRADE-OFF</span><h2 id="front-title">Pareto front</h2></div><span class="pill" id="point-count"></span></div>
+        <p class="panel-help">Hover or select a point. Use arrow keys when the plot is focused.</p>
+        <div class="chart-wrap"><svg id="front" viewBox="0 0 600 420" role="group" aria-label="Pareto front: mission duration versus longest individual path"></svg><div id="tooltip" role="status" hidden></div></div>
+        <div class="density-legend"><span>Cyanobacteria-density coverage <small>(model units)</small></span><div class="colour-bar" aria-hidden="true"></div><div class="legend-range"><span id="density-min"></span><span id="density-max"></span></div></div>
+        <div class="presets" aria-label="Explore mission trade-offs"><button type="button" data-preset="time">Faster mission</button><button type="button" data-preset="length">Shorter individual routes</button><button type="button" data-preset="density">Greater Cyanobacteria-density coverage</button><button type="button" data-preset="balanced" class="balanced">Balanced solution</button></div>
+        <label class="mission-picker">Selected mission<select id="mission"></select></label>
+      </section>
+      <section class="card map-card" aria-labelledby="map-title">
+        <div class="card-heading"><div><span class="eyebrow">02 / SEE THE MISSION</span><h2 id="map-title">Planned trajectories</h2></div><span id="scenario-tag" class="pill"></span></div>
+        <p class="panel-help">Plan view · equal x/y scale · coordinates in metres</p>
+        <svg id="map" viewBox="0 0 600 420" role="img" aria-label="Complete lake boundary and selected ASV routes"></svg>
+        <div class="map-legend" id="boat-legend"></div>
+        <div class="map-key"><span>○ Start</span><span>◇ Destination</span><span>→ Travel direction</span></div>
+        <p class="snapshot-note" id="snapshot-note"></p>
+        <div class="map-density-key"><span>Projected density at mission start</span><span class="colour-bar" aria-hidden="true"></span><span id="map-density-range"></span></div>
+      </section>
+    </div>
+    <section class="selection-card" aria-label="Selected mission summary">
+      <div class="selection-heading"><div><span class="eyebrow" id="selection-label"></span><h2 id="interpretation"></h2></div><span class="pill" id="solution-tag"></span></div>
+      <dl class="metrics"><div><dt>Mission duration</dt><dd id="metric-time"></dd></div><div><dt>Longest individual path <span>(3D)</span></dt><dd id="metric-length"></dd></div><div><dt>Cyanobacteria-density coverage</dt><dd id="metric-density"></dd></div></dl>
+      <p id="selection-context" class="selection-context"></p>
+      <p class="interpretation-note">Trade-off descriptions are relative to this front. “Balanced” gives equal weight to all three normalized objectives; it is not universally best.</p>
+    </section>
+    <details class="method-notes"><summary>About the data &amp; how to read it</summary><p>Only feasible, nondominated final solutions are shown, sampled from the median final-hypervolume repeat of each experiment. Hypervolume describes an entire front, never an individual mission. Two-ASV runs finish at generation 200; three-ASV runs at 500. These are different optimisation budgets, so this view is not a controlled fleet-performance comparison.</p><p>Mission duration is the last boat’s arrival. Longest path is the greatest individual 3D spline arc length, while the map shows horizontal projections. Displayed Cyanobacteria-density coverage is exactly the negative of the saved third minimization objective: <code>coverage = −objs(3)</code>. It sums each particle’s greatest Gaussian contribution across all boat paths, avoiding double-counting overlaps. It is a model score, not measured concentration.</p><p>The background is a horizontal Gaussian projection of recorded particles at mission start, not cumulative Cyanobacteria-density coverage or an animated bloom. The STL outlines are the complete saved simulation geometries, including shoreline holes; no geographic imagery is added. Different groups are displayed separately, with axes rescaled to each front.</p><p id="provenance"></p></details>
+  </section>
+</main>
+</body>
+</html>

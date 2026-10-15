@@ -21,6 +21,12 @@
     if (!explicitTheme) setTheme(event.matches ? 'dark' : 'light');
   });
 
+  window.addEventListener('storage', event => {
+    if (event.key !== 'theme' && event.key !== null) return;
+    explicitTheme = ['light', 'dark'].includes(event.newValue);
+    setTheme(explicitTheme ? event.newValue : (systemTheme.matches ? 'dark' : 'light'));
+  });
+
   const menuButton = document.getElementById('menu-toggle');
   const menu = document.getElementById('section-menu');
   function closeMenu(restoreFocus) {

@@ -14,6 +14,7 @@
 
   var T = {
     ru: {
+      "proj.asv.demo": "Открыть Pareto Explorer →",
       "proj.mono.video.caption": "Вступительный ролик, созданный ИИ; не игровой процесс.",
       "proj.asv.sim.h": "Моделирование миссий мониторинга",
       "proj.asv.sim.download": "Скачать видео моделирования",
@@ -335,6 +336,7 @@
     },
 
     tr: {
+      "proj.asv.demo": "Pareto Explorer’ı aç →",
       "proj.mono.video.caption": "Yapay zekâ ile oluşturulmuş tanıtım; oynanış görüntüsü değildir.",
       "proj.asv.sim.h": "Simüle edilen izleme görevleri",
       "proj.asv.sim.download": "Simülasyon videosunu indir",
@@ -684,6 +686,11 @@
 
     document.title = pick(dict, "meta.title", EN.title);
     if (descTag) descTag.setAttribute("content", pick(dict, "meta.desc", EN.desc));
+    document.querySelectorAll('a[data-i18n="proj.asv.demo"]').forEach(function (link) {
+      var url = new URL(link.href);
+      url.searchParams.set("lang", lang);
+      link.href = url.href;
+    });
     document.documentElement.lang = lang;
     document.dispatchEvent(new CustomEvent("portfolio:language", { detail: lang }));
 

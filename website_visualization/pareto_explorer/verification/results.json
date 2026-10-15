@@ -1,0 +1,69 @@
+{
+  "groups": [
+    {
+      "group": "E2-2-A1R2C2",
+      "clicked": 50
+    },
+    {
+      "group": "E2-2-A2R3X1",
+      "clicked": 50
+    },
+    {
+      "group": "E2-2-A2R3X2",
+      "clicked": 50
+    },
+    {
+      "group": "E2-3-A1R2C2",
+      "clicked": 50
+    },
+    {
+      "group": "E2-3-A2R3X1",
+      "clicked": 50
+    },
+    {
+      "group": "E2-3-A2R3X2",
+      "clicked": 50
+    },
+    {
+      "group": "E4-2-A1R2C2",
+      "clicked": 50
+    },
+    {
+      "group": "E4-2-A2R3X1",
+      "clicked": 50
+    },
+    {
+      "group": "E4-2-A2R3X2",
+      "clicked": 50
+    },
+    {
+      "group": "E4-3-A1R2C2",
+      "clicked": 43
+    },
+    {
+      "group": "E4-3-A2R3X1",
+      "clicked": 50
+    },
+    {
+      "group": "E4-3-A2R3X2",
+      "clicked": 50
+    }
+  ],
+  "solutions": 593,
+  "keyboard": true,
+  "hover": true,
+  "touch": true,
+  "mobile": {
+    "overflow": false,
+    "columns": "358px",
+    "transition": "0s"
+  },
+  "errors": [],
+  "requests": [
+    "http://127.0.0.1:8000/website_visualization/pareto_explorer/",
+    "http://127.0.0.1:8000/website_visualization/pareto_explorer/styles.css",
+    "http://127.0.0.1:8000/website_visualization/pareto_explorer/app.js",
+    "http://127.0.0.1:8000/website_visualization/pareto_explorer/data/pareto_solutions.json",
+    "http://127.0.0.1:8000/website_visualization/pareto_explorer/data/pareto_solutions.json"
+  ]
+}
