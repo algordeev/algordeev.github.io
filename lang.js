@@ -16,9 +16,9 @@
     ru: {
       "sk.low.mips": "Ассемблер MIPS",
       "sk.low.riscv": "Ассемблер RISC-V",
-      "sk.eng.embedded": "Встраиваемые системы",
-      "sk.eng.pcb": "Проектирование печатных плат",
-      "sk.eng.digital": "Цифровое проектирование",
+      "sk.eng.embedded": "Embedded-системы",
+      "sk.eng.pcb": "Печатные платы",
+      "sk.eng.digital": "Цифровая схемотехника",
       "sk.eng.electronics": "Электроника",
       "sk.cs.oop": "ООП",
       "sk.cs.structures": "Структуры данных",
@@ -295,7 +295,7 @@
       "edu.degree": `Бакалавр, компьютерная инженерия`,
       "edu.degree.meta": `Университет Яшар, Измир, Турция · 100% стипендия`,
       "edu.erasmus": `Обмен по программе Erasmus+`,
-      "edu.erasmus.meta": `Мадридский университет Комплутенсе, Испания · грант 6.000 €`,
+      "edu.erasmus.meta": `Мадридский университет Комплутенсе, Испания · Получатель гранта`,
 
       "exp.date": `июнь – июль 2026`,
       "exp.iscar.title": `Стажёр по робототехнике и автономным системам`,
@@ -638,7 +638,7 @@
       "edu.degree": `Bilgisayar Mühendisliği Lisans`,
       "edu.degree.meta": `Yaşar Üniversitesi, İzmir, Türkiye · %100 burslu`,
       "edu.erasmus": `Erasmus+ Değişim Programı`,
-      "edu.erasmus.meta": `Madrid Complutense Üniversitesi, İspanya · 6.000 € hibe`,
+      "edu.erasmus.meta": `Madrid Complutense Üniversitesi, İspanya · Hibe alıcısı`,
 
       "exp.date": `Haziran – Temmuz 2026`,
       "exp.iscar.title": `Robotik ve Otonom Sistemler Stajyeri`,
