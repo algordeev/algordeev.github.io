@@ -14,6 +14,21 @@
 
   var T = {
     ru: {
+      "sk.low.mips": "Ассемблер MIPS",
+      "sk.low.riscv": "Ассемблер RISC-V",
+      "sk.eng.embedded": "Встраиваемые системы",
+      "sk.eng.pcb": "Проектирование печатных плат",
+      "sk.eng.digital": "Цифровое проектирование",
+      "sk.eng.electronics": "Электроника",
+      "sk.cs.oop": "ООП",
+      "sk.cs.structures": "Структуры данных",
+      "sk.cs.algorithms": "Алгоритмы",
+      "sk.cs.networks": "Компьютерные сети",
+      "sk.lang.russian": "Русский · Родной",
+      "sk.lang.english": "Английский · C1",
+      "sk.lang.turkish": "Турецкий · B1",
+      "sk.lang.spanish": "Испанский · A2",
+
       "recommendations": "Рекомендации",
       "rec.dialog": "Рекомендация",
       "rec.excerpt": "Рекомендация в LinkedIn",
@@ -329,14 +344,10 @@
 
       "sk.prog": `Программирование`,
       "sk.low": `Низкоуровневое`,
-      "sk.low.v": `Ассемблер MIPS и RISC-V`,
       "sk.eng": `Инженерия`,
-      "sk.eng.v": `Arduino, встраиваемые системы, проектирование печатных плат, цифровое проектирование, электроника`,
       "sk.cs": `Основы информатики`,
-      "sk.cs.v": `ООП, структуры данных, алгоритмы, компьютерные сети, Scrum`,
       "sk.tools": `Инструменты`,
       "sk.lang": `Языки`,
-      "sk.lang.v": `русский (родной), английский (C1), турецкий (B1), испанский (A2)`,
 
       "contact.email": `Почта:`,
       "contact.copy": `Скопировать почту`,
@@ -345,6 +356,21 @@
     },
 
     tr: {
+      "sk.low.mips": "MIPS Assembly",
+      "sk.low.riscv": "RISC-V Assembly",
+      "sk.eng.embedded": "Gömülü sistemler",
+      "sk.eng.pcb": "PCB tasarımı",
+      "sk.eng.digital": "Sayısal tasarım",
+      "sk.eng.electronics": "Elektronik",
+      "sk.cs.oop": "Nesne yönelimli programlama",
+      "sk.cs.structures": "Veri yapıları",
+      "sk.cs.algorithms": "Algoritmalar",
+      "sk.cs.networks": "Bilgisayar ağları",
+      "sk.lang.russian": "Rusça · Ana dil",
+      "sk.lang.english": "İngilizce · C1",
+      "sk.lang.turkish": "Türkçe · B1",
+      "sk.lang.spanish": "İspanyolca · A2",
+
       "recommendations": "Referanslar",
       "rec.dialog": "Referans",
       "rec.excerpt": "LinkedIn referansı",
@@ -659,14 +685,10 @@
 
       "sk.prog": `Programlama`,
       "sk.low": `Düşük seviye`,
-      "sk.low.v": `MIPS ve RISC-V Assembly`,
       "sk.eng": `Mühendislik`,
-      "sk.eng.v": `Arduino, gömülü sistemler, PCB tasarımı, sayısal tasarım, elektronik`,
       "sk.cs": `Bilgisayar bilimi kavramları`,
-      "sk.cs.v": `Nesne yönelimli programlama, veri yapıları, algoritmalar, bilgisayar ağları, Scrum`,
       "sk.tools": `Araçlar`,
       "sk.lang": `Diller`,
-      "sk.lang.v": `Rusça (ana dil), İngilizce (C1), Türkçe (B1), İspanyolca (A2)`,
 
       "contact.email": `E-posta:`,
       "contact.copy": `E-postayı kopyala`,

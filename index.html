@@ -56,11 +56,11 @@
       <nav id="section-menu" hidden aria-labelledby="menu-label">
         <a href="#about" data-i18n="about">About</a>
         <a href="#projects" data-i18n="projects">Projects</a>
+        <a href="#skills" data-i18n="skills">Skills</a>
         <a href="#education" data-i18n="education">Education</a>
         <a href="#experience" data-i18n="experience">Experience</a>
         <a href="#recommendations" data-i18n="recommendations">Recommendations</a>
         <a href="#achievements" data-i18n="achievements">Achievements</a>
-        <a href="#skills" data-i18n="skills">Skills</a>
         <a href="#credentials" data-i18n="credentials">Certificates & Courses</a>
         <a href="#contact" data-i18n="contact">Contact</a>
       </nav>
@@ -225,6 +225,66 @@
     </div>
   </section>
 
+  <section id="skills">
+    <h2 data-i18n="skills">Skills</h2>
+    <div class="skills">
+      <div class="skill-category skill-category-programming">
+        <h3 id="skills-prog"><svg class="skill-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-3-15-2 18"/></svg><span data-i18n="sk.prog">Programming</span></h3>
+        <ul class="skill-chips" aria-labelledby="skills-prog">
+          <li>C/C++</li>
+          <li>MATLAB</li>
+          <li>Java</li>
+          <li>Python</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3 id="skills-low"><svg class="skill-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 1v5m6-5v5M9 18v5m6-5v5M1 9h5m-5 6h5m12-6h5m-5 6h5"/><rect x="10" y="10" width="4" height="4" rx=".5"/></svg><span data-i18n="sk.low">Low-level</span></h3>
+        <ul class="skill-chips" aria-labelledby="skills-low">
+          <li data-i18n="sk.low.mips">MIPS Assembly</li>
+          <li data-i18n="sk.low.riscv">RISC-V Assembly</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3 id="skills-eng"><svg class="skill-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 3-.5 2a7 7 0 0 0-1.6.9l-2-.6-2.5 4.4 1.5 1.4a7 7 0 0 0 0 1.8l-1.5 1.4 2.5 4.4 2-.6A7 7 0 0 0 9 19l.5 2h5l.5-2a7 7 0 0 0 1.6-.9l2 .6 2.5-4.4-1.5-1.4a7 7 0 0 0 0-1.8l1.5-1.4-2.5-4.4-2 .6A7 7 0 0 0 15 5l-.5-2Z"/><circle cx="12" cy="12" r="3"/></svg><span data-i18n="sk.eng">Engineering</span></h3>
+        <ul class="skill-chips" aria-labelledby="skills-eng">
+          <li>Arduino</li>
+          <li data-i18n="sk.eng.embedded">Embedded systems</li>
+          <li data-i18n="sk.eng.pcb">PCB design</li>
+          <li data-i18n="sk.eng.digital">Digital design</li>
+          <li data-i18n="sk.eng.electronics">Electronics</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3 id="skills-cs"><svg class="skill-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="5" rx="1"/><rect x="2" y="17" width="7" height="5" rx="1"/><rect x="15" y="17" width="7" height="5" rx="1"/><path d="M12 7v5m-6.5 5v-5h13v5"/></svg><span data-i18n="sk.cs">CS concepts</span></h3>
+        <ul class="skill-chips" aria-labelledby="skills-cs">
+          <li data-i18n="sk.cs.oop">OOP</li>
+          <li data-i18n="sk.cs.structures">Data structures</li>
+          <li data-i18n="sk.cs.algorithms">Algorithms</li>
+          <li data-i18n="sk.cs.networks">Computer networks</li>
+          <li>Scrum</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3 id="skills-tools"><svg class="skill-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v12a5 5 0 0 0 5 5h4m-9-9h8a4 4 0 0 0 4-4V6"/><circle cx="6" cy="3" r="2"/><circle cx="18" cy="4" r="2"/><circle cx="17" cy="20" r="2"/></svg><span data-i18n="sk.tools">Tools</span></h3>
+        <ul class="skill-chips" aria-labelledby="skills-tools">
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>LaTeX</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3 id="skills-lang"><svg class="skill-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg><span data-i18n="sk.lang">Languages</span></h3>
+        <ul class="skill-chips" aria-labelledby="skills-lang">
+          <li data-i18n="sk.lang.russian">Russian · Native</li>
+          <li data-i18n="sk.lang.english">English · C1</li>
+          <li data-i18n="sk.lang.turkish">Turkish · B1</li>
+          <li data-i18n="sk.lang.spanish">Spanish · A2</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section id="education">
     <h2 data-i18n="education">Education</h2>
     <div class="timeline">
@@ -315,35 +375,6 @@
     </ul>
   </section>
 
-  <section id="skills">
-    <h2 data-i18n="skills">Skills</h2>
-    <div class="skills">
-      <div>
-        <h3 data-i18n="sk.prog">Programming</h3>
-        <p>C/C++, MATLAB, Java, Python, SQL</p>
-      </div>
-      <div>
-        <h3 data-i18n="sk.low">Low-level</h3>
-        <p data-i18n="sk.low.v">MIPS and RISC-V Assembly</p>
-      </div>
-      <div>
-        <h3 data-i18n="sk.eng">Engineering</h3>
-        <p data-i18n="sk.eng.v">Arduino, embedded systems, PCB design, digital design, electronics</p>
-      </div>
-      <div>
-        <h3 data-i18n="sk.cs">CS concepts</h3>
-        <p data-i18n="sk.cs.v">OOP, data structures, algorithms, computer networks, Scrum</p>
-      </div>
-      <div>
-        <h3 data-i18n="sk.tools">Tools</h3>
-        <p>Git, GitHub, LaTeX</p>
-      </div>
-      <div>
-        <h3 data-i18n="sk.lang">Languages</h3>
-        <p data-i18n="sk.lang.v">Russian (native), English (C1), Turkish (B1), Spanish (A2)</p>
-      </div>
-    </div>
-  </section>
 
   <section id="credentials">
     <h2 data-i18n="credentials">Certificates &amp; Courses</h2>
