@@ -14,6 +14,15 @@
 
   var T = {
     ru: {
+      "recommendations": "Рекомендации",
+      "rec.dialog": "Рекомендация",
+      "rec.excerpt": "Рекомендация в LinkedIn",
+      "rec.read": "Читать рекомендацию полностью",
+      "rec.linkedin": "Посмотреть в LinkedIn ↗",
+      "rec.published": "Опубликовано:",
+      "rec.meherrem.relationship": "Преподаватель математического анализа I и II · 2023–2024",
+      "rec.maestro.relationship": "Преподаватель основ вычислительной техники I и II · 2024–2025",
+
       "proj.asv.demo": "Открыть Pareto Explorer →",
       "proj.mono.video.caption": "Вступительный ролик, созданный ИИ; не игровой процесс.",
       "proj.asv.sim.h": "Моделирование миссий мониторинга",
@@ -336,6 +345,15 @@
     },
 
     tr: {
+      "recommendations": "Referanslar",
+      "rec.dialog": "Referans",
+      "rec.excerpt": "LinkedIn referansı",
+      "rec.read": "Referansın tamamını oku",
+      "rec.linkedin": "LinkedIn’de görüntüle ↗",
+      "rec.published": "Yayınlanma tarihi:",
+      "rec.meherrem.relationship": "Kalkülüs I ve II öğretim üyesi · 2023–2024",
+      "rec.maestro.relationship": "Bilgisayarın Temelleri I ve II öğretim üyesi · 2024–2025",
+
       "proj.asv.demo": "Pareto Explorer’ı aç →",
       "proj.mono.video.caption": "Yapay zekâ ile oluşturulmuş tanıtım; oynanış görüntüsü değildir.",
       "proj.asv.sim.h": "Simüle edilen izleme görevleri",
@@ -691,6 +709,12 @@
       if (url.protocol === "file:" && url.pathname.endsWith("/")) url.pathname += "index.html";
       url.searchParams.set("lang", lang);
       link.href = url.href;
+    });
+    var dateFormatter = new Intl.DateTimeFormat({ en: "en-US", ru: "ru-RU", tr: "tr-TR" }[lang], {
+      year: "numeric", month: "long", day: "numeric", timeZone: "UTC"
+    });
+    document.querySelectorAll("time[data-publication-date]").forEach(function (el) {
+      el.textContent = dateFormatter.format(new Date(el.getAttribute("datetime") + "T12:00:00Z"));
     });
     document.documentElement.lang = lang;
     document.dispatchEvent(new CustomEvent("portfolio:language", { detail: lang }));

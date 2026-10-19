@@ -58,6 +58,7 @@
         <a href="#projects" data-i18n="projects">Projects</a>
         <a href="#education" data-i18n="education">Education</a>
         <a href="#experience" data-i18n="experience">Experience</a>
+        <a href="#recommendations" data-i18n="recommendations">Recommendations</a>
         <a href="#achievements" data-i18n="achievements">Achievements</a>
         <a href="#skills" data-i18n="skills">Skills</a>
         <a href="#credentials" data-i18n="credentials">Certificates & Courses</a>
@@ -271,6 +272,38 @@
     </div>
   </section>
 
+  <section id="recommendations" aria-labelledby="recommendations-heading">
+    <h2 id="recommendations-heading" data-i18n="recommendations">Recommendations</h2>
+    <div class="recommendations-grid">
+      <figure class="card recommendation-card">
+        <p class="recommendation-label" data-i18n="rec.excerpt">LinkedIn recommendation</p>
+        <blockquote lang="en"><p>Aleksandr was a motivated and engaged student who showed a genuine interest in learning and developing his knowledge of computer engineering. He approached his studies with a positive attitude and demonstrated curiosity and enthusiasm throughout the course.</p></blockquote>
+        <figcaption>
+          <div class="recommendation-person">
+            <img class="recommendation-portrait" src="assets/juan-antonio.jpg" width="48" height="48" alt="" loading="lazy">
+            <div><h3>Prof. Juan Antonio Maestro</h3><p class="meta">Universidad Complutense de Madrid</p></div>
+          </div>
+          <p class="recommendation-relationship" data-i18n="rec.maestro.relationship">Fundamentals of Computers I &amp; II lecturer · 2024–2025</p>
+        </figcaption>
+        <div class="links"><button type="button" class="details-button" data-project="recommendation-maestro" aria-haspopup="dialog" aria-controls="project-recommendation-maestro" aria-describedby="rec-card-maestro"><span data-i18n="rec.read">Read full recommendation</span></button></div>
+        <span class="sr-only" id="rec-card-maestro">Prof. Juan Antonio Maestro</span>
+      </figure>
+      <figure class="card recommendation-card">
+        <p class="recommendation-label" data-i18n="rec.excerpt">LinkedIn recommendation</p>
+        <blockquote lang="en"><p>Aleksandr demonstrated exceptional understanding, earning an A in both courses and achieving a perfect score (100/100) on the Calculus II midterm, a distinction earned by only two students across the university.</p></blockquote>
+        <figcaption>
+          <div class="recommendation-person">
+            <img class="recommendation-portrait" src="assets/shahlar-meherrem.jpg" width="48" height="48" alt="" loading="lazy">
+            <div><h3>Prof. Dr. Şahlar Meherrem</h3><p class="meta">Yaşar University</p></div>
+          </div>
+          <p class="recommendation-relationship" data-i18n="rec.meherrem.relationship">Calculus I &amp; II lecturer · 2023–2024</p>
+        </figcaption>
+        <div class="links"><button type="button" class="details-button" data-project="recommendation-meherrem" aria-haspopup="dialog" aria-controls="project-recommendation-meherrem" aria-describedby="rec-card-meherrem"><span data-i18n="rec.read">Read full recommendation</span></button></div>
+        <span class="sr-only" id="rec-card-meherrem">Prof. Dr. Şahlar Meherrem</span>
+      </figure>
+    </div>
+  </section>
+
   <section id="achievements">
     <h2 data-i18n="achievements.title">Selected Achievements</h2>
     <ul class="achievements">
@@ -336,6 +369,36 @@
   </section>
 
 </main>
+
+<dialog class="project-dialog recommendation-dialog" id="project-recommendation-meherrem" aria-labelledby="rec-title-meherrem">
+  <div class="dialog-header"><p class="eyebrow" data-i18n="rec.dialog">Recommendation</p><button type="button" class="icon-button dialog-close" aria-labelledby="rec-close-meherrem"><span aria-hidden="true">×</span><span class="sr-only" id="rec-close-meherrem" data-i18n="ui.close">Close</span></button></div>
+  <div class="recommendation-person">
+    <img class="recommendation-portrait" src="assets/shahlar-meherrem.jpg" width="48" height="48" alt="" loading="lazy">
+    <div><h2 id="rec-title-meherrem">Prof. Dr. Şahlar Meherrem</h2><p class="meta">Yaşar University</p></div>
+  </div>
+  <p class="recommendation-relationship" data-i18n="rec.meherrem.relationship">Calculus I &amp; II lecturer · 2023–2024</p>
+  <p class="date"><span data-i18n="rec.published">Published:</span> <time datetime="2026-10-14" data-publication-date>October 14, 2026</time></p>
+  <blockquote class="recommendation-full" lang="en">
+      <p>I had the pleasure of teaching Aleksandr Gordeev during the 2023–2024 academic year in both Calculus I and Calculus II at Yaşar University. Aleksandr demonstrated exceptional understanding, earning an A in both courses and achieving a perfect score (100/100) on the Calculus II midterm, a distinction earned by only two students across the university.</p>
+      <p>What stood out most was Aleksandr's genuine intellectual curiosity and his dedication to mastering the subject beyond what was required. He often stayed after class to discuss advanced concepts, posed insightful questions, and actively engaged in classroom discussions. His clarity in thought and communication, along with his support for peers, contributed greatly to the learning environment.</p>
+      <p>Aleksandr combines strong analytical thinking with a deep motivation to learn, making him well-suited for both academic and professional research settings. I am confident that he will be a valuable asset to any team or organisation he joins.<br>Prof. Dr Shahlar Meherrem, Yasar University, Departments of Mathematics, Türkiye</p>
+  </blockquote>
+  <p class="links"><a href="https://www.linkedin.com/in/algordeev/details/recommendations/" target="_blank" rel="noopener noreferrer" data-i18n="rec.linkedin">View on LinkedIn ↗</a></p>
+</dialog>
+
+<dialog class="project-dialog recommendation-dialog" id="project-recommendation-maestro" aria-labelledby="rec-title-maestro">
+  <div class="dialog-header"><p class="eyebrow" data-i18n="rec.dialog">Recommendation</p><button type="button" class="icon-button dialog-close" aria-labelledby="rec-close-maestro"><span aria-hidden="true">×</span><span class="sr-only" id="rec-close-maestro" data-i18n="ui.close">Close</span></button></div>
+  <div class="recommendation-person">
+    <img class="recommendation-portrait" src="assets/juan-antonio.jpg" width="48" height="48" alt="" loading="lazy">
+    <div><h2 id="rec-title-maestro">Prof. Juan Antonio Maestro</h2><p class="meta">Universidad Complutense de Madrid</p></div>
+  </div>
+  <p class="recommendation-relationship" data-i18n="rec.maestro.relationship">Fundamentals of Computers I &amp; II lecturer · 2024–2025</p>
+  <p class="date"><span data-i18n="rec.published">Published:</span> <time datetime="2026-10-19" data-publication-date>October 19, 2026</time></p>
+  <blockquote class="recommendation-full" lang="en">
+      <p>I had the pleasure of teaching Aleksandr in Fundamentals of Computers I and II at Complutense University of Madrid (UCM) during the 2024–2025 academic year, as part of the Erasmus exchange programme. Aleksandr was a motivated and engaged student who showed a genuine interest in learning and developing his knowledge of computer engineering. He approached his studies with a positive attitude and demonstrated curiosity and enthusiasm throughout the course. I am confident that his dedication, international experience, and willingness to learn will serve him well in future academic and professional endeavours. I would gladly recommend Aleksandr for further academic opportunities.</p>
+  </blockquote>
+  <p class="links"><a href="https://www.linkedin.com/in/algordeev/details/recommendations/" target="_blank" rel="noopener noreferrer" data-i18n="rec.linkedin">View on LinkedIn ↗</a></p>
+</dialog>
 
 <dialog class="project-dialog" id="project-tram" aria-labelledby="title-tram">
   <div class="dialog-header"><p class="eyebrow" data-i18n="ui.project">Project details</p><button type="button" class="icon-button dialog-close" aria-labelledby="close-tram"><span aria-hidden="true">×</span><span class="sr-only" id="close-tram" data-i18n="ui.close">Close</span></button></div>

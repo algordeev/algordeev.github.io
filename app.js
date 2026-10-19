@@ -98,6 +98,7 @@
     button.addEventListener('click', () => {
       closeMenu(false);
       dialog.showModal();
+      if (dialog.classList.contains('recommendation-dialog')) dialog.scrollTop = 0;
       if (!reducedMotion.matches && introPlayers.has(dialog)) introPlayers.get(dialog)();
       document.body.classList.add('dialog-open');
       dialog.querySelector('.dialog-close').focus();
@@ -115,6 +116,22 @@
       dialog.querySelectorAll('video').forEach(video => video.pause());
       document.body.classList.remove('dialog-open');
       button.focus();
+    });
+  });
+
+  // Keep Tab cycling through the recommendation's close button and source link.
+  document.querySelectorAll('.recommendation-dialog').forEach(dialog => {
+    dialog.addEventListener('keydown', event => {
+      if (event.key !== 'Tab') return;
+      const controls = Array.from(dialog.querySelectorAll('button:not([disabled]), a[href]'));
+      const first = controls[0], last = controls[controls.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     });
   });
 

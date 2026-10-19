@@ -590,3 +590,40 @@ button.btn.ghost { border: 1px solid var(--border); }
 .asv-simulation-details summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .asv-simulation-details h4 { margin: 1rem 0 .35rem; }
 .asv-simulation-details p { font-size: .875rem; line-height: 1.6; }
+
+/* Recommendations share the portfolio cards and native project dialogs. */
+.recommendations-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 20px; }
+.recommendation-card { margin: 0; padding: 24px; }
+.recommendation-label { margin: 0 0 16px; font-size: .8rem; color: var(--muted); }
+.recommendation-card blockquote { margin: 0 0 24px; padding: 0 0 0 18px; border-left: 2px solid var(--border); font-size: 1rem; line-height: 1.65; }
+.recommendation-card blockquote p { margin: 0; }
+.recommendation-card figcaption { margin-top: auto; }
+.recommendation-card h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.recommendation-card .meta { font-size: .9rem; }
+.recommendation-relationship { margin: 6px 0 0; color: var(--muted); font-size: .85rem; }
+.recommendation-card .links { margin: 18px 0 0; }
+.recommendation-card .details-button { text-align: left; }
+.recommendation-dialog .dialog-header { position: sticky; top: 0; z-index: 1; margin: -28px -28px 24px; padding: 16px 28px; background: var(--surface); border-bottom: 1px solid var(--border); }
+.recommendation-dialog h2 { margin-top: 0; }
+.recommendation-dialog .date { margin: 12px 0 24px; }
+.recommendation-full { max-width: 70ch; margin: 0; font-size: 1rem; line-height: 1.85; }
+.recommendation-full p { margin: 0 0 1.25em; }
+.recommendation-full p:last-child { margin-bottom: 0; }
+@media (max-width: 700px) {
+  .recommendations-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .recommendation-card { padding: 20px; }
+  .recommendation-dialog .dialog-header { top: 0; margin: -20px -20px 20px; padding: 12px 20px; }
+}
+
+#project-recommendation-meherrem .recommendation-full p:not(:last-child) { margin-bottom: 0.6em; }
+
+.recommendation-person { display: flex; align-items: center; gap: 12px; }
+.recommendation-person > div { min-width: 0; }
+.recommendation-portrait { display: block; width: 48px; height: 48px; flex: 0 0 48px; object-fit: cover; border: 1px solid var(--border); border-radius: 50%; }
+.recommendation-person .meta { margin-bottom: 0; }
+.recommendation-dialog .recommendation-person h2 { margin-bottom: 4px; }
+
+.recommendation-dialog { padding-top: 0; }
+.recommendation-dialog .dialog-header { margin-top: 0; margin-bottom: 20px; }
